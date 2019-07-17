@@ -1,0 +1,46 @@
+// Типографика
+// -----------
+
+
+// Базовая типографика для Проекта Cat Energy
+// ------------------------------------------
+
+body {
+  width: 320px;
+  margin: 0 auto;
+
+  font-family: @baseFont;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+
+  text-transform: none;
+
+  color: @black;
+  background-color: @white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  border: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+

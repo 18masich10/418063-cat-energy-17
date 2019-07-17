@@ -1,0 +1,68 @@
+// Style.less для блока promo
+//--------------------------------
+
+.promo {
+  position: relative;
+  min-height: 505px;
+
+  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  // Разобраться с путями, в .css файле данный путь не проходит из-за вложенности папок
+}
+
+.promo__header {
+  display: block;
+  min-height: 165px;
+}
+
+.promo__title {
+  display: block;
+  padding: 27px;
+  margin-left: 3px;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  //color: @white;
+  // временно без фона
+}
+
+.promo__slogan {
+  display: block;
+  margin-top: -26px;
+  margin-left: 1px;
+
+  font-size: @baseFontSize;
+  line-height: 14px;
+  font-weight: @baseFontWeight;
+  text-align: center;
+  text-transform: uppercase;
+  //color: @white;
+  // временно без фона
+}
+
+.promo__img {
+  display: block;
+  min-height: 271px;
+  margin: -12px 22px;
+}
+
+.promo__button {
+  display: block;
+  margin: 23px;
+  padding: 5px;
+}
+
+.promo__link {
+  display: block;
+  padding: 12px 10px;
+  margin: -14px -9px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+  background-color: @green;
+}
