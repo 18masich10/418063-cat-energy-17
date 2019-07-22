@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/style.css">
   <title>Cat Energy</title>
 </head>
@@ -11,9 +11,9 @@
     <a class="page-header__logo">
       <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип-картинка «Кэт Энерджи»">
     </a>
-    <button class="page-header__toogle" type="button">Открыть меню</button>
+    <button class="page-header__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
-  <!--  <nav class="main-nav">
+    <!-- <nav class="main-nav">
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a>Главная</a>
@@ -26,9 +26,9 @@
         </li>
 
       </ul>
-    </nav> -->                     <!-- Временно отключено для работы с ПП -->
+    </nav>  -->                    <!-- Временно отключено для работы с ПП -->
   </header>
-  <main class="page-main">
+  <main class="page-main container">
 
     <section class="promo">
       <header class="promo__header">
@@ -78,19 +78,19 @@
         <h2 class="advantages__title">Как это работает</h2>
 
         <ul class="advantages__list">
-          <li class="advantages__item advantages__item--nutrients">
+          <li class="advantages__item advantages__item--leaf">
             <p class="advantages__description">Функциональное питание содержит только полезные питательные
               вещества.</p>
           </li>
-          <li class="advantages__item advantages__item--quick-cooking">
+          <li class="advantages__item advantages__item--powder">
             <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить
               кипятком и готово.</p>
           </li>
-          <li class="advantages__item advantages__item--changing-food">
+          <li class="advantages__item advantages__item--dining">
             <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное
               питание.</p>
           </li>
-          <li class="advantages__item advantages__item--efficiency">
+          <li class="advantages__item advantages__item--clock">
             <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего
               питомца!</p>
           </li>
@@ -139,26 +139,19 @@
         <div class="contacts__address">
           <h2 class="visually-hidden">Контактная информация</h2>
 
-          <h3 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h3>    <!-- Попробовать ещё раз подобрать паддинги и маргины, без <br> не получилось :( -->
+          <h3 class="contacts__title">Приглашаем к <br> сотрудничеству дилеров!</h3>    <!-- Попробовать ещё раз подобрать паддинги и маргины, без <br> не получилось :( -->
           <p class="contacts__text">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
         </div>
         <div class="contacts__map">
-
-          <!-- Карта сделана фоновым изображение, но как и в блоке .promo не могу понять как работать с путями -->
-
-          <!-- <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" width="320" height="363" alt="Изображение карты с указанием адреса"> -->
-          <!-- <iframe
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.5979569536785!2d30.32267188939105!3d59.938813220090566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0LjQvdGC0LXRgNCw0LrRgtC40LLQvdCw0Y8g0LrQsNGA0YLQsCDRj9C90LTQtdC60YEg0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8sINC0LiAxOS84ICAg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1563076568662!5m2!1sru!2sru"
-            width="320" height="363" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-
+          <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" width="320" height="363" alt="Изображение карты с указанием адреса">
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="page-footer">                                         <!-- Фон не растягивается на всю ширину -->
+  <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__header">
         <a class="page-footer__logo-text">
@@ -172,19 +165,18 @@
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
-          </li>
-          <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в инстаграме</span></a>
           </li>
-
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+          </li>
         </ul>
       </div>
 
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <!-- Картинку-логотип Академии не смогла найти -->
+          <img class="copyright__logo-img" src="img/logo-academy.svg" width="" height="" alt="Логотип академии">
         </a>
       </div>
     </div>

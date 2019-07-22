@@ -5,20 +5,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 320px;
+  height: 69px;
+
+  background-color: @white;
 }
 
 .page-header__logo {
   display: block;
 
   width: 192px;
-  min-height: 38px;
-  margin: 14px auto 16px 22px;
+  margin: 15px auto 11px 22px;
 }
 
 .page-header__toogle {
   display: block;
+  width: 45px;
+  min-height: 40px;
+  margin: 17px 20px 12px auto;
+  background-color: white;
+  border: none;
+}
 
-  width: 25px;
-  min-height: 18px;
-  margin: 23px 20px 23px auto;
+.page-header__toogle::before {
+  position: absolute;
+  content: " ";
+  width: 24px;
+  height: 18px;
+  margin-top: -12px;
+  margin-left: -10px;
+
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
 }

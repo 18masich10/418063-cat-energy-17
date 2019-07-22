@@ -4,60 +4,58 @@
 .promo {
   position: relative;
   min-height: 505px;
-
-  background-image: url("../../img/index-background-mobile@1x.jpg");
+  margin-bottom: 28px;
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  // Разобраться с путями, в .css файле данный путь не проходит из-за вложенности папок
 }
 
 .promo__header {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   min-height: 165px;
 }
 
 .promo__title {
   display: block;
   padding: 27px;
-  margin-left: 3px;
-
+  margin-top: -1px;
+  margin-left: 4px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
   text-align: center;
-  //color: @white;
-  // временно без фона
+  color: @white;
 }
 
 .promo__slogan {
   display: block;
-  margin-top: -26px;
-  margin-left: 1px;
-
+  margin-top: -34px;
+  margin-left: 62px;
   font-size: @baseFontSize;
   line-height: 14px;
   font-weight: @baseFontWeight;
   text-align: center;
   text-transform: uppercase;
-  //color: @white;
-  // временно без фона
+  color: @white;
 }
 
 .promo__img {
   display: block;
-  min-height: 271px;
-  margin: -12px 22px;
+  margin-left: 22px;
 }
 
 .promo__button {
   display: block;
-  margin: 23px;
+  margin: 11px 9px 9px 12px;
   padding: 5px;
 }
 
 .promo__link {
   display: block;
+  width: 261px;
   padding: 12px 10px;
-  margin: -14px -9px;
+  margin: -14px -9px -14px 4px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
