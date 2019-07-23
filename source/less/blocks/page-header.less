@@ -3,25 +3,22 @@
 
 .page-header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  width: 320px;
-  height: 69px;
-
-  background-color: @white;
+  height: 67px; // временно для сетки
+  background-color: @bg-white;
 }
 
 .page-header__logo {
   display: block;
-
   width: 192px;
+  height: 40px; // временно для сетки
   margin: 15px auto 11px 22px;
 }
 
 .page-header__toogle {
   display: block;
   width: 45px;
-  min-height: 40px;
+  height: 40px;
   margin: 17px 20px 12px auto;
   background-color: white;
   border: none;
@@ -37,4 +34,33 @@
 
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    width: 708px;
+    height: 100px; // временно для сетки
+    margin: 0 auto;
+  }
+
+  .page-header__logo {
+    display: block;
+    width: 195px;
+    height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1300px;
+    height: 125px; // временно для сетки
+  }
+
+  .page-header__logo {
+    display: block;
+    width: 210px;
+    height: 65px;
+  }
 }

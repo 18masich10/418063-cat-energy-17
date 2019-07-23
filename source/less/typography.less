@@ -6,6 +6,7 @@
 // ------------------------------------------
 
 /* oswald-regular - latin */
+
 @font-face {
   font-family: "Oswald";
   font-style: normal;
@@ -100,34 +101,33 @@
 //}
 
 body {
-  min-width: 320px;
+  width: 320px;
   margin: 0 auto;
 
-  font-family: @baseFont;
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
+  font-family: @basefont;
+  font-size: @basefontsize;
+  line-height: @baselineheight;
 
   text-transform: none;
 
-  color: @black;
+  color: @col-black;
   background: blue;
-  }
+}
 
 @media (min-width: @tablet-width) {
   body {
     width: 640px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   body {
     width: 960px;
+    margin: 0 auto;
   }
 }
 
-@media (min-width: @tablet-width) {
-  
-}
 a {
   text-decoration: none;
 }

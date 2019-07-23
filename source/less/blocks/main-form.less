@@ -3,7 +3,7 @@
 
 .form {
   width: 320px;
-  background-color: @white;
+  background-color: @bg-white;
 }
 
 .form__title {
@@ -35,19 +35,20 @@
   display: block;
   width: 294px;
   border: none;
-}
 
-.form__fieldset {
   &--data {
     min-height: 190px;
   }
+
   &--diet {
     min-height: 137px;
   }
+
   &--contacts {
     min-height: 197px;
     margin-top: 22px;
   }
+
   &--extra {
     min-height: 226px;
   }
@@ -63,6 +64,7 @@
     margin-top: 14px;
     margin-bottom: 15px;
   }
+
   &--slim,
   &--pro,
   &--advice,
@@ -74,33 +76,56 @@
     width: 285px;
     height: 28px;
   }
+
   &--slim {
     margin-top: 14px;
     margin-bottom: 10px;
   }
+
   &--pro {
     margin-top: 14px;
     margin-bottom: 15px;
   }
+
   &--advice {
     margin-top: 14px;
     margin-bottom: 15px;
   }
+
   &--sweetener {
     margin-top: 28px;
     margin-bottom: 15px;
   }
+
   &--water {
     margin-top: 16px;
     margin-bottom: 15px;
   }
+
   &--milk {
     margin-top: 16px;
     margin-bottom: 15px;
   }
+
   &--vitamins {
     height: 24px;
     margin-top: 16px;
+    margin-bottom: 15px;
+  }
+
+  &--email-user {
+    display: flex;
+    width: 285px;
+    height: 44px;
+    margin-top: 23px;
+    margin-bottom: 15px;
+  }
+
+  &--phone-user {
+    display: flex;
+    width: 285px;
+    height: 44px;
+    margin-top: 18px;
     margin-bottom: 15px;
   }
 }
@@ -117,15 +142,19 @@
     line-height: 18px;
     text-transform: uppercase;
   }
+
   &--name {
     width: 53px;
   }
+
   &--weight {
     width: 78px;
   }
+
   &--years {
     width: 110px;
   }
+
   &--slim,
   &--pro,
   &--advice {
@@ -136,15 +165,19 @@
     font-size: 16px;
     text-transform: uppercase;
   }
+
   &--slim {
     margin-top: 4px;
   }
+
   &--pro {
     margin-top: 4px;
   }
+
   &--advice {
     margin-top: 3px;
   }
+
   &--email-user,
   &--phone-user {
     display: block;
@@ -152,18 +185,21 @@
     line-height: 18px;
     text-transform: uppercase;
   }
+
   &--email-user {
     width: 92px;
     height: 31px;
     margin-top: 15px;
     margin-left: 5px;
   }
+
   &--phone-user {
     width: 82px;
     height: 43px;
     margin-top: 12px;
     margin-left: 5px;
   }
+
   &--sweetener,
   &--water,
   &--milk,
@@ -172,21 +208,24 @@
     width: 270px;
     height: 24px;
     margin-left: 10px;
-
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
   }
+
   &--sweetener {
     margin-top: 4px;
   }
+
   &--water {
     margin-top: 3px;
   }
+
   &--milk {
     margin-top: 1px;
     margin-left: 12px;
   }
+
   &--vitamins {
     margin-top: -1px;
     margin-left: 12px;
@@ -202,15 +241,19 @@
     font-size: 16px;
     text-transform: uppercase;
   }
+
   &--text1 {
     width: 209px;
   }
+
   &--text2 {
     width: 186px;
   }
+
   &--text3 {
     width: 152px;
   }
+
   &--radio1,
   &--radio2,
   &--radio3 {
@@ -219,15 +262,19 @@
     height: 29px;
     margin-left: 2px;
   }
+
   &--radio1 {
     margin-top: -2px;
   }
+
   &--radio2 {
     margin-top: -1px;
   }
+
   &--radio3 {
     margin-top: -2px;
   }
+
   &--text4,
   &--text5 {
     display: block;
@@ -235,16 +282,19 @@
     font-size: 16px;
     text-transform: uppercase;
   }
+
   &--text4 {
     width: 229px;
     padding-left: 13px;
     margin-top: 3px;
   }
+
   &--text5 {
     width: 147px;
     padding-left: 14px;
     margin-top: 0;
   }
+
   &--textarea {
     display: block;
     width: 260px;
@@ -257,6 +307,7 @@
     font-size: 16px;
     text-transform: uppercase;
   }
+
   &--checkbox1,
   &--checkbox2,
   &--checkbox3,
@@ -265,18 +316,22 @@
     width: 42px;
     height: 29px;
   }
+
   &--checkbox1 {
     margin-top: 0;
     margin-left: 5px;
   }
+
   &--checkbox2 {
     margin-top: -1px;
     margin-left: 5px;
   }
+
   &--checkbox3 {
     margin-top: -3px;
     margin-left: 4px;
   }
+
   &--checkbox4 {
     margin-top: -5px;
     margin-left: 4px;
@@ -291,23 +346,6 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: none;
-  }
-
-.form__item {
-  &--email-user {
-    display: flex;
-    width: 285px;
-    height: 44px;
-    margin-top: 23px;
-    margin-bottom: 15px;
-  }
-  &--phone-user {
-    display: flex;
-    width: 285px;
-    height: 44px;
-    margin-top: 18px;
-    margin-bottom: 15px;
-  }
 }
 
 .button {
@@ -315,12 +353,14 @@
   &--phone-user {
     display: block;
     height: 42px;
-    background-color: @white;
+    background-color: @bg-white;
   }
+
   &--email-user {
     width: 55px;
     margin-top: 3px;
   }
+
   &--email-user::before {
     position: absolute;
     content: " ";
@@ -332,10 +372,12 @@
     background-image: url("../img/icon-mail.svg");
     background-repeat: no-repeat;
   }
+
   &--phone-user {
     width: 45px;
     margin-top: 0;
   }
+
   &--phone-user::before {
     position: absolute;
     content: " ";
@@ -343,7 +385,6 @@
     margin-left: -10px;
     margin-top: -9px;
     height: 35px;
-
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
   }
@@ -353,14 +394,13 @@
   display: block;
   width: 283px;
   height: 42px;
-
   padding: 5px 24px;
   margin-top: 8px;
   margin-left: 21px;
   margin-bottom: 8px;
   font-size: 16px;
   text-transform: uppercase;
-  background-color: @green;
+  background-color: @bg-green;
 }
 
 .form__small {
@@ -372,7 +412,7 @@
     margin-left: 76px;
     margin-top: 5px;
     margin-bottom: 14px;
-    font-family: @secondFont;
+    font-family: @secondfont;
     font-size: 14px;
     text-transform: none;
   }

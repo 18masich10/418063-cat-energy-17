@@ -1,5 +1,6 @@
 // Style.less для блока advantages
 //--------------------------------
+
 .advantages__wrapper {
   width: 280px;
   min-height: 450px;
@@ -11,9 +12,9 @@
   margin-top: -31px;
   margin-bottom: 0;
   margin-left: -8px;
-  font-family: @baseFont;
+  font-family: @basefont;
   font-size: 36px;
-  font-weight: @baseFontWeight;
+  font-weight: @basefontweight;
   line-height: 60px;
   text-transform: none;
 }
@@ -30,49 +31,35 @@
   width: 200px;
   padding: 3px;
   margin: 7px -5px -15px auto;
-  font-family: @secondFont;
-}
+  font-family: @secondfont;
 
-.advantages__item {
+  &--leaf::before,
+  &--powder::before,
+  &--dining::before,
+  &--clock::before {
+    display: block;
+    content: " ";
+    width: 55px;
+    height: 55px;
+    margin-top: 16px;
+    margin-left: -75px;
+    background-color: @bg-green;
+    background-repeat: no-repeat;
+  }
 
   &--leaf::before {
-    content: " ";
-    width: 55px;
-    height: 55px;
-    margin-top: 16px;
-    margin-left: -75px;
-    background-color: @green;
-    background-repeat: no-repeat;
     background-image: url("../img/advantage-leaf@1x.png");
   }
+
   &--powder::before {
-    content: " ";
-    width: 55px;
-    height: 55px;
-    margin-top: 16px;
-    margin-left: -75px;
-    background-color: @green;
-    background-repeat: no-repeat;
     background-image: url("../img/advantage-powder@1x.png");
   }
+
   &--dining::before {
-    content: " ";
-    width: 55px;
-    height: 55px;
-    margin-top: 16px;
-    margin-left: -75px;
-    background-color: @green;
-    background-repeat: no-repeat;
     background-image: url("../img/advantage-dining@1x.png");
   }
+
   &--clock::before {
-    content: " ";
-    width: 55px;
-    height: 55px;
-    margin-top: 16px;
-    margin-left: -75px;
-    background-color: @green;
-    background-repeat: no-repeat;
     background-image: url("../img/advantage-clock@1x.png");
   }
 }
