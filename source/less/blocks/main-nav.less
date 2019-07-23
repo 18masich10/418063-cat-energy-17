@@ -1,0 +1,44 @@
+// Style.less для блока main-nav
+//-------------------------------
+
+.main-nav {
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  min-height: 200px;
+}
+
+.main-nav__list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list__item {
+  display: block;
+  width: 200px;
+  height: 67px;  // временно для сетки
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .site__list {
+    width: 440px;
+    height: 60px;  // временно для сетки
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 545px;
+    height: 65px; // временно для сетки
+  }
+}
