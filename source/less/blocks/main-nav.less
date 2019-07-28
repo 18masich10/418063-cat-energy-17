@@ -3,43 +3,195 @@
 
 .main-nav {
   display: block;
-  width: 320px;
   margin: 0 auto;
-  min-height: 200px;
+}
+
+.main-nav__toogle {
+  display: block;
+  width: 45px;
+  height: 40px;
+  margin: -50px 13px 10px auto;
+  border: none;
+}
+
+.mai-nav__toogle::before {
+  display: block;
+  position: absolute;
+  content: " ";
+  width: 24px;
+  height: 18px;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
 }
 
 .main-nav__list {
   display: flex;
   flex-direction: column;
+  width: 320px;
+  height: 200px;
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center;
+  //background-color: @bg-white;           отключение фона, продумать альтернативу
 }
 
 .site-list__item {
   display: block;
   width: 200px;
-  height: 67px;  // временно для сетки
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 3px 3px;
+  margin-top: 22px;
+  margin-left: 58px;
+  font-family: @basefont;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: @col-black;
 }
 
+.site-list__item:nth-child(1) {
+  margin-top: 17px;
+  margin-left: 57px;
+}
+
+.site-list__item:nth-child(2),
+.site-list__item:nth-child(3) {
+  margin-top: 40px;
+  margin-left: 57px;
+}
+
+
 @media (min-width: @tablet-width) {
-  .site__list {
-    width: 440px;
-    height: 60px;  // временно для сетки
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 505px;
+    height: 95px;    // временно для сетки
+  }
+
+  .main-nav__toogle {
+    display: none;
   }
 
   .main-nav__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 480px;
+    height: 95px;
+    margin-left: 7px;
+  }
+
+  .site-list__item {
+    display: block;
+    width: 165px;
+    height: 30px;   // временно для сетки
+    padding: 26px 2px;
+    margin-left: 29px;
+    margin-top: 19px;
+    color: @col-black;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .site-list__item:nth-child(1) {
+    display: block;
+    width: 86px;
+    height: 30px;   // временно для сетки
+    padding: 10px 2px;
+    margin-left: 32px;
+    margin-top: 34px;
+    color: @col-black;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .site-list__item:nth-child(2) {
+    display: block;
+    width: 165px;
+    height: 30px;    // временно для сетки
+    padding: 10px 2px;
+    margin-left: 14px;
+    margin-top: 34px;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: @col-black;
+  }
+
+  .site-list__item:nth-child(3) {
+    display: block;
+    width: 165px;
+    height: 30px;   // временно для сетки
+    padding: 10px 0;
+    margin-left: 22px;
+    margin-top: 34px;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: @col-black;
   }
 }
 
-
 @media (min-width: @desktop-width) {
-  .site-list {
-    width: 545px;
-    height: 65px; // временно для сетки
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 650px;
+    height: 125px;  // временно для сетки
+  }
+
+  .main-nav__toogle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px;
+    height: 94px; // временно для сетки
+    margin-top: 31px;
+    margin-left: 136px;
+    z-index: 2;
+  }
+
+  .site-list__item:nth-child(1) {
+    display: block;
+    width: 86px;
+    height: 30px;   // временно для сетки
+    padding: 10px 2px;
+    margin-left: 47px;
+    margin-top: 34px;
+    color: @col-white;
+    font-size: 20px;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+
+  .site-list__item:nth-child(2) {
+    display: block;
+    width: 190px;
+    height: 30px;    // временно для сетки
+    padding: 10px 2px;
+    margin-left: 13px;
+    margin-top: 34px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: @col-white;
+  }
+
+  .site-list__item:nth-child(3) {
+    display: block;
+    width: 177px;
+    height: 30px;   // временно для сетки
+    padding: 10px 0;
+    margin-left: 19px;
+    margin-top: 34px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: @col-white;
   }
 }
