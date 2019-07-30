@@ -3,22 +3,8 @@
 
 .promo {
   position: relative;
-  height: 480px;
-  margin-bottom: 28px;
   background-color: @bg-white;
   background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-}
-
-.promo::before {
-  display: block;
-  position: absolute;
-  content: " ";
-  width: 280px;
-  height: 271px;
-  margin-top: 166px;
-  margin-left: 20px;
-  background-image: url("../img/index-can-mobile@1x.png");
   background-repeat: no-repeat;
 }
 
@@ -26,14 +12,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 197px;
 }
 
 .promo__title {
   display: block;
   padding: 27px;
-  margin-top: 0;
-  margin-left: 0;
+  margin-top: -3px;
+  margin-left: 3px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -44,7 +29,7 @@
 .promo__slogan {
   display: block;
   margin-top: -26px;
-  margin-left: 60px;
+  margin-left: 62px;
   font-size: @basefontsize;
   line-height: 14px;
   font-weight: @basefontweight;
@@ -53,12 +38,19 @@
   color: @col-white;
 }
 
+.promo__img {
+  display: block;
+  margin-top: 13px;
+  margin-left: 21px;
+}
+
 .promo__link {
   display: block;
   width: 260px;
   padding: 11px 10px;
-  margin-top: 288px;
-  margin-left: 19px;
+  margin-top: 3px;
+  margin-left: 21px;
+  margin-bottom: 23px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -72,42 +64,24 @@
   .promo {
     width: 768px;
     position: relative;
-    height: 854px;
     margin: 0;
     padding: 0;
-  }
-
-  .promo::before {
-    display: none;
   }
 
   .promo__header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 306px;
     margin: 0;
     background-color: @bg-white;
-  }
-
-  .promo__header::before {
-    display: block;
-    position: absolute;
-    content: " ";
-    width: 768px;
-    height: 607px;
-    margin-top: 246px;
-    margin-left: 28px;
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-repeat: no-repeat;
   }
 
   .promo__title {
     display: block;
     width: 451px;
     padding-top: 15px;
-    margin-top: 36px;
-    margin-left: 56px;
+    margin-top: 42px;
+    margin-left: 58px;
     font-size: 60px;
     line-height: 50px;
     font-weight: 700;
@@ -125,7 +99,7 @@
     display: block;
     padding: 10px;
     margin-top: -27px;
-    margin-left: 108px;
+    margin-left: 109px;
     font-size: 20px;
     line-height: 13px;
     font-weight: @basefontweight;
@@ -134,13 +108,20 @@
     color: @col-black;
   }
 
+  .promo__img {
+    display: block;
+    margin-top: -7px;
+    margin-left: 31px;
+  }
+
   .promo__link {
     display: block;
+    position: absolute;
     width: 241px;
     height: 20px;
     padding: 15px 1px;
-    margin-top: 22px;
-    margin-left: 117px;
+    margin-top: 281px;
+    margin-left: 120px;
     font-size: 20px;
     line-height: 18px;
     font-weight: @basefontweight;
@@ -148,13 +129,12 @@
     text-transform: uppercase;
     color: @col-white;
     background-color: @bg-green;
-    z-index: 2;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo {
-    width: 1440px;
+    width: 100%;
     position: relative;
     height: 570px;
     margin: 0;
@@ -182,25 +162,12 @@
     background-color: @bg-white;
   }
 
-  .promo__header::before {
-    display: block;
-    position: absolute;
-    content: " ";
-    width: 50%;
-    height: 607px;
-    right: 0;
-    margin-top: 15px;
-    margin-right: 160px;
-    background-image: url("../img/index-can-desktop@1x.png");
-    background-repeat: no-repeat;
-  }
-
   .promo__title {
     display: block;
     width: 451px;
     padding-top: 15px;
-    margin-top: 86px;
-    margin-left: 129px;
+    margin-top: 89px;
+    margin-left: 127px;
     font-size: 60px;
     line-height: 50px;
     font-weight: 700;
@@ -210,9 +177,10 @@
 
   .promo__slogan {
     display: block;
+    position: absolute;
     padding: 10px;
-    margin-top: -26px;
-    margin-right: 923px;
+    margin-top: 254px;
+    margin-left: 178px;
     font-size: 20px;
     line-height: 13px;
     font-weight: @basefontweight;
@@ -221,13 +189,20 @@
     color: @col-black;
   }
 
+  .promo__img {
+    display: block;
+    position: relative;
+    margin-top: -260px;
+    margin-left: 557px;
+  }
+
   .promo__link {
     display: block;
     width: 245px;
     height: 20px;
     padding: 15px 1px;
-    margin-top: 27px;
-    margin-right: 933px;
+    margin-top: 334px;
+    margin-left: 186px;
     font-size: 20px;
     line-height: 18px;
     font-weight: @basefontweight;

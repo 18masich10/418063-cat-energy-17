@@ -3,5 +3,16 @@
 
 .page-main {
   width: 320px;
-  min-height: 2200px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: 100%;
+  }
 }
