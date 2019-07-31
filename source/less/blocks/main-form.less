@@ -9,9 +9,7 @@
 .form__title {
   display: block;
   width: 275px;
-  padding: 3px 3px;
-  margin-top: 12px;
-  margin-left: 17px;
+  padding: 0 5px 0 19px;
   font-size: 36px;
   line-height: 60px;
   text-transform: none;
@@ -20,9 +18,8 @@
 .form__text {
   display: block;
   width: 270px;
-  padding: 5px 5px;
-  margin-top: -7px;
-  margin-left: 16px;
+  padding: 0 5px 0 20px;
+  margin-top: -30px;
   text-transform: uppercase;
 }
 
@@ -32,9 +29,14 @@
 }
 
 .form__fieldset {
-  display: block;
-  width: 294px;
-  border: none;
+  &--data,
+  &--diet,
+  &--contacts,
+  &--extra {
+    display: block;
+    width: 294px;
+    border: none;
+  }
 
   &--data {
     min-height: 190px;
@@ -415,5 +417,874 @@
     font-family: @secondfont;
     font-size: 14px;
     text-transform: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 768px;
+    margin: 0;
+    background-color: @bg-white;
+  }
+
+  .form__title {
+    display: block;
+    width: 435px;
+    padding: 7px 5px 0 29px;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: none;
+  }
+
+  .form__text {
+    display: block;
+    width: 325px;
+    padding: 44px 5px 0 70px;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  .form__form {
+    display: block;
+    min-height: 1185px;
+  }
+
+  .form__fieldset {
+    &--data,
+    &--diet,
+    &--contacts,
+    &--extra {
+      display: block;
+      border: none;
+    }
+
+    &--data {
+      width: 745px;
+      min-height: 190px;
+    }
+
+    &--diet {
+      width: 607px;
+      min-height: 180px;
+      margin-top: 47px;
+      margin-left: 71px;
+      border: 1px solid #e7e7e7;
+    }
+
+    &--contacts {
+      width: 745px;
+      min-height: 290px;
+      margin-top: 60px;
+    }
+
+    &--extra {
+      width: 745px;
+      min-height: 260px;
+      margin-top: 28px;
+    }
+  }
+
+  .form__item {
+    &--name,
+    &--weight,
+    &--years {
+      display: flex;
+      width: 745px;
+      padding: 25px 0 0 1px;
+    }
+
+    &--name {
+      padding: 25px 0 0 1px;
+    }
+
+    &--weight {
+      padding: 18px 0 0 1px;
+    }
+
+    &--years {
+      padding: 19px 0 0 1px;
+    }
+
+    &--slim,
+    &--pro,
+    &--advice,
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: flex;
+      width: 285px;
+      height: 28px;
+    }
+
+    &--slim {
+      margin-top: 14px;
+      margin-bottom: 10px;
+    }
+
+    &--pro {
+      margin-top: 14px;
+      margin-bottom: 15px;
+    }
+
+    &--advice {
+      margin-top: 14px;
+      margin-bottom: 15px;
+    }
+
+    &--sweetener {
+      margin-top: 28px;
+      margin-bottom: 15px;
+    }
+
+    &--water {
+      margin-top: 16px;
+      margin-bottom: 15px;
+    }
+
+    &--milk {
+      margin-top: 16px;
+      margin-bottom: 15px;
+    }
+
+    &--vitamins {
+      height: 24px;
+      margin-top: 16px;
+      margin-bottom: 15px;
+    }
+
+    &--email-user {
+      display: flex;
+      width: 285px;
+      height: 44px;
+      margin-top: 23px;
+      margin-bottom: 15px;
+    }
+
+    &--phone-user {
+      display: flex;
+      width: 285px;
+      height: 44px;
+      margin-top: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .form__label {
+    &--name,
+    &--weight,
+    &--years {
+      display: block;
+      height: 44px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--name {
+      width: 53px;
+      padding: 8px 7px 0 53px;
+    }
+
+    &--weight {
+      width: 78px;
+      margin-top: 13px;
+      padding: 0 16px 0 53px;
+    }
+
+    &--years {
+      width: 120px;
+      padding: 0 12px 0 53px;
+      margin-top: 7px;
+    }
+
+    &--slim,
+    &--pro,
+    &--advice {
+      display: block;
+      width: 195px;
+      height: 25px;
+      margin-left: 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &--slim {
+      margin-top: 4px;
+    }
+
+    &--pro {
+      margin-top: 4px;
+    }
+
+    &--advice {
+      margin-top: 3px;
+    }
+
+    &--email-user,
+    &--phone-user {
+      display: block;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--email-user {
+      width: 92px;
+      margin-top: 15px;
+      margin-left: 5px;
+    }
+
+    &--phone-user {
+      width: 82px;
+      height: 43px;
+      margin-top: 12px;
+      margin-left: 5px;
+    }
+
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: block;
+      width: 270px;
+      height: 24px;
+      margin-left: 10px;
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--sweetener {
+      margin-top: 4px;
+    }
+
+    &--water {
+      margin-top: 3px;
+    }
+
+    &--milk {
+      margin-top: 1px;
+      margin-left: 12px;
+    }
+
+    &--vitamins {
+      margin-top: -1px;
+      margin-left: 12px;
+    }
+  }
+
+  .form__input {
+    &--text1,
+    &--text2,
+    &--text3 {
+      display: block;
+      height: 50px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e7e7e7;
+    }
+
+    &--text1 {
+      width: 540px;
+      padding: 2px 5px 0 21px;
+    }
+
+    &--text2 {
+      width: 515px;
+      margin-top: -3px;
+      padding: 0 0 0 18px;
+    }
+
+    &--text3 {
+      width: 475px;
+      padding: 0 0 0 18px;
+      margin-top: -10px;
+    }
+
+    &--radio1,
+    &--radio2,
+    &--radio3 {
+      display: block;
+      width: 40px;
+      height: 29px;
+      margin-left: 2px;
+    }
+
+    &--radio1 {
+      margin-top: -2px;
+    }
+
+    &--radio2 {
+      margin-top: -1px;
+    }
+
+    &--radio3 {
+      margin-top: -2px;
+    }
+
+    &--text4,
+    &--text5 {
+      display: block;
+      height: 36px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &--text4 {
+      width: 229px;
+      padding-left: 13px;
+      margin-top: 3px;
+    }
+
+    &--text5 {
+      width: 147px;
+      padding-left: 14px;
+      margin-top: 0;
+    }
+
+    &--textarea {
+      display: block;
+      width: 608px;
+      height: 155px;
+      margin-bottom: 14px;
+      padding-top: 14px;
+      padding-left: 17px;
+      margin-left: 57px;
+      margin-top: 77px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e7e7e7;
+    }
+
+    &--checkbox1,
+    &--checkbox2,
+    &--checkbox3,
+    &--checkbox4 {
+      display: block;
+      width: 42px;
+      height: 29px;
+    }
+
+    &--checkbox1 {
+      margin-top: 0;
+      margin-left: 5px;
+    }
+
+    &--checkbox2 {
+      margin-top: -1px;
+      margin-left: 5px;
+    }
+
+    &--checkbox3 {
+      margin-top: -3px;
+      margin-left: 4px;
+    }
+
+    &--checkbox4 {
+      margin-top: -5px;
+      margin-left: 4px;
+    }
+  }
+
+  .form__legend {
+    display: block;
+    width: 575px;
+    padding: 20px 5px 0 54px;
+    font-size: 36px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  .button {
+    &--email-user,
+    &--phone-user {
+      display: block;
+      height: 42px;
+      background-color: @bg-white;
+    }
+
+    &--email-user {
+      width: 55px;
+      margin-top: 3px;
+    }
+
+    &--email-user::before {
+      position: absolute;
+      content: " ";
+      width: 18px;
+      margin-left: -11px;
+      margin-top: -7px;
+      height: 20px;
+
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--phone-user {
+      width: 45px;
+      margin-top: 0;
+    }
+
+    &--phone-user::before {
+      position: absolute;
+      content: " ";
+      width: 20px;
+      margin-left: -10px;
+      margin-top: -9px;
+      height: 35px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .form__button {
+    display: block;
+    width: 283px;
+    height: 48px;
+    padding: 5px 24px;
+    margin-top: 0;
+    margin-left: 69px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: @bg-green;
+  }
+
+  .form__small {
+    &--bottom {
+      display: block;
+      width: 170px;
+      height: 30px;
+      padding: 8px 10px;
+      margin-left: 76px;
+      margin-top: 5px;
+      margin-bottom: 14px;
+      font-family: @secondfont;
+      font-size: 14px;
+      text-transform: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 320px;
+    background-color: @bg-white;
+  }
+
+  .form__title {
+    display: block;
+    width: 275px;
+    padding: 0 5px 0 19px;
+    font-size: 36px;
+    line-height: 60px;
+    text-transform: none;
+  }
+
+  .form__text {
+    display: block;
+    width: 270px;
+    padding: 0 5px 0 20px;
+    margin-top: -30px;
+    text-transform: uppercase;
+  }
+
+  .form__form {
+    display: block;
+    min-height: 1185px;
+  }
+
+  .form__fieldset {
+    &--data,
+    &--diet,
+    &--contacts,
+    &--extra {
+      display: block;
+      width: 294px;
+      border: none;
+    }
+
+    &--data {
+      min-height: 190px;
+    }
+
+    &--diet {
+      min-height: 137px;
+    }
+
+    &--contacts {
+      min-height: 197px;
+      margin-top: 22px;
+    }
+
+    &--extra {
+      min-height: 226px;
+    }
+  }
+
+  .form__item {
+    &--name,
+    &--weight,
+    &--years {
+      display: flex;
+      width: 285px;
+      height: 44px;
+      margin-top: 14px;
+      margin-bottom: 15px;
+    }
+
+    &--slim,
+    &--pro,
+    &--advice,
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: flex;
+      width: 285px;
+      height: 28px;
+    }
+
+    &--slim {
+      margin-top: 14px;
+      margin-bottom: 10px;
+    }
+
+    &--pro {
+      margin-top: 14px;
+      margin-bottom: 15px;
+    }
+
+    &--advice {
+      margin-top: 14px;
+      margin-bottom: 15px;
+    }
+
+    &--sweetener {
+      margin-top: 28px;
+      margin-bottom: 15px;
+    }
+
+    &--water {
+      margin-top: 16px;
+      margin-bottom: 15px;
+    }
+
+    &--milk {
+      margin-top: 16px;
+      margin-bottom: 15px;
+    }
+
+    &--vitamins {
+      height: 24px;
+      margin-top: 16px;
+      margin-bottom: 15px;
+    }
+
+    &--email-user {
+      display: flex;
+      width: 285px;
+      height: 44px;
+      margin-top: 23px;
+      margin-bottom: 15px;
+    }
+
+    &--phone-user {
+      display: flex;
+      width: 285px;
+      height: 44px;
+      margin-top: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .form__label {
+    &--name,
+    &--weight,
+    &--years {
+      display: block;
+      height: 44px;
+      margin-top: 11px;
+      margin-left: 5px;
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--name {
+      width: 53px;
+    }
+
+    &--weight {
+      width: 78px;
+    }
+
+    &--years {
+      width: 110px;
+    }
+
+    &--slim,
+    &--pro,
+    &--advice {
+      display: block;
+      width: 195px;
+      height: 25px;
+      margin-left: 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &--slim {
+      margin-top: 4px;
+    }
+
+    &--pro {
+      margin-top: 4px;
+    }
+
+    &--advice {
+      margin-top: 3px;
+    }
+
+    &--email-user,
+    &--phone-user {
+      display: block;
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--email-user {
+      width: 92px;
+      height: 31px;
+      margin-top: 15px;
+      margin-left: 5px;
+    }
+
+    &--phone-user {
+      width: 82px;
+      height: 43px;
+      margin-top: 12px;
+      margin-left: 5px;
+    }
+
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: block;
+      width: 270px;
+      height: 24px;
+      margin-left: 10px;
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--sweetener {
+      margin-top: 4px;
+    }
+
+    &--water {
+      margin-top: 3px;
+    }
+
+    &--milk {
+      margin-top: 1px;
+      margin-left: 12px;
+    }
+
+    &--vitamins {
+      margin-top: -1px;
+      margin-left: 12px;
+    }
+  }
+
+  .form__input {
+    &--text1,
+    &--text2,
+    &--text3 {
+      display: block;
+      padding-left: 13px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &--text1 {
+      width: 209px;
+    }
+
+    &--text2 {
+      width: 186px;
+    }
+
+    &--text3 {
+      width: 152px;
+    }
+
+    &--radio1,
+    &--radio2,
+    &--radio3 {
+      display: block;
+      width: 40px;
+      height: 29px;
+      margin-left: 2px;
+    }
+
+    &--radio1 {
+      margin-top: -2px;
+    }
+
+    &--radio2 {
+      margin-top: -1px;
+    }
+
+    &--radio3 {
+      margin-top: -2px;
+    }
+
+    &--text4,
+    &--text5 {
+      display: block;
+      height: 36px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &--text4 {
+      width: 229px;
+      padding-left: 13px;
+      margin-top: 3px;
+    }
+
+    &--text5 {
+      width: 147px;
+      padding-left: 14px;
+      margin-top: 0;
+    }
+
+    &--textarea {
+      display: block;
+      width: 260px;
+      height: 134px;
+      margin-bottom: 14px;
+      padding-top: 11px;
+      padding-left: 15px;
+      margin-left: 6px;
+      margin-top: 26px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &--checkbox1,
+    &--checkbox2,
+    &--checkbox3,
+    &--checkbox4 {
+      display: block;
+      width: 42px;
+      height: 29px;
+    }
+
+    &--checkbox1 {
+      margin-top: 0;
+      margin-left: 5px;
+    }
+
+    &--checkbox2 {
+      margin-top: -1px;
+      margin-left: 5px;
+    }
+
+    &--checkbox3 {
+      margin-top: -3px;
+      margin-left: 4px;
+    }
+
+    &--checkbox4 {
+      margin-top: -5px;
+      margin-left: 4px;
+    }
+  }
+
+  .form__legend {
+    display: block;
+    width: 218px;
+    padding: 3px 3px;
+    margin-left: 2px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  .button {
+    &--email-user,
+    &--phone-user {
+      display: block;
+      height: 42px;
+      background-color: @bg-white;
+    }
+
+    &--email-user {
+      width: 55px;
+      margin-top: 3px;
+    }
+
+    &--email-user::before {
+      position: absolute;
+      content: " ";
+      width: 18px;
+      margin-left: -11px;
+      margin-top: -7px;
+      height: 20px;
+
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--phone-user {
+      width: 45px;
+      margin-top: 0;
+    }
+
+    &--phone-user::before {
+      position: absolute;
+      content: " ";
+      width: 20px;
+      margin-left: -10px;
+      margin-top: -9px;
+      height: 35px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .form__button {
+    display: block;
+    width: 283px;
+    height: 42px;
+    padding: 5px 24px;
+    margin-top: 8px;
+    margin-left: 21px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: @bg-green;
+  }
+
+  .form__small {
+    &--bottom {
+      display: block;
+      width: 170px;
+      height: 30px;
+      padding: 8px 10px;
+      margin-left: 76px;
+      margin-top: 5px;
+      margin-bottom: 14px;
+      font-family: @secondfont;
+      font-size: 14px;
+      text-transform: none;
+    }
   }
 }
