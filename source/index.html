@@ -15,7 +15,7 @@
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип-картинка «Кэт Энерджи»">
       </picture>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened">
       <button class="main-nav__toogle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -34,7 +34,7 @@
       </ul>
     </nav>
   </header>
-  <main class="page-main container">
+  <main class="page-main">
 
     <section class="promo">
       <header class="promo__header">
@@ -122,14 +122,14 @@
           <h3 class="before-after__title-cost">Затраты на питание:<span class="before-after__cost-number"> 15 000 руб.</span></h3>
         </div>
         <ul class="before-after__image">
-          <li>
-            <picture class="before-after__image">
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-              <img class="before-after__image-before" src="img/before-mobile@1x.png" width="320" height="240" alt="Изображение кота «До»">
-            </picture>
+          <!--  <li>
+             <picture class="before-after__image">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img class="before-after__image-before" src="img/before-mobile@1x.png" width="320" height="240" alt="Изображение кота «До»">
+              </picture>
 
-          </li>
+          </li> -->
           <!-- <li>
             <picture class="before-after__image">
               <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1300w">
@@ -179,14 +179,14 @@
 
       <div class="page-footer__social social">
         <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
+          <li class="social__item social__item--vkontakte">
+            <a href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в Инстаграме</span></a>
+          <li class="social__item social__item--instagram">
+            <a href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в Инстаграме</span></a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+          <li class="social__item social__item--facebook">
+            <a href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
           </li>
         </ul>
       </div>
@@ -194,7 +194,7 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo-img" src="#" width=" " height=" " alt="Логотип академии">
+          <img class="copyright__logo-img" src="img/logo-academy.svg" width="30" height="40" alt="Логотип академии">
         </a>
       </div>
     </div>
