@@ -9,9 +9,8 @@
 .form__title {
   display: block;
   width: 275px;
-  padding: 3px 3px;
-  margin-top: 12px;
-  margin-left: 17px;
+  margin: 0;
+  padding: 14px 0 0 18px;
   font-size: 36px;
   line-height: 60px;
   text-transform: none;
@@ -20,21 +19,29 @@
 .form__text {
   display: block;
   width: 270px;
-  padding: 5px 5px;
-  margin-top: -7px;
-  margin-left: 16px;
+  padding: 24px 5px 0 18px;
+  margin: 0;
   text-transform: uppercase;
 }
 
 .form__form {
   display: block;
   min-height: 1185px;
+  margin: 0 20px;
 }
 
 .form__fieldset {
-  display: block;
-  width: 294px;
-  border: none;
+  &--data,
+  &--diet,
+  &--contacts,
+  &--about-me,
+  &--extra {
+    display: block;
+    width: 280px;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
 
   &--data {
     min-height: 190px;
@@ -46,11 +53,35 @@
 
   &--contacts {
     min-height: 197px;
-    margin-top: 22px;
   }
 
   &--extra {
     min-height: 226px;
+  }
+}
+
+.form__legend {
+  &--contacts,
+  &--about-me,
+  &--extra {
+    display: block;
+    width: 185px;
+    margin-left: -3px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  &--contacts {
+    padding: 40px 0 0 0;
+  }
+
+  &--about-me {
+    padding: 28px 0 35px 0;
+  }
+
+  &--extra {
+    padding: 30px 0 0 0;
   }
 }
 
@@ -59,74 +90,53 @@
   &--weight,
   &--years {
     display: flex;
-    width: 285px;
+    width: 279px;
     height: 44px;
-    margin-top: 14px;
     margin-bottom: 15px;
+  }
+
+  &--name {
+    margin-top: 39px;
   }
 
   &--slim,
   &--pro,
-  &--advice,
+  &--advice {
+    display: flex;
+    width: 270px;
+    height: 28px;
+    padding-left: 13px;
+    padding-bottom: 15px;
+  }
+
+  &--slim {
+    padding-top: 27px;
+  }
+
   &--sweetener,
   &--water,
   &--milk,
   &--vitamins {
     display: flex;
-    width: 285px;
+    width: 270px;
     height: 28px;
-  }
-
-  &--slim {
-    margin-top: 14px;
-    margin-bottom: 10px;
-  }
-
-  &--pro {
-    margin-top: 14px;
-    margin-bottom: 15px;
-  }
-
-  &--advice {
-    margin-top: 14px;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
+    margin-left: -9px;
   }
 
   &--sweetener {
-    margin-top: 28px;
-    margin-bottom: 15px;
+    padding-top: 35px;
   }
 
-  &--water {
-    margin-top: 16px;
-    margin-bottom: 15px;
-  }
-
-  &--milk {
-    margin-top: 16px;
-    margin-bottom: 15px;
-  }
-
-  &--vitamins {
-    height: 24px;
-    margin-top: 16px;
-    margin-bottom: 15px;
-  }
-
-  &--email-user {
-    display: flex;
-    width: 285px;
-    height: 44px;
-    margin-top: 23px;
-    margin-bottom: 15px;
-  }
-
+  &--email-user,
   &--phone-user {
     display: flex;
     width: 285px;
     height: 44px;
-    margin-top: 18px;
-    margin-bottom: 15px;
+  }
+
+  &--email-user {
+    padding: 33px 0 16px 13px;
   }
 }
 
@@ -135,9 +145,9 @@
   &--weight,
   &--years {
     display: block;
-    height: 44px;
-    margin-top: 11px;
-    margin-left: 5px;
+    height: 32px;
+    padding: 13px 0 0 0;
+    margin-left: -3px;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
@@ -161,43 +171,29 @@
     display: block;
     width: 195px;
     height: 25px;
-    margin-left: 10px;
+    padding: 9px 0 0 10px;
+    margin: 0;
     font-size: 16px;
     text-transform: uppercase;
-  }
-
-  &--slim {
-    margin-top: 4px;
-  }
-
-  &--pro {
-    margin-top: 4px;
-  }
-
-  &--advice {
-    margin-top: 3px;
   }
 
   &--email-user,
   &--phone-user {
     display: block;
+    margin-left: -16px;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
   }
 
   &--email-user {
-    width: 92px;
-    height: 31px;
-    margin-top: 15px;
-    margin-left: 5px;
+    width: 61px;
+    padding: 13px 0 0 0;
   }
 
   &--phone-user {
-    width: 82px;
-    height: 43px;
-    margin-top: 12px;
-    margin-left: 5px;
+    width: 78px;
+    padding: 12px 0 0 13px;
   }
 
   &--sweetener,
@@ -207,28 +203,10 @@
     display: block;
     width: 270px;
     height: 24px;
-    margin-left: 10px;
+    padding: 3px 0 0 13px;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
-  }
-
-  &--sweetener {
-    margin-top: 4px;
-  }
-
-  &--water {
-    margin-top: 3px;
-  }
-
-  &--milk {
-    margin-top: 1px;
-    margin-left: 12px;
-  }
-
-  &--vitamins {
-    margin-top: -1px;
-    margin-left: 12px;
   }
 }
 
@@ -240,18 +218,19 @@
     padding-left: 13px;
     font-size: 16px;
     text-transform: uppercase;
+    border: 1px solid #e6e6e6;
   }
 
   &--text1 {
-    width: 209px;
+    width: 212px;
   }
 
   &--text2 {
-    width: 186px;
+    width: 187px;
   }
 
   &--text3 {
-    width: 152px;
+    width: 156px;
   }
 
   &--radio1,
@@ -260,52 +239,38 @@
     display: block;
     width: 40px;
     height: 29px;
-    margin-left: 2px;
-  }
-
-  &--radio1 {
-    margin-top: -2px;
-  }
-
-  &--radio2 {
-    margin-top: -1px;
-  }
-
-  &--radio3 {
-    margin-top: -2px;
+    margin-top: 4px;
+    margin-left: -19px;
   }
 
   &--text4,
   &--text5 {
     display: block;
-    height: 36px;
+    height: 43px;
     font-size: 16px;
     text-transform: uppercase;
+    border: 1px solid #e6e6e6;
   }
 
   &--text4 {
-    width: 229px;
-    padding-left: 13px;
-    margin-top: 3px;
+    width: 203px;
+    padding: 0 0 0 16px;
   }
 
   &--text5 {
-    width: 147px;
-    padding-left: 14px;
-    margin-top: 0;
+    width: 188px;
+    padding: 0 0 0 14px;
   }
 
   &--textarea {
     display: block;
-    width: 260px;
-    height: 134px;
-    margin-bottom: 14px;
-    padding-top: 11px;
-    padding-left: 15px;
-    margin-left: 6px;
-    margin-top: 26px;
+    width: 265px;
+    height: 135px;
+    padding: 12px 0 0 12px;
+    margin: 0;
     font-size: 16px;
     text-transform: uppercase;
+    border: 1px solid #e6e6e6;
   }
 
   &--checkbox1,
@@ -315,37 +280,8 @@
     display: block;
     width: 42px;
     height: 29px;
+    margin: -1px 0 0 6px;
   }
-
-  &--checkbox1 {
-    margin-top: 0;
-    margin-left: 5px;
-  }
-
-  &--checkbox2 {
-    margin-top: -1px;
-    margin-left: 5px;
-  }
-
-  &--checkbox3 {
-    margin-top: -3px;
-    margin-left: 4px;
-  }
-
-  &--checkbox4 {
-    margin-top: -5px;
-    margin-left: 4px;
-  }
-}
-
-.form__legend {
-  display: block;
-  width: 218px;
-  padding: 3px 3px;
-  margin-left: 2px;
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: none;
 }
 
 .button {
@@ -353,12 +289,10 @@
   &--phone-user {
     display: block;
     height: 42px;
+    margin-top: 2px;
+    margin-left: -31px;
     background-color: @bg-white;
-  }
-
-  &--email-user {
-    width: 55px;
-    margin-top: 3px;
+    border: none;
   }
 
   &--email-user::before {
@@ -373,18 +307,13 @@
     background-repeat: no-repeat;
   }
 
-  &--phone-user {
-    width: 45px;
-    margin-top: 0;
-  }
-
   &--phone-user::before {
     position: absolute;
     content: " ";
     width: 20px;
     margin-left: -10px;
     margin-top: -9px;
-    height: 35px;
+    height: 25px;
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
   }
@@ -395,9 +324,9 @@
   width: 283px;
   height: 42px;
   padding: 5px 24px;
-  margin-top: 8px;
-  margin-left: 21px;
-  margin-bottom: 8px;
+  margin-top: 17px;
+  margin-left: -2px;
+  margin-bottom: 12px;
   font-size: 16px;
   text-transform: uppercase;
   background-color: @bg-green;
@@ -408,12 +337,824 @@
     display: block;
     width: 170px;
     height: 30px;
-    padding: 8px 10px;
-    margin-left: 76px;
-    margin-top: 5px;
-    margin-bottom: 14px;
+    padding: 8px 10px 18px 63px;
     font-family: @secondfont;
     font-size: 14px;
     text-transform: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 100%;
+    margin: 0 auto;
+    background-color: @bg-white;
+  }
+
+  .form__title {
+    display: block;
+    width: 440px;
+    margin: 0;
+    padding: 56px 0 0 29px;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: none;
+  }
+
+  .form__text {
+    display: block;
+    width: 324px;
+    padding: 57px 5px 28px 70px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  .form__form {
+    display: block;
+    min-height: 1185px;
+    padding-bottom: 63px;
+    margin: 0 30px;
+  }
+
+  .form__wrapper {
+    &--extra {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 708px;
+    }
+  }
+
+  .form__fieldset {
+    &--data,
+    &--diet,
+    &--contacts,
+    &--about-me,
+    &--extra {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+
+    &--data {
+      width: 708px;
+    }
+
+    &--diet {
+      width: 628px;
+
+      margin-left: 42px;
+      margin-top: 53px;
+      padding-bottom: 8px;
+      border: 1px solid #e6e6e6;
+    }
+
+    &--contacts {
+      width: 708px;
+    }
+
+    &--about-me {
+      width: 708px;
+    }
+
+    &--extra {
+      display: block;
+      width: 708px;
+    }
+  }
+
+  .form__legend {
+    &--contacts,
+    &--about-me,
+    &--extra {
+      display: block;
+      width: 560px;
+      font-size: 36px;
+      line-height: 24px;
+      text-transform: none;
+    }
+
+    &--contacts {
+      padding: 80px 0 0 41px;
+    }
+
+    &--about-me {
+      padding: 54px 0 35px 42px;
+    }
+
+    &--extra {
+      padding: 47px 0 0 41px;
+    }
+  }
+
+  .form__item {
+    &--name,
+    &--weight,
+    &--years {
+      display: flex;
+      width: 670px;
+      height: 53px;
+      margin-bottom: 19px;
+    }
+
+    &--slim,
+    &--pro,
+    &--advice {
+      display: flex;
+      width: 500px;
+      height: 40px;
+      padding-left: 13px;
+      padding-bottom: 13px;
+    }
+
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: flex;
+      width: 294px;
+      height: 33px;
+      padding-bottom: 39px;
+    }
+
+    &--sweetener,
+    &--water {
+      padding-top: 69px;
+    }
+
+    &--sweetener,
+    &--milk {
+      padding-left: 48px;
+    }
+
+    &--water,
+    &--vitamins {
+      padding-right: 31px;
+    }
+
+    &--email-user,
+    &--phone-user {
+      display: flex;
+      width: 660px;
+      height: 50px;
+    }
+
+    &--email-user {
+      padding: 83px 0 20px 13px;
+    }
+
+    &--phone-user {
+      padding-bottom: 20px;
+    }
+  }
+
+  .form__label {
+    &--name,
+    &--weight,
+    &--years {
+      display: block;
+      height: 36px;
+      padding: 16px 0 0 44px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--name {
+      width: 62px;
+    }
+
+    &--weight {
+      width: 94px;
+    }
+
+    &--years {
+      width: 133px;
+    }
+
+    &--slim,
+    &--pro,
+    &--advice {
+      display: block;
+      width: 270px;
+      height: 25px;
+      padding: 7px 0 0 16px;
+      margin: 0;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    &--email-user,
+    &--phone-user {
+      display: block;
+      padding: 14px 0 0 44px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--email-user {
+      width: 80px;
+      padding: 15px 0 0 44px;
+    }
+
+    &--phone-user {
+      width: 100px;
+      padding: 17px 0 0 54px;
+    }
+
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: block;
+      width: 270px;
+      height: 24px;
+      padding: 3px 0 0 16px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  .form__input {
+    &--text1,
+    &--text2,
+    &--text3 {
+      display: block;
+      padding-left: 19px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e6e6e6;
+    }
+
+    &--text1 {
+      width: 545px;
+    }
+
+    &--text2 {
+      width: 515px;
+    }
+
+    &--text3 {
+      width: 475px;
+    }
+
+    &--radio1,
+    &--radio2,
+    &--radio3 {
+      display: block;
+      width: 48px;
+      height: 38px;
+      margin-top: -1px;
+      margin-left: 10px;
+    }
+
+    &--text4,
+    &--text5 {
+      display: block;
+      height: 50px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e6e6e6;
+    }
+
+    &--text4 {
+      width: 530px;
+      padding: 0 0 0 21px;
+    }
+
+    &--text5 {
+      width: 515px;
+      padding: 0 0 0 18px;
+    }
+
+    &--textarea {
+      display: block;
+      width: 610px;
+      height: 158px;
+      padding: 14px 0 0 18px;
+      margin-top: 47px;
+      margin-left: 40px;
+      margin-bottom: 25px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e6e6e6;
+    }
+
+    &--checkbox1,
+    &--checkbox2,
+    &--checkbox3,
+    &--checkbox4 {
+      display: block;
+      width: 49px;
+      height: 40px;
+      margin: -6px 0 0 1px;
+    }
+  }
+
+  .button {
+    &--email-user,
+    &--phone-user {
+      display: block;
+      height: 42px;
+      margin-top: 5px;
+      margin-left: -36px;
+      background-color: @bg-white;
+      border: none;
+    }
+
+    &--email-user::before {
+      position: absolute;
+      content: " ";
+      width: 18px;
+      margin-left: -11px;
+      margin-top: -7px;
+      height: 20px;
+
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--phone-user::before {
+      position: absolute;
+      content: " ";
+      width: 20px;
+      margin-left: -10px;
+      margin-top: -9px;
+      height: 25px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .form__send {
+    display: flex;
+    width: 708px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__button {
+    display: block;
+    width: 283px;
+    height: 45px;
+    padding: 5px 24px;
+    margin-top: 20px;
+    margin-left: 39px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: @bg-green;
+  }
+
+  .form__small {
+    &--bottom {
+      display: block;
+      width: 180px;
+      height: 30px;
+      padding: 31px 139px 18px 10px;
+      font-family: @secondfont;
+      font-size: 16px;
+      text-transform: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .form {
+    width: 100%;
+    margin: 0 auto;
+    background-color: @bg-white;
+  }
+
+  .form__title {
+    display: block;
+    width: 440px;
+    margin: 0;
+    padding: 62px 0 0 85px;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: none;
+  }
+
+  .form__text {
+    display: block;
+    width: 324px;
+    padding: 57px 5px 28px 85px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  .form__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1220px;
+    min-height: 1142px;
+    padding-bottom: 77px;
+    margin: 0 80px;
+  }
+
+  .form__wrapper {
+    &--data,
+    &--diet {
+      display: block;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 570px;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 1220px;
+    }
+
+    &--about-me {
+      display: block;
+      width: 1220px;
+    }
+
+    &--extra {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 1220px;
+    }
+  }
+
+  .form__fieldset {
+    &--data,
+    &--diet,
+    &--contacts,
+    &--about-me,
+    &--extra {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+
+    &--data {
+      width: 570px;
+      margin-left: -35px;
+    }
+
+    &--diet {
+      width: 570px;
+      margin-top: 40px;
+      margin-left: 4px;
+      padding-bottom: 7px;
+      border: 1px solid #e6e6e6;
+    }
+
+    &--contacts {
+      width: 1220px;
+    }
+
+    &--about-me {
+      width: 1220px;
+    }
+
+    &--extra {
+      display: block;
+      width: 1220px;
+    }
+  }
+
+  .form__legend {
+    &--contacts,
+    &--about-me,
+    &--extra {
+      display: block;
+      width: 560px;
+      font-size: 36px;
+      line-height: 24px;
+      text-transform: none;
+    }
+
+    &--contacts {
+      padding: 45px 0 0 7px;
+    }
+
+    &--about-me {
+      padding: 48px 0 35px 7px;
+    }
+
+    &--extra {
+      padding: 38px 0 0 7px;
+    }
+  }
+
+  .form__item {
+    &--name,
+    &--weight,
+    &--years {
+      display: flex;
+      width: 610px;
+      height: 53px;
+      margin-bottom: 19px;
+    }
+
+    &--slim,
+    &--pro,
+    &--advice {
+      display: flex;
+      width: 500px;
+      height: 40px;
+      padding-left: 13px;
+      padding-bottom: 13px;
+    }
+
+    &--slim {
+      padding: 29px 0 12px 13px;
+    }
+
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: flex;
+      width: 245px;
+      height: 33px;
+      padding-top: 69px;
+      padding-bottom: 39px;
+    }
+
+    &--sweetener {
+      padding-left: 15px;
+    }
+
+    &--water {
+      padding-left: 67px;
+    }
+
+    &--milk {
+      padding-right: 57px;
+      padding-left: 39px;
+    }
+
+    &--vitamins {
+      padding-right: 0;
+    }
+
+    &--email-user,
+    &--phone-user {
+      display: flex;
+      width: 570px;
+      height: 50px;
+    }
+
+    &--email-user {
+      padding: 80px 0 5px 0;
+      margin-left: -22px;
+      margin-right: 0;
+    }
+
+    &--phone-user {
+      padding: 80px 0 20px 0;
+      margin-right: 35px;
+    }
+  }
+
+  .form__label {
+    &--name,
+    &--weight,
+    &--years {
+      display: block;
+      height: 36px;
+      padding: 16px 0 0 44px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--name {
+      width: 62px;
+    }
+
+    &--weight {
+      width: 94px;
+    }
+
+    &--years {
+      width: 133px;
+    }
+
+    &--slim,
+    &--pro,
+    &--advice {
+      display: block;
+      width: 270px;
+      height: 25px;
+      padding: 7px 0 0 16px;
+      margin: 0;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    &--email-user,
+    &--phone-user {
+      display: block;
+      padding: 14px 0 0 44px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--email-user {
+      width: 92px;
+      padding: 16px 0 0 44px;
+    }
+
+    &--phone-user {
+      width: 115px;
+      padding: 17px 0 0 54px;
+    }
+
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: block;
+      width: 270px;
+      height: 24px;
+      padding: 3px 0 0 18px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  .form__input {
+    &--text1,
+    &--text2,
+    &--text3 {
+      display: block;
+      padding-left: 19px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e6e6e6;
+    }
+
+    &--text1 {
+      width: 486px;
+    }
+
+    &--text2 {
+      width: 454px;
+    }
+
+    &--text3 {
+      width: 414px;
+    }
+
+    &--radio1,
+    &--radio2,
+    &--radio3 {
+      display: block;
+      width: 48px;
+      height: 38px;
+      margin-top: -3px;
+      margin-left: 11px;
+    }
+
+    &--text4,
+    &--text5 {
+      display: block;
+      height: 50px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e6e6e6;
+    }
+
+    &--text4 {
+      width: 507px;
+      padding: 0 0 0 17px;
+    }
+
+    &--text5 {
+      width: 515px;
+      padding: 0 0 0 18px;
+    }
+
+    &--textarea {
+      display: block;
+      width: 1200px;
+      height: 158px;
+      padding: 14px 0 0 18px;
+      margin-top: 47px;
+      margin-left: 5px;
+      margin-bottom: 25px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e6e6e6;
+    }
+
+    &--checkbox1,
+    &--checkbox2,
+    &--checkbox3,
+    &--checkbox4 {
+      display: block;
+      width: 54px;
+      height: 40px;
+    }
+
+    .form__input--checkbox1,
+    .form__input--checkbox2 {
+      margin: -7px 0 0 -4px;
+    }
+
+    &--checkbox3 {
+      margin: -7px 0 0 -4px;
+    }
+
+    &--checkbox4 {
+      margin: -7px 0 0 8px;
+    }
+  }
+
+  .button {
+    &--email-user,
+    &--phone-user {
+      display: block;
+      height: 42px;
+      margin-top: 5px;
+      margin-left: -39px;
+      background-color: @bg-white;
+      border: none;
+    }
+
+    &--phone-user {
+      margin-left: -53px;
+    }
+
+    &--email-user::before {
+      position: absolute;
+      content: " ";
+      width: 18px;
+      margin-left: -4px;
+      margin-top: -7px;
+      height: 20px;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--phone-user::before {
+      position: absolute;
+      content: " ";
+      width: 20px;
+      margin-left: 8px;
+      margin-top: -9px;
+      height: 25px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .form__send {
+    display: flex;
+    width: 1220px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__button {
+    display: block;
+    width: 568px;
+    height: 50px;
+    padding: 3px 24px 0 43px;
+    margin: 0;
+    margin-top: -12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: @bg-green;
+  }
+
+  .form__small {
+    &--bottom {
+      display: block;
+      width: 180px;
+      height: 30px;
+      padding: 0;
+      padding-right: 380px;
+      padding-top: 4px;
+      margin: 0;
+      font-family: @secondfont;
+      font-size: 16px;
+      text-transform: none;
+    }
   }
 }

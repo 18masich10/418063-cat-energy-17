@@ -1,18 +1,23 @@
 // Style.less для блока before-after
 //--------------------------------
+.before-after {
+  display: block;
+  width: 100%;
+}
 
 .before-after__wrapper {
   display: block;
   width: 320px;
-  min-height: 705px;
-  margin-top: -46px;
+  height: 705px;
+  margin: 0;
   background-color: @bg-lightergray;
 }
 
 .before-after__title {
   display: block;
-  padding: 16px 10px;
-  margin: 31px 12px;
+  padding: 18px 20px 0 21px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: @basefont;
   font-size: 36px;
   font-weight: @basefontweight;
@@ -22,14 +27,29 @@
 
 .before-after__description {
   display: block;
-  padding: 5px 5px;
-  margin: -29px 17px;
+  width: 270px;
+  padding: 23px 21px 0 21px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: @secondfont;
   text-transform: none;
 }
 
-.before-after__table {
-  margin: 0 auto;
+.before-after__cost {
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.before-after__list {
+  display: block;
+  list-style: none;
+  width: 280px;
+  height: 80px;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
+  background-color: #00a8e6;     // временно для решения проблемы
 }
 
 .before-after__number {
@@ -39,7 +59,6 @@
   line-height: 26px;
   text-transform: uppercase;
 }
-// Внести корректировки в таблицу
 
 .before-after__result {
   width: 89px;
@@ -50,41 +69,263 @@
   text-transform: lowercase;
   text-align: center;
 }
-// Внести корректировки в таблицу
 
 .before-after__title-cost {
   display: block;
-  padding: 2px 2px 2px 6px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 3px 4px 5px;
   font-size: @basefontsize;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
 }
 
+.before-after__image {
+  display: block;
+  list-style: none;
+  width: 280px;
+  height: 235px;
+  margin: 0;
+  padding: 0;
+  background-color: #00a8e6;
+}
+
 .before-after__image-before {
   display: block;
-  margin-top: 32px;
-  margin-left: 2px;
+  margin-top: 30px;
 }
 
 .before-after__scale {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.before-after__before,
+.before-after__after {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 .before-after__before {
-  display: block;
-  padding: 10px 10px;
-  margin: 22px auto 26px 56px;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+  padding: 37px 5px 5px 44px;
 }
 
 .before-after__after {
-  display: block;
-  padding: 10px 10px;
-  margin: 22px 47px 26px auto;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+  padding: 37px 38px 5px 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .before-after {
+    display: block;
+    width: 100%;
+  }
+
+  .before-after__wrapper {
+    display: block;
+    width: 100%;
+    height: 1080px;
+    margin: 0;
+    padding: 0;
+    background-color: @bg-lightergray;
+  }
+
+  .before-after__title {
+    display: block;
+    width: 335px;
+    padding: 40px 5px 0 0;
+    margin: 0 30px 0 30px;
+    font-family: @basefont;
+    font-size: 60px;
+    font-weight: @basefontweight;
+    line-height: 60px;
+    text-transform: none;
+  }
+
+  .before-after__description {
+    display: block;
+    width: 680px;
+    padding: 64px 5px 53px 0;
+    margin: 0 30px 0 30px;
+    line-height: 24px;
+    font-size: 16px;
+    font-family: @secondfont;
+    text-transform: none;
+  }
+
+  .before-after__cost {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 708px;
+    margin: 0 30px 0 30px;
+  }
+
+  .before-after__list {
+    display: block;
+    list-style: none;
+    width: 365px;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    background-color: #00a8e6;
+  }
+
+  .before-after__title-cost {
+    display: block;
+    width: 175px;
+    padding: 7px 2px 2px 5px;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  .before-after__cost-number {
+    display: block;
+    margin-right: -85px;
+  }
+
+  .before-after__image {
+    display: block;
+    list-style: none;
+    width: 708px;
+    height: 580px;
+    margin: 0;
+    padding: 0;
+    background-color: #00a8e6;
+  }
+
+  .before-after__image-before {
+    display: none;
+  }
+
+  .before-after__scale {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 28px 0 0 0;
+    margin: 0;
+  }
+
+  .before-after__before,
+  .before-after__after {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .before-after__before {
+    padding: 6px 10px 0 98px;
+  }
+
+  .before-after__after {
+    padding: 6px 101px 0 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .before-after__wrapper {
+    display: block;
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    background-color: @bg-lightergray;
+  }
+
+  .before-after__title {
+    display: block;
+    padding: 0 5px 5px 11px;
+    font-family: @basefont;
+    font-size: 60px;
+    font-weight: @basefontweight;
+    line-height: 60px;
+    text-transform: none;
+  }
+
+  .before-after__description {
+    display: block;
+    width: 435px;
+    padding: 140px 10px 5px 2px;
+    margin: 0 40px;
+    line-height: 24px;
+    font-size: 16px;
+    font-family: @secondfont;
+    text-transform: none;
+  }
+
+  .before-after__cost {
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+  }
+
+  .before-after__list {
+    display: block;
+    list-style: none;
+    width: 367px;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding: 0;
+    height: 100px;
+    background-color: #00a8e6;
+  }
+
+  .before-after__title-cost {
+    display: block;
+    width: 175px;
+    padding: 41px 5px 5px 2px;
+    margin-left: 9px;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  .before-after__cost-number {
+    display: block;
+    width: 95px;
+    margin-top: -28px;
+    margin-left: 235px;
+  }
+
+  .before-after__image {
+    position: absolute;
+    right: 204px;
+    display: block;
+    width: 445px;
+    height: 550px;
+    margin-top: -550px;
+    list-style: none;
+    background-color: #00a8e6;
+  }
+
+  .before-after__image-before {
+    display: none;
+  }
+
+  .before-after__scale {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .before-after__before,
+  .before-after__after {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .before-after__before {
+    padding: 5px 5px 5px 669px;
+  }
+
+  .before-after__after {
+    padding: 3px 22px 5px 5px;
+  }
 }

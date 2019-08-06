@@ -3,64 +3,49 @@
 
 .page-header {
   display: flex;
-  justify-content: space-between;
-  height: 67px; // временно для сетки
+  flex-direction: column;
+  width: 100%;
   background-color: @bg-white;
 }
 
 .page-header__logo {
   display: block;
   width: 192px;
-  height: 40px; // временно для сетки
-  margin: 15px auto 11px 22px;
-}
-
-.page-header__toogle {
-  display: block;
-  width: 45px;
-  height: 40px;
-  margin: 17px 20px 12px auto;
-  background-color: white;
-  border: none;
-}
-
-.page-header__toogle::before {
-  position: absolute;
-  content: " ";
-  width: 24px;
-  height: 18px;
-  margin-top: -12px;
-  margin-left: -10px;
-
-  background-image: url("../img/icon-mobile-menu.svg");
-  background-repeat: no-repeat;
+  height: 35px;
+  margin: 12px auto 17px 19px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 708px;
-    height: 100px; // временно для сетки
+    width: 100%;
+    height: 85px;
     margin: 0 auto;
   }
 
   .page-header__logo {
     display: block;
     width: 195px;
-    height: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
     height: 125px; // временно для сетки
+    margin: 0 auto;
   }
 
   .page-header__logo {
     display: block;
-    width: 210px;
+    width: 190px;
     height: 65px;
+    margin-top: 50px;
+    margin-left: 125px;
   }
 }
