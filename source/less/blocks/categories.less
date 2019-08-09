@@ -3,7 +3,7 @@
 
 .categories {
   display: block;
-  width: 100%;
+  width: 320px;
   margin: 0;
   padding: 0;
   background-color: @bg-white;
@@ -11,22 +11,21 @@
 
 .categories__list {
   display: block;
-  padding: 0;
-  margin: 0 20px 0 20px;
+  margin: 0;
+  padding: 0 20px;
   list-style: none;
 }
 
 .categories__item {
   display: block;
   width: 280px;
-  height: 266px;
   padding: 0;
   font-family: @secondfont;
   background-color: @bg-lightergray;
 }
 
 .categories__item:nth-child(1) {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .categories__item:nth-child(1)::before {
@@ -47,7 +46,7 @@
   content: " ";
   width: 50px;
   height: 50px;
-  margin-top: -228px;
+  margin-top: -243px;
   margin-left: 30px;
   background-image: url("../img/icon-cat-slim.svg");
   background-repeat: no-repeat no-repeat;
@@ -71,7 +70,7 @@
   content: " ";
   width: 68px;
   height: 56px;
-  margin-top: -214px;
+  margin-top: -230px;
   margin-left: 14px;
   background-image: url("../img/icon-cat-pro.svg");
   background-repeat: no-repeat no-repeat;
@@ -90,13 +89,13 @@
 }
 
 .title-slim {
-  padding: 29px 0 0 13px;
+  padding: 29px 0 29px 13px;
 }
 
 .categories__description-slim,
 .categories__description-pro {
   display: block;
-  padding: 29px 19px;
+  padding: 0 19px 22px 19px;
   margin: 0 0 0 2px;
   text-transform: none;
 }
@@ -104,20 +103,20 @@
 .categories__slim,
 .categories__pro {
   display: block;
-  padding: 13px 10px 5px 21px;
+  width: 130px;
+  padding: 20px 107px 20px 0;
+  margin-right: 20px;
+  margin-left: 20px;
   font-family: @basefont;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: @col-black;
+  border-top: 1px solid #d9d9d9;
 }
 
 .title-pro {
-  padding: 29px 0 5px 42px;
-}
-
-.categories__description-pro {
-  margin-top: -5px;
+  padding: 29px 0 29px 42px;
 }
 
 .categories__slim::before,
@@ -136,7 +135,6 @@
   .categories {
     display: block;
     width: 100%;
-    height: 820px;         // временно для сетки
     margin: 0;
     padding: 0;
   }
@@ -146,7 +144,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
-    margin: 0 30px 0 30px;
+    margin: 0 30px;
     list-style: none;
   }
 
@@ -184,7 +182,7 @@
     content: " ";
     width: 195px;
     height: 195px;
-    margin-top: -234px;
+    margin-top: -229px;
     background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
   }
@@ -196,7 +194,7 @@
     content: " ";
     width: 267px;
     height: 315px;
-    margin-top: -177px;
+    margin-top: -173px;
     background-image: url("../img/icon-cat-pro.svg");
     background-repeat: no-repeat no-repeat;
   }
@@ -215,11 +213,11 @@
   }
 
   .title-slim {
-    padding: 73px 10px 15px 24px;
+    padding: 73px 125px 26px 26px;
   }
 
   .title-pro {
-    padding: 74px 0 5px 45px;
+    padding: 76px 125px 25px 46px;
   }
 
   .categories__description-slim,
@@ -233,23 +231,24 @@
 
   .categories__description-slim {
     width: 375px;
-    padding: 10px 5px 5px 51px;
+    padding: 0 5px 58px 51px;
   }
 
   .categories__description-pro {
     width: 340px;
-    padding: 21px 5px 5px 51px;
+    padding: 0 5px 58px 52px;
   }
 
   .categories__slim,
   .categories__pro {
     display: block;
-    padding: 52px 10px 5px 51px;
+    padding: 0 10px 0 32px;
     font-family: @basefont;
     font-size: 20px;
     line-height: 16px;
     text-transform: uppercase;
     color: @col-black;
+    border: none;
   }
 
   .categories__slim::before,
@@ -273,7 +272,6 @@
   .categories {
     display: block;
     width: 100%;
-    height: 502px;         // временно для сетки
     margin: 0;
     padding: 0;
   }
@@ -282,8 +280,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 81px 0 0 0;
-    margin: 0 40px;
+    width: 1220px;
+    padding: 0 40px;
+    padding-bottom: 75px;
+    margin: 0 auto;
     list-style: none;
   }
 
@@ -291,9 +291,8 @@
     position: relative;
     display: block;
     width: 570px;
-    height: 370px;
     padding: 0;
-    margin-bottom: 0;
+    margin: 0;
     font-family: @secondfont;
     background-color: @bg-lightergray;
   }
@@ -333,7 +332,7 @@
     content: " ";
     width: 95px;
     height: 95px;
-    margin-top: -272px;
+    margin-top: -326px;
     background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
   }
@@ -345,53 +344,39 @@
     content: " ";
     width: 138px;
     height: 253px;
-    margin-top: -246px;
+    margin-top: -300px;
     background-image: url("../img/icon-cat-pro.svg");
     background-repeat: no-repeat no-repeat;
   }
 
   .title-slim {
-    padding: 75px 10px 15px 188px;
+    padding: 75px 10px 75px 188px;
   }
 
   .title-pro {
-    padding: 75px 0 5px 209px;
+    padding: 75px 0 75px 209px;
   }
 
   .categories__description-slim,
   .categories__description-pro {
     display: block;
     width: 465px;
+    padding: 0 52px 33px 53px;
     margin: 0;
     font-size: 16px;
     line-height: 24px;
     text-transform: none;
   }
 
-  .categories__description-slim {
-    padding: 57px 5px 5px 54px;
-  }
-
-  .categories__description-pro {
-    padding: 69px 5px 5px 52px;
-  }
-
   .categories__slim,
   .categories__pro {
     display: block;
+    padding: 0 10px 61px 33px;
     font-family: @basefont;
     font-size: 20px;
     line-height: 16px;
     text-transform: uppercase;
     color: @col-black;
-  }
-
-  .categories__slim {
-    padding: 27px 10px 5px 54px;
-  }
-
-  .categories__pro {
-    padding: 28px 10px 5px 52px;
   }
 
   .categories__slim::before,

@@ -9,36 +9,37 @@
 </head>
 <body>
   <header class="page-header">
-
+    <div class="page-header__wrapper">
       <picture class="page-header__logo">
         <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип-картинка «Кэт Энерджи»">
       </picture>
 
-    <nav class="main-nav">
-      <button class="main-nav__toogle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a>Каталог продукции</a>
-        </li>
-        <li class="site-list__item">
-          <a href="form.html">Подбор программы</a>
-        </li>
-      </ul>
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toogle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a>Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
 
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main class="main-catalog">
     <h1 class="main-catalog__title">Каталог продукции</h1>
 
-    <section class="catalog-list">
+    <section class="main-catalog__wrapper">
       <ul class="catalog-list basic-list">
         <li class="basic-list__item">
 
@@ -52,16 +53,14 @@
             <a class="basic-list__title" href="#"><h3>Cat Energy Pro <span class="basic-list__weight">500 г</span></h3></a>
 
             <table class="basic-list__product-description">
-              <tr>
+              <tr class="basic-list__product">
                 <td class="basic-list__value">Объем</td>
-                <td class="basic-list__field">500 г</td>
-              </tr>
-              <tr>
                 <td class="basic-list__value">Вкус</td>
-                <td class="basic-list_field">Курица</td>
+                <td class="basic-list__value">Цена</td>
               </tr>
               <tr>
-                <td class="basic-list__value">Цена</td>
+                <td class="basic-list__field">500 г</td>
+                <td class="basic-list__field">Курица</td>
                 <td class="basic-list__field">700 Р.</td>
               </tr>
 
@@ -80,17 +79,15 @@
             <a class="basic-list__title"><h3>Cat Energy Pro <span class="basic-list__weight">1000 г</span></h3></a>
 
             <table class="basic-list__product-description">
-              <tr>
+              <tr class="basic-list__product">
                 <td class="basic-list_value">Объем</td>
-                <td class="basic-list_field">1000 г</td>
-              </tr>
-              <tr>
                 <td class="basic-list_value">Вкус</td>
-                <td class="basic-list_field">Курица</td>
+                <td class="basic-list_value">Цена</td>
               </tr>
               <tr>
-                <td class="basic-list_value">Цена</td>
-                <td class="basic-list_field">1000 Р.</td>
+                <td class="basic-list__field">1000 г</td>
+                <td class="basic-list__field">Курица</td>
+                <td class="basic-list__field">1000 Р.</td>
               </tr>
 
             </table>
@@ -109,17 +106,15 @@
             <a class="basic-list__title" href="#"><h3>Cat Energy Pro <span class="basic-list__weight">500 г</span></h3></a>
 
             <table class="basic-list__product-description">
-              <tr>
-                <td class="basic-list_value">Объем</td>
-                <td class="basic-list_field">500 г</td>
+              <tr class="basic-list__product">
+                <td class="basic-list__value">Объем</td>
+                <td class="basic-list__value">Вкус</td>
+                <td class="basic-list__value">Цена</td>
               </tr>
               <tr>
-                <td class="basic-list_value">Вкус</td>
-                <td class="basic-list_field">Рыба</td>
-              </tr>
-              <tr>
-                <td class="basic-list_value">Цена</td>
-                <td class="basic-list_field">700 Р.</td>
+                <td class="basic-list__field">500 г</td>
+                <td class="basic-list__field">Рыба</td>
+                <td class="basic-list__field">700 Р.</td>
               </tr>
 
             </table>
@@ -138,17 +133,15 @@
             <a class="basic-list__title" href="#"><h3>Cat Energy Pro <span class="basic-list__weight">1000 г</span></h3></a>
 
             <table class="basic-list__product-description">
-              <tr>
-                <td class="basic-list_value">Объем</td>
-                <td class="basic-list_field">1000 г</td>
+              <tr class="basic-list__product">
+                <td class="basic-list__value">Объем</td>
+                <td class="basic-list__value">Вкус</td>
+                <td class="basic-list__value">Цена</td>
               </tr>
               <tr>
-                <td class="basic-list_value">Вкус</td>
-                <td class="basic-list_field">Рыба</td>
-              </tr>
-              <tr>
-                <td class="basic-list_value">Цена</td>
-                <td class="basic-list_field">1000 Р.</td>
+                <td class="basic-list__field">1000 г</td>
+                <td class="basic-list__field">Рыба</td>
+                <td class="basic-list__field">1000 Р.</td>
               </tr>
 
             </table>
@@ -167,17 +160,15 @@
 
             <a class="basic-list__title" href="#"><h3>Cat Energy Slim <span class="basic-list__weight"> 500 г</span></h3></a>
             <table class="basic-list__product-description">
-              <tr>
-                <td class="basic-list_value">Объем</td>
-                <td class="basic-list_field">500 г</td>
+              <tr class="basic-list__product">
+                <td class="basic-list__value">Объем</td>
+                <td class="basic-list__value">Вкус</td>
+                <td class="basic-list__value">Цена</td>
               </tr>
               <tr>
-                <td class="basic-list_value">Вкус</td>
-                <td class="basic-list_field">Гречка</td>
-              </tr>
-              <tr>
-                <td class="basic-list_value">Цена</td>
-                <td class="basic-list_field">400 Р.</td>
+                <td class="basic-list__field">500 г</td>
+                <td class="basic-list__field">Гречка</td>
+                <td class="basic-list__field">400 Р.</td>
               </tr>
 
             </table>
@@ -196,17 +187,15 @@
             <a class="basic-list__title" href="#"><h3>Cat Energy Slim <span class="basic-list__weight">1000 г</span></h3></a>
 
             <table class="basic-list__product-description">
-              <tr>
-                <td class="basic-list_value">Объем</td>
-                <td class="basic-list_field">1000 г</td>
+              <tr class="basic-list__product">
+                <td class="basic-list__value">Объем</td>
+                <td class="basic-list__value">Вкус</td>
+                <td class="basic-list__value">Цена</td>
               </tr>
               <tr>
-                <td class="basic-list_value">Вкус</td>
-                <td class="basic-list_field">Гречка</td>
-              </tr>
-              <tr>
-                <td class="basic-list_value">Цена</td>
-                <td class="basic-list_field">700 Р.</td>
+                <td class="basic-list__field">1000 г</td>
+                <td class="basic-list__field">Гречка</td>
+                <td class="basic-list__field">700 Р.</td>
               </tr>
 
             </table>
@@ -223,18 +212,17 @@
 
           <div class="basic-list__description">
             <a class="basic-list__title" href="#"><h3>Cat Energy Slim <span class="basic-list__weight">500 г</span></h3></a>
+
             <table class="basic-list__product-description">
-              <tr>
-                <td class="basic-list_value">Объем</td>
-                <td class="basic-list_field">500 г</td>
+              <tr class="basic-list__product">
+                <td class="basic-list__value">Объем</td>
+                <td class="basic-list__value">Вкус</td>
+                <td class="basic-list__value">Цена</td>
               </tr>
               <tr>
-                <td class="basic-list_value">Вкус</td>
-                <td class="basic-list_field">Рис</td>
-              </tr>
-              <tr>
-                <td class="basic-list_value">Цена</td>
-                <td class="basic-list_field">500 Р.</td>
+                <td class="basic-list__field">500 г</td>
+                <td class="basic-list__field">Рис</td>
+                <td class="basic-list__field">500 Р.</td>
               </tr>
 
             </table>
@@ -252,8 +240,8 @@
       </ul>
     </section>
 
-    <section class="catalog-list additional-goods">
-      <h2 class="catalog-list__title">Дополнительные товары</h2>
+    <section class="main-catalog__wrapper">
+      <h2 class="main-catalog__caption">Дополнительные товары</h2>
 
       <ul class="catalog-list other-list">
         <li class="other-list__item">
@@ -307,12 +295,12 @@
     <section class="contacts contacts-catalog">
       <div class="contacts__wrapper">
 
-        <div class="contacts__address">
+        <div class="contacts__address contacts__catalog">
           <h2 class="visually-hidden">Контактная информация</h2>
 
           <h3 class="contacts__title">Приглашаем <br> к сотрудничеству дилеров!</h3>
           <p class="contacts__text">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            ул. Большая <span class="contacts__street">Конюшенная, д. 19/8 </span><span class="contacts__city"> Санкт-Петербург</span>
           </p>
         </div>
         <div class="contacts__map">

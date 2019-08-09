@@ -7,14 +7,14 @@
 
 .advantages__wrapper {
   width: 320px;
-  height: 445px;
   margin: 0;
   background-color: @bg-white;
 }
 
 .advantages__title {
-  padding: 16px 20px 0 21px;
+  padding: 18px 20px 29px 21px;
   margin-top: 0;
+  margin-bottom: 0;
   font-family: @basefont;
   font-size: 36px;
   font-weight: @basefontweight;
@@ -24,13 +24,18 @@
 
 .advantages__list {
   display: block;
-  padding: 0;
-  margin: 0 20px 0 20px;
+  margin: 0;
+  padding: 0 20px;
   list-style: none;
 }
 
 .advantages__item {
   display: block;
+  padding-bottom: 26px;
+}
+
+.advantages__item:last-child {
+  padding-bottom: 46px;
 }
 
 .advantages__description {
@@ -42,12 +47,6 @@
   font-family: @secondfont;
   font-size: @basefontsize;
   line-height: 18px;
-}
-
-.description-powder,
-.description-dining,
-.description-clock {
-  padding-top: 26px;
 }
 
 .advantages__description::before {
@@ -98,14 +97,14 @@
   }
 
   .advantages__wrapper {
-    width: 100%;
-    height: 735px;
+    width: 708px;
+    padding: 0 30px;
   }
 
   .advantages__title {
     display: block;
     width: 402px;
-    padding: 0 10px 9px 30px;
+    padding: 47px 10px 13px 0;
     margin-top: 0;
     margin-bottom: 0;
     font-family: @basefont;
@@ -120,7 +119,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
-    margin: 0 30px 0 30px;
+    margin: 0;
     list-style: none;
   }
 
@@ -128,6 +127,12 @@
     display: block;
     width: 330px;
     height: 330px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .advantages__item:last-child {
+    padding-bottom: 0;
   }
 
   .advantages__description {
@@ -200,17 +205,20 @@
   .advantages {
     display: block;
     width: 100%;
+    background-color: @bg-white;
   }
 
   .advantages__wrapper {
-    width: 100%;
-    height: 465px;
+    display: block;
+    width: 1220px;
+    padding: 0 40px;
+    margin: 0 auto;
   }
 
   .advantages__title {
     display: block;
     width: 402px;
-    padding: 22px 10px 5px 42px;
+    padding: 0 115px 185px 0;
     font-family: @basefont;
     font-size: 60px;
     font-weight: @basefontweight;
@@ -223,7 +231,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
-    margin: 0 20px;
+    padding: 0;
+    padding-bottom: 30px;
+    margin: 0;
   }
 
   .advantages__item {
@@ -241,19 +251,19 @@
   }
 
   .description-leaf {
-    padding: 179px 5px 5px 22px;
+    padding: 0 50px 5px 1px;
   }
 
   .description-powder {
-    padding: 179px 5px 5px 26px;
+    padding: 0 32px 5px 18px;
   }
 
   .description-dining {
-    padding: 179px 5px 5px 31px;
+    padding: 0 14px 5px 37px;
   }
 
   .description-clock {
-    padding: 179px 5px 5px 36px;
+    padding: 0 5px 5px 55px;
   }
 
   .description-leaf::before,
