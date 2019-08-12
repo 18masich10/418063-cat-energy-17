@@ -9,7 +9,7 @@
   display: block;
   width: 280px;
   padding: 0 20px;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid @border-lightgray;
 }
 
 .form {
@@ -23,11 +23,11 @@
   display: block;
   width: 270px;
   margin: 0;
-  padding: 9px 28px 25px 22px;
+  padding: 15px 28px 25px 21px;
   font-size: 36px;
   line-height: 60px;
   text-transform: none;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid @border-lightgray;
 }
 
 .form__text {
@@ -204,7 +204,7 @@
     padding-left: 15px;
     font-size: 16px;
     text-transform: uppercase;
-    border: 1px solid #e6e6e6;
+    border: 1px solid @border-lightgray;
   }
 
   &--text1 {
@@ -235,7 +235,7 @@
     height: 43px;
     font-size: 16px;
     text-transform: uppercase;
-    border: 1px solid #e6e6e6;
+    border: 1px solid @border-lightgray;
   }
 
   &--text4 {
@@ -256,7 +256,7 @@
     margin: 0;
     font-size: 16px;
     text-transform: uppercase;
-    border: 1px solid #e6e6e6;
+    border: 1px solid @border-lightgray;
   }
 
   &--checkbox1,
@@ -309,11 +309,12 @@
   width: 280px;
   height: 42px;
   padding: 5px 24px;
-  margin-top: 17px;
+  margin-top: 14px;
   margin-left: 22px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-size: 16px;
   text-transform: uppercase;
+  color: @color-white;
   background-color: @bg-green;
 }
 
@@ -321,14 +322,10 @@
   display: block;
   width: 170px;
   height: 30px;
-  padding: 6px 64px 18px 87px;
+  padding: 6px 64px 16px 87px;
   font-family: @secondfont;
   font-size: 14px;
   text-transform: none;
-}
-
-.form__address {
-  background-color: @bg-lightergray;
 }
 
 @media (min-width: @tablet-width) {
@@ -347,7 +344,7 @@
     display: block;
     width: 440px;
     margin: 0;
-    padding: 54px 100px 57px 0;
+    padding: 54px 100px 56px 0;
     font-size: 60px;
     line-height: 60px;
     text-transform: none;
@@ -356,7 +353,7 @@
   .form__text {
     display: block;
     width: 324px;
-    padding: 0 100px 68px 41px;
+    padding: 0 100px 68px 39px;
     margin: 0;
     font-size: 20px;
     line-height: 28px;
@@ -406,13 +403,10 @@
       width: 628px;
       margin-left: 42px;
       margin-bottom: 80px;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @border-lightgray;
     }
 
-    &--contacts {
-      width: 708px;
-    }
-
+    &--contacts,
     &--about-me {
       width: 708px;
     }
@@ -435,15 +429,15 @@
     }
 
     &--contacts {
-      padding: 0 7px 82px 40px;
+      padding: 0 7px 82px 38px;
     }
 
     &--about-me {
-      padding: 0 0 83px 40px;
+      padding: 0 0 83px 38px;
     }
 
     &--extra {
-      padding: 0 0 70px 40px;
+      padding: 0 0 70px 38px;
     }
   }
 
@@ -483,12 +477,12 @@
 
     &--sweetener,
     &--milk {
-      padding-left: 40px;
+      padding-left: 38px;
     }
 
     &--water,
     &--vitamins {
-      padding-right: 31px;
+      padding-right: 32px;
     }
 
     &--email-user,
@@ -513,7 +507,7 @@
     &--years {
       display: block;
       height: 36px;
-      padding: 16px 0 0 43px;
+      padding: 16px 0 0 40px;
       font-size: 20px;
       line-height: 18px;
       text-transform: uppercase;
@@ -554,12 +548,12 @@
 
     &--email-user {
       width: 80px;
-      padding: 15px 0 0 42px;
+      padding: 16px 0 0 40px;
     }
 
     &--phone-user {
       width: 100px;
-      padding: 17px 0 0 40px;
+      padding: 16px 0 0 37px;
     }
 
     &--sweetener,
@@ -584,7 +578,7 @@
       padding-left: 19px;
       font-size: 20px;
       text-transform: uppercase;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @border-lightgray;
     }
 
     &--text1 {
@@ -606,7 +600,7 @@
       width: 48px;
       height: 38px;
       margin-top: 10px;
-      margin-left: 10px;
+      margin-left: 8px;
     }
 
     &--text4,
@@ -615,7 +609,7 @@
       height: 50px;
       font-size: 20px;
       text-transform: uppercase;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @border-lightgray;
     }
 
     &--text4 {
@@ -632,12 +626,12 @@
       display: block;
       width: 610px;
       height: 158px;
-      padding: 13px 0 0 19px;
+      padding: 12px 0 0 17px;
       margin-left: 40px;
-      margin-bottom: 70px;
+      margin-bottom: 72px;
       font-size: 20px;
       text-transform: uppercase;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @border-lightgray;
     }
 
     &--checkbox1,
@@ -696,10 +690,10 @@
   .form__button {
     display: block;
     width: 283px;
-    height: 45px;
+    height: 50px;
     padding: 5px 24px;
-    margin-top: 20px;
-    margin-left: 39px;
+    margin-top: 16px;
+    margin-left: 38px;
     margin-bottom: 12px;
     font-size: 20px;
     text-transform: uppercase;
@@ -710,14 +704,10 @@
     display: block;
     width: 180px;
     height: 30px;
-    padding: 31px 139px 18px 10px;
+    padding: 30px 139px 18px 10px;
     font-family: @secondfont;
     font-size: 16px;
     text-transform: none;
-  }
-
-  .form__address {
-    background-color: @bg-lightergray;
   }
 }
 
@@ -813,7 +803,7 @@
 
     &--diet {
       width: 570px;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @border-lightgray;
     }
 
     &--contacts {
@@ -822,7 +812,7 @@
 
     &--about-me {
       width: 1220px;
-      padding-bottom: 76px;
+      padding-bottom: 74px;
     }
 
     &--extra {
@@ -849,7 +839,7 @@
     }
 
     &--about-me {
-      padding: 0 0 82px 0;
+      padding: 2px 0 82px 0;
     }
 
     &--extra {
@@ -918,7 +908,7 @@
     &--years {
       display: block;
       height: 36px;
-      padding: 17px 0 0 0;
+      padding: 17px 0 0 2px;
       font-size: 20px;
       line-height: 18px;
       text-transform: uppercase;
@@ -942,7 +932,7 @@
       display: block;
       width: 270px;
       height: 25px;
-      padding: 18px 0 0 15px;
+      padding: 19px 0 0 15px;
       margin: 0;
       font-size: 20px;
       text-transform: uppercase;
@@ -958,11 +948,11 @@
 
     &--email-user {
       width: 84px;
-      padding: 16px 0 0 0;
+      padding: 16px 0 0 2px;
     }
 
     &--phone-user {
-      width: 97px;
+      width: 99px;
       padding: 17px 0 0 0;
     }
 
@@ -988,7 +978,7 @@
       padding-left: 19px;
       font-size: 20px;
       text-transform: uppercase;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @border-lightgray;
     }
 
     &--text1 {
@@ -1009,6 +999,8 @@
       display: block;
       width: 48px;
       height: 38px;
+      margin-top: 10px;
+      margin-left: 11px;
     }
 
     &--text4,
@@ -1017,7 +1009,7 @@
       height: 50px;
       font-size: 20px;
       text-transform: uppercase;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @border-lightgray;
     }
 
     &--text4 {
@@ -1034,11 +1026,11 @@
       display: block;
       width: 1200px;
       height: 158px;
-      padding: 14px 0 0 17px;
+      padding: 13px 0 0 19px;
       margin: 0;
       font-size: 20px;
       text-transform: uppercase;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @border-lightgray;
     }
 
     &--checkbox1,
@@ -1048,7 +1040,7 @@
       display: block;
       width: 54px;
       height: 40px;
-      margin: -7px 0 0 -7px;
+      margin: -6px 0 0 -5px;
     }
   }
 
@@ -1095,7 +1087,7 @@
     width: 1220px;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 82px;
+    padding-bottom: 85px;
   }
 
   .form__button {
@@ -1104,9 +1096,10 @@
     height: 50px;
     padding: 3px 24px 0 25px;
     margin: 0;
+    margin-left: 3px;
     font-size: 20px;
     text-transform: uppercase;
-    color: @col-white;
+    color: @color-white;
     background-color: @bg-green;
   }
 
@@ -1115,8 +1108,8 @@
     width: 180px;
     height: 30px;
     padding: 0;
-    padding-right: 387px;
-    padding-top: 15px;
+    padding-right: 384px;
+    padding-top: 16px;
     margin: 0;
     font-family: @secondfont;
     font-size: 16px;
