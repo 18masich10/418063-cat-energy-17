@@ -92,6 +92,10 @@
   padding: 29px 0 29px 13px;
 }
 
+.title-pro {
+  padding: 29px 0 29px 42px;
+}
+
 .categories__description-slim,
 .categories__description-pro {
   display: block;
@@ -111,12 +115,8 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  color: @col-black;
-  border-top: 1px solid #d9d9d9;
-}
-
-.title-pro {
-  padding: 29px 0 29px 42px;
+  color: @color-black;
+  border-top: 1px solid @border-gray;
 }
 
 .categories__slim::before,
@@ -129,6 +129,16 @@
   margin-left: 96px;
   background-image: url("../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
+}
+
+.categories__slim:hover,
+.categories__pro:hover {
+  color: @catalog-link-hover;
+}
+
+.categories__slim:active,
+.categories__pro:active {
+  color: @catalog-link-active;
 }
 
 @media (min-width: @tablet-width) {
@@ -247,7 +257,7 @@
     font-size: 20px;
     line-height: 16px;
     text-transform: uppercase;
-    color: @col-black;
+    color: @color-black;
     border: none;
   }
 
@@ -282,7 +292,7 @@
     justify-content: space-between;
     width: 1220px;
     padding: 0 40px;
-    padding-bottom: 75px;
+    padding-bottom: 72px;
     margin: 0 auto;
     list-style: none;
   }
@@ -308,7 +318,7 @@
     content: " ";
     width: 100px;
     height: 100px;
-    margin-top: 50px;
+    margin-top: 44px;
     background-color: @bg-green;
     border-radius: 50%;
   }
@@ -320,7 +330,7 @@
     content: " ";
     width: 100px;
     height: 100px;
-    margin-top: 50px;
+    margin-top: 44px;
     background-color: @bg-green;
     border-radius: 50%;
   }
@@ -343,18 +353,18 @@
     right: 399px;
     content: " ";
     width: 138px;
-    height: 253px;
-    margin-top: -300px;
+    height: 254px;
+    margin-top: -301px;
     background-image: url("../img/icon-cat-pro.svg");
     background-repeat: no-repeat no-repeat;
   }
 
   .title-slim {
-    padding: 75px 10px 75px 188px;
+    padding: 75px 10px 72px 188px;
   }
 
   .title-pro {
-    padding: 75px 0 75px 209px;
+    padding: 75px 0 72px 209px;
   }
 
   .categories__description-slim,
@@ -376,7 +386,7 @@
     font-size: 20px;
     line-height: 16px;
     text-transform: uppercase;
-    color: @col-black;
+    color: @color-black;
   }
 
   .categories__slim::before,

@@ -27,39 +27,75 @@
 .before-after__description {
   display: block;
   width: 270px;
-  padding: 0 21px 25px 20px;
+  padding: 0 30px 25px 20px;
   margin: 0;
   font-family: @secondfont;
   text-transform: none;
 }
 
 .before-after__cost {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 280px;
   margin: 0;
   padding: 0 20px;
 }
 
 .before-after__list {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
   width: 280px;
-  height: 80px;
   padding: 0;
   margin: 0;
-  background-color: #00a8e6;     // временно для решения проблемы
 }
 
-.before-after__number {
-  width: 77px;
-  padding: 60px 5px 5px 5px;
+.before-after__list-item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 120px;
+  height: 80px;
+}
+
+.before-after__number-weight {
+  display: block;
+  width: 88px;
+  height: 30px;
+  padding: 13px 34px 0 43px;
+  font-family: @basefont;
   font-size: 24px;
   line-height: 26px;
   text-transform: uppercase;
 }
 
-.before-after__result {
-  width: 89px;
-  padding: 0 10px 2px 0;
+.before-after__result-weight {
+  width: 80px;
+  height: 30px;
+  padding: 0 19px 0 22px;
+  font-family: @secondfont;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.before-after__number-day {
+  display: block;
+  width: 85px;
+  height: 30px;
+  padding: 13px 17px 0 18px;
+  font-family: @basefont;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.before-after__result-day {
+  display: block;
+  width: 80px;
+  height: 30px;
+  padding: 0 19px 0 19px;
   font-family: @secondfont;
   font-size: 12px;
   line-height: 12px;
@@ -78,41 +114,54 @@
   text-align: center;
 }
 
-.before-after__image {
+.slider__list {
   display: block;
-  list-style: none;
-  width: 280px;
-  height: 235px;
   margin: 0;
   padding: 0;
-  background-color: #00a8e6;
+  list-style: none;
 }
 
 .before-after__image-before {
   display: block;
 }
 
-.before-after__scale {
+.before-after__image-after {
+  display: block;
+}
+
+.before-after__toggles {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 37px 20px 36px 20px;
-}
-
-.before-after__before,
-.before-after__after {
-  display: block;
+  padding: 0;
+  margin: 0;
+  font-family: @basefont;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
-.before-after__before {
-  padding: 0 5px 0 44px;
+.slider__toggle-before,
+.slider__toggle-after {
+  display: block;
+  padding: 0;
+  margin-top: 32px;
+  margin-bottom: 33px;
+  font-family: @basefont;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.before-after__after {
-  padding: 0 38px 0 5px;
+.slider__toggle-before {
+  margin-left: 63px;
+}
+
+.slider__toggle-after {
+  margin-right: 58px;
 }
 
 @media (min-width: @tablet-width) {
@@ -156,70 +205,165 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 708px;
     margin: 0;
     padding: 0;
+    padding-bottom: 78px;
   }
 
   .before-after__list {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     width: 365px;
     margin: 0;
     padding: 0;
+  }
+
+  .before-after__list-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 160px;
     height: 80px;
-    background-color: #00a8e6;
+  }
+
+  .before-after__number-weight {
+    display: block;
+    width: 113px;
+    height: 30px;
+    padding: 20px 46px 0 57px;
+    font-family: @basefont;
+    font-size: 30px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  .before-after__result-weight {
+    width: 100px;
+    height: 15px;
+    padding: 13px 19px 8px 31px;
+    font-family: @secondfont;
+    font-size: @basefontsize;
+    line-height: 12px;
+    text-align: center;
+  }
+
+  .before-after__number-day {
+    display: block;
+    width: 125px;
+    height: 30px;
+    padding: 20px 17px 0 29px;
+    font-family: @basefont;
+    font-size: 30px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  .before-after__result-day {
+    display: block;
+    width: 145px;
+    height: 15px;
+    padding: 11px 9px 0 9px;
+    font-family: @secondfont;
+    font-size: @basefontsize;
+    line-height: 12px;
+    text-transform: lowercase;
+    text-align: center;
   }
 
   .before-after__title-cost {
     display: block;
     width: 175px;
-    padding: 7px 0 2px 5px;
+    text-align: right;
+    padding: 6px 0 2px 5px;
     font-size: 20px;
     line-height: 28px;
     text-transform: uppercase;
   }
 
-  .before-after__cost-number {
+  .slider__list {
     display: block;
-    margin-right: -85px;
-  }
-
-  .before-after__image {
-    display: block;
-    list-style: none;
-    width: 708px;
-    height: 580px;
     margin: 0;
     padding: 0;
-    background-color: #00a8e6;
+    list-style: none;
   }
 
   .before-after__image-before {
-    display: none;
+    display: block;
+    width: 690px;
+    height: 517px;
+    padding-left: 15px;
+    padding-right: 2px;
   }
 
-  .before-after__scale {
+  .before-after__image-after {
+    display: block;
+  }
+
+  .before-after__toggles {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 29px;
-    padding-bottom: 68px;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 54px;
     margin: 0;
   }
 
-  .before-after__before,
-  .before-after__after {
+  .slider__toggle-before,
+  .slider__toggle-after {
     display: block;
+    margin-top: 17px;
+    margin-bottom: 21px;
+    font-family: @basefont;
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
   }
 
-  .before-after__before {
-    padding: 5px 10px 7px 48px;
+  .slider__toggle-before {
+    margin-left: 68px;
   }
 
-  .before-after__after {
-    padding: 5px 49px 7px 15px;
+  .slider__toggle-after {
+    margin-right: 69px;
+  }
+
+  .slider__toggle-before::before,
+  .slider__toggle-after::before {
+    position: relative;
+    top: 26px;
+    display: block;
+    content: " ";
+    width: 48px;
+    margin: 0;
+    border-bottom: 1px dashed @border-darkgray;
+  }
+
+  .slider__toggle-before::before,
+  .slider__toggle-after::before {
+    &:hover {
+      position: relative;
+      top: 26px;
+      display: block;
+      content: " ";
+      width: 48px;
+      margin: 0;
+      border-bottom: 1px solid @border-darkgray;
+    }
+
+    &:active {
+      position: relative;
+      top: 26px;
+      display: block;
+      content: " ";
+      width: 48px;
+      margin: 0;
+      border: none;
+    }
   }
 }
 
@@ -233,7 +377,8 @@
   }
 
   .before-after__wrapper {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     width: 1220px;
     margin: 0 auto;
     padding: 0 40px;
@@ -241,19 +386,36 @@
 
   .before-after__title {
     display: block;
-    padding: 0 5px 5px 11px;
+    width: 700px;
+    padding: 0 335px 146px 1px;
     font-family: @basefont;
     font-size: 60px;
     font-weight: @basefontweight;
     line-height: 60px;
     text-transform: none;
   }
+  .before-after__wrapper-left,
+  .before-after__wrapper-right {
+    display: block;
+    height: 392px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .before-after__wrapper-right {
+    position: relative;
+    top: -263px;
+    left: 121px;
+    display: block;
+  }
 
   .before-after__description {
     display: block;
     width: 435px;
-    padding: 140px 10px 5px 2px;
-    margin: 0 40px;
+    padding: 0;
+    padding-left: 1px;
+    padding-bottom: 68px;
+    margin: 0;
     line-height: 24px;
     font-size: 16px;
     font-family: @secondfont;
@@ -261,72 +423,164 @@
   }
 
   .before-after__cost {
-    display: flex;
-    flex-direction: column;
-    width: 490px;
+    display: block;
+    width: 370px;
+    margin: 0;
+    padding: 0;
   }
 
   .before-after__list {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    width: 367px;
-    margin-left: 10px;
-    margin-top: 50px;
+    width: 365px;
+    margin: 0;
     padding: 0;
-    height: 100px;
-    background-color: #00a8e6;
+    padding-bottom: 40px;
+  }
+
+  .before-after__list-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 160px;
+    height: 80px;
+  }
+
+  .before-after__number-weight {
+    display: block;
+    width: 113px;
+    height: 30px;
+    padding: 21px 46px 0 58px;
+    font-family: @basefont;
+    font-size: 30px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  .before-after__result-weight {
+    width: 100px;
+    height: 15px;
+    padding: 13px 19px 8px 31px;
+    font-family: @secondfont;
+    font-size: @basefontsize;
+    line-height: 12px;
+    text-align: center;
+  }
+
+  .before-after__number-day {
+    display: block;
+    width: 125px;
+    height: 30px;
+    padding: 21px 17px 0 30px;
+    font-family: @basefont;
+    font-size: 30px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  .before-after__result-day {
+    display: block;
+    width: 145px;
+    height: 15px;
+    padding: 11px 9px 0 9px;
+    font-family: @secondfont;
+    font-size: @basefontsize;
+    line-height: 12px;
+    text-transform: lowercase;
+    text-align: center;
   }
 
   .before-after__title-cost {
     display: block;
-    width: 175px;
-    padding: 41px 5px 5px 2px;
-    margin-left: 9px;
+    width: 275px;
+    padding: 6px 0 2px 0;
+    margin: 0;
     font-size: 20px;
     line-height: 28px;
     text-transform: uppercase;
   }
 
-  .before-after__cost-number {
+  .slider__list {
     display: block;
-    width: 95px;
-    margin-top: -28px;
-    margin-left: 235px;
-  }
-
-  .before-after__image {
-    position: absolute;
-    right: 204px;
-    display: block;
-    width: 445px;
-    height: 550px;
-    margin-top: -550px;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    background-color: #00a8e6;
   }
 
   .before-after__image-before {
-    display: none;
-  }
-
-  .before-after__scale {
-    flex-wrap: wrap;
-    display: flex;
-  }
-
-  .before-after__before,
-  .before-after__after {
     display: block;
+    width: 690px;
+    height: 517px;
+    padding-left: 15px;
+    padding-right: 2px;
+  }
+
+  .before-after__image-after {
+    display: block;
+  }
+
+  .before-after__toggles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+
+  .slider__toggle-before,
+  .slider__toggle-after {
+    display: block;
+    margin-top: 42px;
+    margin-bottom: 21px;
+    font-family: @basefont;
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
   }
 
-  .before-after__before {
-    padding: 5px 5px 5px 669px;
+  .slider__toggle-before {
+    margin-left: 93px;
   }
 
-  .before-after__after {
-    padding: 3px 22px 5px 5px;
+  .slider__toggle-after {
+    margin-right: 43px;
+  }
+
+  .slider__toggle-before::before,
+  .slider__toggle-after::before {
+    position: relative;
+    top: 26px;
+    display: block;
+    content: " ";
+    width: 48px;
+    margin: 0;
+    border-bottom: 1px dashed @border-darkgray;
+  }
+
+  .slider__toggle-before::before,
+  .slider__toggle-after::before {
+    &:hover {
+      position: relative;
+      top: 26px;
+      display: block;
+      content: " ";
+      width: 48px;
+      margin: 0;
+      border-bottom: 1px solid @border-darkgray;
+    }
+
+    &:active {
+      position: relative;
+      top: 26px;
+      display: block;
+      content: " ";
+      width: 48px;
+      margin: 0;
+      border: none;
+    }
   }
 }
