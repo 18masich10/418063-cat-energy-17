@@ -23,9 +23,8 @@
   }
 }
 
-@media (min-width: 768px) and (min-resolution: 144dpi),
-        (min-width: 768px) and (min-resolution: 1.5dppx){
-  .promo:before {
+@media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .promo::before {
     background-image: url("../img/index-background-mobile@2x.jpg 2x");
     background-size: 320px auto;
   }
@@ -219,9 +218,8 @@
     }
   }
 
-  @media (min-width: 1300px) and (min-resolution: 144dpi),
-  (min-width: 1300px) and (min-resolution: 1.5dppx){
-    .promo:before {
+  @media (min-width: 1300px) and (min-resolution: 144dpi), (min-width: 1300px) and (min-resolution: 1.5dppx) {
+    .promo::before {
       background-image: url("../img/index-background-desktop@2x.jpg 2x");
     }
   }
