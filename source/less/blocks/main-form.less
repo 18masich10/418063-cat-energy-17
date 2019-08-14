@@ -12,6 +12,10 @@
   border-bottom: 1px solid @border-lightgray;
 }
 
+.form__wrapper:nth-child(4) {
+  border: none;
+}
+
 .form {
   width: 320px;
   padding: 0;
@@ -28,6 +32,7 @@
   line-height: 60px;
   text-transform: none;
   border-top: 1px solid @border-lightgray;
+  background-color: @bg-white;
 }
 
 .form__text {
@@ -68,16 +73,49 @@
   }
 
   &--contacts {
-    padding: 28px 99px 33px 21px;
+    padding: 25px 99px 34px 20px;
   }
 
   &--about-me {
     width: 281px;
-    padding: 13px 145px 35px 0;
+    padding: 10px 145px 34px 0;
   }
 
   &--extra {
-    padding: 28px 145px 36px 20px;
+    padding: 25px 145px 36px 20px;
+  }
+
+  &--contacts::before {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 98px;
+    height: 3px;
+    top: 17px;
+    left: 202px;
+    background: @bg-green;
+  }
+
+  &--about-me::before {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 158px;
+    height: 3px;
+    top: 17px;
+    left: 143px;
+    background: @bg-green;
+  }
+
+  &--extra::before {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 135px;
+    height: 3px;
+    top: 17px;
+    left: 165px;
+    background: @bg-green;
   }
 }
 
@@ -309,9 +347,9 @@
   width: 280px;
   height: 42px;
   padding: 5px 24px;
-  margin-top: 14px;
+  margin-top: 16px;
   margin-left: 22px;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
   font-size: 16px;
   text-transform: uppercase;
   color: @color-white;
@@ -429,15 +467,81 @@
     }
 
     &--contacts {
-      padding: 0 7px 82px 38px;
+      padding: 0 7px 77px 38px;
     }
 
     &--about-me {
-      padding: 0 0 83px 38px;
+      padding: 0 0 77px 38px;
     }
 
     &--extra {
-      padding: 0 0 70px 38px;
+      padding: 0 0 64px 38px;
+    }
+
+    &--contacts::before {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 146px;
+      height: 3px;
+      top: 17px;
+      left: 554px;
+      background: @bg-green;
+    }
+
+    &--contacts::after {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 31px;
+      height: 3px;
+      top: -10px;
+      left: -68px;
+      background: @bg-green;
+    }
+
+    &--about-me::before {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 478px;
+      height: 3px;
+      top: 16px;
+      left: 220px;
+      background: @bg-green;
+    }
+
+    &--about-me::after {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 32px;
+      height: 3px;
+      top: -11px;
+      left: -69px;
+      background: @bg-green;
+    }
+
+    &--extra::before {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 446px;
+      height: 3px;
+      top: 16px;
+      left: 254px;
+      background: @bg-green;
+    }
+
+    &--extra::after {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 31px;
+      height: 3px;
+      top: -11px;
+      left: -68px;
+      background: @bg-green;
     }
   }
 
@@ -761,7 +865,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       width: 570px;
-      padding-bottom: 57px;
+      padding-bottom: 54px;
     }
 
     &--contacts {
@@ -834,17 +938,82 @@
     }
 
     &--contacts {
-      padding: 0;
-      padding-bottom: 81px;
+      padding: 0 7px 77px 0;
     }
 
     &--about-me {
-      padding: 2px 0 82px 0;
+      padding: 2px 0 77px 0;
     }
 
     &--extra {
       padding: 0;
-      padding-bottom: 69px;
+      padding-bottom: 64px;
+    }
+
+    &--contacts::before {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 776px;
+      height: 3px;
+      top: 17px;
+      left: 554px;
+      background: @bg-green;
+    }
+
+    &--contacts::after {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 70px;
+      height: 3px;
+      top: -9px;
+      left: -110px;
+      background: @bg-green;
+    }
+
+    &--about-me::before {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 1110px;
+      height: 3px;
+      top: 16px;
+      left: 220px;
+      background: @bg-green;
+    }
+
+    &--about-me::after {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 72px;
+      height: 3px;
+      top: -10px;
+      left: -111px;
+      background: @bg-green;
+    }
+
+    &--extra::before {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 1076px;
+      height: 3px;
+      top: 16px;
+      left: 254px;
+      background: @bg-green;
+    }
+
+    &--extra::after {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 70px;
+      height: 3px;
+      top: -11px;
+      left: -110px;
+      background: @bg-green;
     }
   }
 
