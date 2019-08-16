@@ -11,13 +11,14 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
+      <a href="index.html">
       <picture class="page-header__logo">
         <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип-картинка «Кэт Энерджи»">
       </picture>
-
-      <nav class="main-nav main-nav--opened">
+      </a>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toogle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -85,13 +86,11 @@
             <div class="form__wrapper form__wrapper--contacts">
               <div class="form__item form__item--email-user">
                 <label for="email-user" class="form__label form__label--email-user">E-mail:<sup>*</sup></label>
-                <input id="email-user" class="form__input form__input--text4" type="email" name="email" placeholder="Kuklachev@gmail.com" required>
-                <button class="form__icon form__icon--email-user" type="button"><span class="visually-hidden">Конверт</span></button>
+                <input id="email-user" class="form__input form__input--text4" type="email" name="email" placeholder="Kuklachev@gmail.com" required><span class="visually-hidden">Конверт</span>
               </div>
               <div class="form__item form__item--phone-user">
                 <label for="phone-user" class="form__label form__label--phone-user">Телефон:<sup>*</sup></label>
-                <input id="phone-user" class="form__input form__input--text5" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>            <!-- Иконки почты и телефона кликабельны?  -->
-                <button class="form__icon form__icon--phone-user" type="button"><span class="visually-hidden">Телефон</span></button>
+                <input id="phone-user" class="form__input form__input--text5" type="tel" name="phone" placeholder="8 (960) 900-60-90" required><span class="visually-hidden">Телефон</span>
               </div>
             </div>
         </fieldset>
@@ -100,8 +99,7 @@
           <fieldset class="form__fieldset form__fieldset--about-me">
             <legend class="form__legend form__legend--about-me">Комментарий</legend>
 
-            <textarea class="form__input form__input--textarea" name="extra" cols="25" rows="5"
-                      placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form__input form__input--textarea" name="extra" cols="25" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
         </div>
 
