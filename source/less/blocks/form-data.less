@@ -1,0 +1,225 @@
+// Style.less для блока form-data
+//-------------------------------
+
+.form__fieldset {
+  &--data {
+    display: block;
+    width: 280px;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
+
+.form__item {
+  &--name,
+  &--weight,
+  &--years {
+    display: flex;
+    width: 280px;
+    padding-bottom: 15px;
+  }
+
+  &--years {
+    padding-bottom: 24px;
+  }
+}
+
+.form__label {
+  &--name,
+  &--weight,
+  &--years {
+    display: block;
+    padding: 13px 0 12px 0;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &--name {
+    width: 52px;
+  }
+
+  &--weight {
+    width: 77px;
+  }
+
+  &--years {
+    width: 110px;
+  }
+}
+
+.form__input {
+  &--text1,
+  &--text2,
+  &--text3 {
+    display: block;
+    height: 41px;
+    padding-top: 0;
+    padding-left: 13px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 1px solid @border-lightgray;
+  }
+
+  &--text1 {
+    width: 212px;
+  }
+
+  &--text2 {
+    width: 187px;
+  }
+
+  &--text3 {
+    width: 156px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__fieldset {
+    &--data {
+      display: flex;
+      flex-wrap: wrap;
+      width: 708px;
+      padding: 0;
+      padding-bottom: 52px;
+      margin: 0;
+      border: none;
+    }
+  }
+
+  .form__item {
+    &--name,
+    &--weight,
+    &--years {
+      display: flex;
+      width: 670px;
+      height: 54px;
+      padding-bottom: 18px;
+    }
+  }
+
+  .form__label {
+    &--name,
+    &--weight,
+    &--years {
+      display: block;
+      height: 36px;
+      padding: 17px 0 0 41px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--name {
+      width: 64px;
+    }
+
+    &--weight {
+      width: 94px;
+    }
+
+    &--years {
+      width: 133px;
+    }
+  }
+
+  .form__input {
+    &--text1,
+    &--text2,
+    &--text3 {
+      display: block;
+      padding-top: 4px;
+      padding-left: 17px;
+      padding-bottom: 6px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid @border-lightgray;
+    }
+
+    &--text1 {
+      width: 545px;
+    }
+
+    &--text2 {
+      width: 515px;
+    }
+
+    &--text3 {
+      width: 477px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__fieldset {
+    &--data {
+      display: flex;
+      flex-wrap: wrap;
+      width: 570px;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+  }
+
+  .form__item {
+    &--name,
+    &--weight,
+    &--years {
+      display: flex;
+      width: 570px;
+      height: 53px;
+      padding-bottom: 19px;
+    }
+  }
+
+  .form__label {
+    &--name,
+    &--weight,
+    &--years {
+      display: block;
+      height: 36px;
+      padding: 17px 0 0 0;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &--name {
+      width: 62px;
+    }
+
+    &--weight {
+      width: 94px;
+    }
+
+    &--years {
+      width: 133px;
+    }
+  }
+
+  .form__input {
+    &--text1,
+    &--text2,
+    &--text3 {
+      display: block;
+      padding-left: 19px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid @border-lightgray;
+    }
+
+    &--text1 {
+      width: 486px;
+    }
+
+    &--text2 {
+      width: 454px;
+    }
+
+    &--text3 {
+      width: 414px;
+    }
+  }
+}

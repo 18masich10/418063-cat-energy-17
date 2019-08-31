@@ -1,0 +1,192 @@
+// Style.less для блока site-list
+//-------------------------------
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.site-list__item {
+  display: block;
+}
+
+.site-list__link {
+  display: block;
+  padding: 22px 69px 23px 69px;
+  margin: 0 -20px;
+  font-family: @basefont;
+  font-size: 20px;
+  font-weight: @basefontweight;
+  line-height: 20px;
+  color: @color-black;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-top: 1px solid @border-lightgray;
+
+  &:hover {
+    color: @link-hover;
+  }
+
+  &:active {
+    color: @link-active;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .site-list__item {
+    display: block;
+    position: relative;
+    margin-left: 33px;
+  }
+
+  .site-list__link {
+    display: block;
+    padding: 0;
+    margin: 0;
+    color: @color-black;
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    border: none;
+
+    &--active-index::before {
+      content: "";
+
+      position: absolute;
+      top: 30px;
+      left: 2px;
+      width: 62px;
+      height: 2px;
+      background: @bg-green;
+    }
+
+    &--active-catalog::before {
+      content: "";
+      position: absolute;
+      width: 152px;
+      bottom: -12px;
+      left: 0;
+      height: 2px;
+
+      background: @bg-green;
+    }
+
+    &--active-form::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 151px;
+      bottom: -12px;
+      height: 2px;
+      background: @bg-green;
+    }
+
+    &:hover {
+      color: @link-hover;
+    }
+
+    &:active {
+      color: @link-active;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: -5px;
+  }
+
+  .site-list__item {
+    display: block;
+    position: relative;
+    margin-left: 23px;
+  }
+
+  .site-list__item:nth-child(1) {
+    margin-right: -47px;
+  }
+
+
+  .site-list__link {
+    display: block;
+    width: 180px;
+    padding: 22px 0;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    border: none;
+
+    &--active-index::before {
+      display: block;
+    }
+
+    &--active-catalog::before {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      width: 169px;
+      bottom: 9px;
+      left: 6px;
+      height: 2px;
+
+      background: @bg-green;
+    }
+
+    &--active-form::before {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      width: 169px;
+      bottom: 9px;
+      left: 5px;
+      height: 2px;
+      background: @bg-green;
+    }
+
+    &:hover {
+      color: @link-hover;
+    }
+
+    &:active {
+      color: @link-active;
+    }
+  }
+
+  .site-list__index {
+    color: @color-white;
+
+    &--active-index::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 67px;
+      top: 54px;
+      left: 56px;
+      height: 2px;
+      background: @bg-white;
+    }
+
+    &:hover {
+      color: @link-index-hover;
+    }
+
+    &:active {
+      color: @link-index-active;
+    }
+  }
+}

@@ -2,23 +2,23 @@
 //-------------------------------
 .main-form {
   display: block;
-  width: 320px;
+  width: 100%;
 }
 
 .form__wrapper {
   display: block;
-  width: 280px;
   padding: 0 20px;
-  border-bottom: 1px solid @border-lightgray;
-}
+  margin: 0 -20px;
 
-.form__wrapper:nth-child(4) {
-  border: none;
+  &--diet {
+    border-top: 1px solid @border-lightgray;
+    border-bottom: 1px solid @border-lightgray;
+  }
 }
 
 .form {
-  width: 320px;
-  padding: 0;
+  width: 280px;
+  padding: 0 20px;
   margin: 0;
   background-color: @bg-white;
 }
@@ -27,18 +27,18 @@
   display: block;
   width: 270px;
   margin: 0;
-  padding: 15px 28px 25px 21px;
+  padding: 15px 28px 25px 0;
   font-size: 36px;
+  font-weight: @basefontweight;
   line-height: 60px;
   text-transform: none;
-  border-top: 1px solid @border-lightgray;
   background-color: @bg-white;
 }
 
 .form__text {
   display: block;
   width: 235px;
-  padding: 0 63px 39px 22px;
+  padding: 0 63px 39px 0;
   margin: 0;
   text-transform: uppercase;
 }
@@ -47,384 +47,13 @@
   display: block;
 }
 
-.form__fieldset {
-  &--data,
-  &--diet,
-  &--contacts,
-  &--about-me,
-  &--extra {
-    display: block;
-    width: 280px;
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
-}
-
-.form__legend {
-  &--contacts,
-  &--about-me,
-  &--extra {
-    display: block;
-    width: 320px;
-    font-size: 24px;
-    line-height: 24px;
-    text-transform: none;
-  }
-
-  &--contacts {
-    padding: 25px 99px 34px 20px;
-  }
-
-  &--about-me {
-    width: 281px;
-    padding: 10px 145px 34px 0;
-  }
-
-  &--extra {
-    padding: 26px 145px 35px 20px;
-  }
-
-  &--contacts::before {
-    position: relative;
-    display: block;
-    content: " ";
-    width: 98px;
-    height: 3px;
-    top: 17px;
-    left: 202px;
-    background: @bg-green;
-  }
-
-  &--about-me::before {
-    position: relative;
-    display: block;
-    content: " ";
-    width: 158px;
-    height: 3px;
-    top: 17px;
-    left: 143px;
-    background: @bg-green;
-  }
-
-  &--extra::before {
-    position: relative;
-    display: block;
-    content: " ";
-    width: 135px;
-    height: 3px;
-    top: 17px;
-    left: 165px;
-    background: @bg-green;
-  }
-}
-
-.form__item {
-  &--name,
-  &--weight,
-  &--years {
-    display: flex;
-    width: 280px;
-    padding-bottom: 15px;
-  }
-
-  &--years {
-    padding-bottom: 25px;
-  }
-
-  &--slim,
-  &--pro,
-  &--advice {
-    display: flex;
-    width: 270px;
-    padding-bottom: 23px;
-    padding-left: 16px;
-  }
-
-  &--slim {
-    padding-top: 34px;
-  }
-
-  &--advice {
-    padding-bottom: 15px;
-  }
-
-  &--sweetener,
-  &--water,
-  &--milk,
-  &--vitamins {
-    display: flex;
-    width: 300px;
-  }
-
-  &--email-user,
-  &--phone-user {
-    display: flex;
-    width: 296px;
-    padding: 0 0 14px 0;
-  }
-}
-
-.form__label {
-  &--name,
-  &--weight,
-  &--years {
-    display: block;
-    padding: 14px 0 12px 0;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
-
-  &--name {
-    width: 52px;
-  }
-
-  &--weight {
-    width: 78px;
-  }
-
-  &--years {
-    width: 110px;
-  }
-
-  &--slim,
-  &--pro,
-  &--advice {
-    display: block;
-    width: 195px;
-    padding: 9px 0 0 10px;
-    margin: 0;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-
-  &--email-user,
-  &--phone-user {
-    display: block;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
-
-  &--email-user {
-    width: 61px;
-    padding: 13px 0 10px 0;
-  }
-
-  &--phone-user {
-    width: 78px;
-    padding: 12px 0 12px 0;
-  }
-
-  &--sweetener,
-  &--water,
-  &--milk,
-  &--vitamins {
-    display: block;
-    width: 270px;
-    padding: 3px 0 22px 11px;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
-}
-
-.form__input {
-  &--text1,
-  &--text2,
-  &--text3 {
-    display: block;
-    padding-left: 15px;
-    font-size: 16px;
-    text-transform: uppercase;
-    border: 1px solid @border-lightgray;
-
-    &:hover {
-      border-color: @border-hover;
-    }
-
-    &:active {
-      border-color: @border-active;
-    }
-  }
-
-  &--text1 {
-    width: 212px;
-  }
-
-  &--text2 {
-    width: 187px;
-  }
-
-  &--text3 {
-    width: 156px;
-  }
-
-  &--radio1,
-  &--radio2,
-  &--radio3 {
-    display: block;
-  }
-
-  &--text4,
-  &--text5 {
-    display: block;
-    height: 43px;
-    font-size: 16px;
-    text-transform: uppercase;
-    border: 1px solid @border-lightgray;
-
-    &:hover {
-      border-color: @border-hover;
-    }
-
-    &:active {
-      border-color: @border-active;
-    }
-  }
-
-  &--text4 {
-    width: 202px;
-    padding: 0 0 0 15px;
-  }
-
-  &--text5 {
-    width: 188px;
-    padding: 0 0 0 14px;
-  }
-
-  &--textarea {
-    display: block;
-    width: 263px;
-    height: 135px;
-    padding: 13px 0 0 16px;
-    margin: 0;
-    font-size: 16px;
-    text-transform: uppercase;
-    border: 1px solid @border-lightgray;
-  }
-
-  &--checkbox1,
-  &--checkbox2,
-  &--checkbox3,
-  &--checkbox4 {
-    display: block;
-  }
-}
-
-.form__item input[type="checkbox"]:checked,
-.form__item input[type="checkbox"]:not(:checked),
-.form__item input[type="radio"]:checked,
-.form__item input[type="radio"]:not(:checked) {
-  position: absolute;
-  left: -9999px;
-}
-
-.form__item input[type="checkbox"]:checked + label,
-.form__item input[type="checkbox"]:not(:checked) + label,
-.form__item input[type="radio"]:checked + label,
-.form__item input[type="radio"]:not(:checked) + label {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-}
-
-.form__item input[type="checkbox"]:checked + label,
-.form__item input[type="checkbox"]:not(:checked) + label {
-  padding: 0;
-  padding-left: 47px;
-}
-
-.form__item input[type="checkbox"]:checked + label:nth-child(1),
-.form__item input[type="checkbox"]:not(:checked) + label:nth-child(1),
-.form__item input[type="checkbox"]:checked + label:nth-child(2),
-.form__item input[type="checkbox"]:not(:checked) + label:nth-child(2) {
-  padding-top: 4px;
-}
-
-.form__item input[type="radio"]:checked + label,
-.form__item input[type="radio"]:not(:checked) + label {
-  padding: 0;
-  padding-left: 31px;
-  margin-top: -9px;
-}
-
-.form__item input[type="checkbox"]:checked + label::before,
-.form__item input[type="checkbox"]:not(:checked) + label::before,
-.form__item input[type="radio"]:checked + label::before,
-.form__item input[type="radio"]:not(:checked) + label::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  left: 0;
-  top: 0;
-  border: 1px solid @border-darkgray;
-  background-color: @bg-white;
-}
-
-.form__item input[type="checkbox"]:checked + label::before,
-.form__item input[type="checkbox"]:not(:checked) + label::before {
-  left: 1px;
-  top: -1px;
-  width: 28px;
-  height: 28px;
-  border-radius: 2px;
-}
-
-.form__item input[type="radio"]:checked + label::before,
-.form__item input[type="radio"]:not(:checked) + label::before {
-  left: -16px;
-  top: -6px;
-  width: 28px;
-  height: 28px;
-  border-radius: 100%;
-}
-
-.form__item input[type="checkbox"]:checked + label::after,
-.form__item input[type="checkbox"]:not(:checked) + label::after {
-  position: relative;
-  top: -14px;
-  left: -41px;
-  display: block;
-  content: "";
-  width: 21px;
-  height: 21px;
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-}
-
-.form__item input[type="radio"]:checked + label::after,
-.form__item input[type="radio"]:not(:checked) + label::after {
-  position: relative;
-  display: block;
-  content: "";
-  left: -37px;
-  top: -14px;
-  width: 11px;
-  height: 11px;
-  border-radius: 100%;
-  background-color: @bg-green;
-}
-
-.form__item input[type="checkbox"]:not(:checked) + label::after,
-.form__item input[type="radio"]:not(:checked) + label::after {
-  opacity: 0;
-}
-
-.form__item input[type="checkbox"]:checked + label::after,
-.form__item input[type="radio"]:checked + label::after {
-  opacity: 1;
-}
-
 .form__button {
   display: block;
   width: 280px;
   height: 42px;
   padding: 5px 24px;
-  margin-top: 17px;
-  margin-left: 22px;
+  margin-top: 22px;
+  margin-left: 1px;
   margin-bottom: 13px;
   font-size: 16px;
   text-transform: uppercase;
@@ -436,7 +65,7 @@
   display: block;
   width: 170px;
   height: 30px;
-  padding: 6px 64px 16px 87px;
+  padding: 5px 64px 16px 65px;
   font-family: @secondfont;
   font-size: 14px;
   text-transform: none;
@@ -458,7 +87,7 @@
     display: block;
     width: 440px;
     margin: 0;
-    padding: 54px 100px 56px 0;
+    padding: 56px 100px 56px 0;
     font-size: 60px;
     line-height: 60px;
     text-transform: none;
@@ -468,7 +97,7 @@
   .form__text {
     display: block;
     width: 324px;
-    padding: 0 100px 68px 39px;
+    padding: 0 100px 68px 40px;
     margin: 0;
     font-size: 20px;
     line-height: 28px;
@@ -487,461 +116,7 @@
     width: 708px;
     padding: 0;
     margin: 0;
-    border-bottom: none;
-  }
-
-  &--extra {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 708px;
-  }
-
-  .form__fieldset {
-    &--data,
-    &--diet,
-    &--contacts,
-    &--about-me,
-    &--extra {
-      display: flex;
-      padding: 0;
-      margin: 0;
-      border: none;
-    }
-
-    &--data {
-      width: 708px;
-      padding-bottom: 52px;
-    }
-
-    &--diet {
-      width: 628px;
-      margin-left: 42px;
-      margin-bottom: 79px;
-      border: 1px solid @border-lightgray;
-    }
-
-    &--contacts,
-    &--about-me {
-      width: 708px;
-    }
-
-    &--extra {
-      display: block;
-      width: 708px;
-    }
-  }
-
-  .form__legend {
-    &--contacts,
-    &--about-me,
-    &--extra {
-      display: block;
-      width: 560px;
-      font-size: 36px;
-      line-height: 24px;
-      text-transform: none;
-    }
-
-    &--contacts {
-      padding: 0 7px 77px 38px;
-    }
-
-    &--about-me {
-      padding: 0 0 77px 38px;
-    }
-
-    &--extra {
-      padding: 0 0 64px 38px;
-    }
-
-    &--contacts::before {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 146px;
-      height: 3px;
-      top: 17px;
-      left: 554px;
-      background: @bg-green;
-    }
-
-    &--contacts::after {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 31px;
-      height: 3px;
-      top: -10px;
-      left: -68px;
-      background: @bg-green;
-    }
-
-    &--about-me::before {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 480px;
-      height: 3px;
-      top: 18px;
-      left: 220px;
-      background: @bg-green;
-    }
-
-    &--about-me::after {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 32px;
-      height: 3px;
-      top: -9px;
-      left: -69px;
-      background: @bg-green;
-    }
-
-    &--extra::before {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 446px;
-      height: 3px;
-      top: 18px;
-      left: 254px;
-      background: @bg-green;
-    }
-
-    &--extra::after {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 31px;
-      height: 3px;
-      top: -9px;
-      left: -68px;
-      background: @bg-green;
-    }
-  }
-
-  .form__item {
-    &--name,
-    &--weight,
-    &--years {
-      display: flex;
-      width: 670px;
-      height: 53px;
-      padding-bottom: 19px;
-    }
-
-    &--slim,
-    &--pro,
-    &--advice {
-      display: flex;
-      width: 515px;
-      height: 40px;
-      padding-left: 55px;
-      padding-bottom: 13px;
-    }
-
-    &--slim {
-      padding-top: 36px;
-    }
-
-    &--advice {
-      padding-bottom: 15px;
-    }
-
-    &--sweetener,
-    &--water,
-    &--milk,
-    &--vitamins {
-      display: flex;
-      width: 294px;
-      height: 33px;
-      padding-bottom: 39px;
-    }
-
-    &--sweetener,
-    &--milk {
-      padding-left: 38px;
-    }
-
-    &--water,
-    &--vitamins {
-      padding-right: 32px;
-    }
-
-    &--email-user,
-    &--phone-user {
-      display: flex;
-      width: 660px;
-      height: 50px;
-    }
-
-    &--email-user {
-      padding-bottom: 22px;
-    }
-
-    &--phone-user {
-      padding-bottom: 72px;
-    }
-  }
-
-  .form__label {
-    &--name,
-    &--weight,
-    &--years {
-      display: block;
-      height: 36px;
-      padding: 16px 0 0 40px;
-      font-size: 20px;
-      line-height: 18px;
-      text-transform: uppercase;
-    }
-
-    &--name {
-      width: 62px;
-    }
-
-    &--weight {
-      width: 94px;
-    }
-
-    &--years {
-      width: 133px;
-    }
-
-    &--slim,
-    &--pro,
-    &--advice {
-      display: block;
-      width: 270px;
-      height: 25px;
-      padding: 18px 0 0 16px;
-      margin: 0;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-
-    &--email-user,
-    &--phone-user {
-      display: block;
-      padding: 14px 0 0 44px;
-      font-size: 20px;
-      line-height: 18px;
-      text-transform: uppercase;
-    }
-
-    &--email-user {
-      width: 80px;
-      padding: 16px 0 0 40px;
-    }
-
-    &--phone-user {
-      width: 100px;
-      padding: 16px 0 0 37px;
-    }
-
-    &--sweetener,
-    &--water,
-    &--milk,
-    &--vitamins {
-      display: block;
-      width: 270px;
-      height: 24px;
-      padding: 3px 0 0 16px;
-      font-size: 20px;
-      line-height: 18px;
-      text-transform: uppercase;
-    }
-  }
-
-  .form__input {
-    &--text1,
-    &--text2,
-    &--text3 {
-      display: block;
-      padding-left: 19px;
-      font-size: 20px;
-      text-transform: uppercase;
-      border: 1px solid @border-lightgray;
-
-      &:hover {
-        border-color: @border-hover;
-      }
-
-      &:active {
-        border-color: @border-active;
-      }
-    }
-
-    &--text1 {
-      width: 545px;
-    }
-
-    &--text2 {
-      width: 515px;
-    }
-
-    &--text3 {
-      width: 475px;
-    }
-
-    &--radio1,
-    &--radio2,
-    &--radio3 {
-      display: block;
-    }
-
-    &--text4,
-    &--text5 {
-      display: block;
-      height: 50px;
-      font-size: 20px;
-      text-transform: uppercase;
-      border: 1px solid @border-lightgray;
-
-      &:hover {
-        border-color: @border-hover;
-      }
-
-      &:active {
-        border-color: @border-active;
-      }
-    }
-
-    &--text4 {
-      width: 530px;
-      padding: 0 0 0 21px;
-    }
-
-    &--text5 {
-      width: 515px;
-      padding: 0 0 0 18px;
-    }
-
-    &--textarea {
-      display: block;
-      width: 610px;
-      height: 158px;
-      padding: 14px 0 0 18px;
-      margin-left: 40px;
-      margin-bottom: 70px;
-      font-size: 20px;
-      text-transform: uppercase;
-      border: 1px solid @border-lightgray;
-    }
-
-    &--checkbox1,
-    &--checkbox2,
-    &--checkbox3,
-    &--checkbox4 {
-      display: block;
-    }
-  }
-
-  .form__item input[type="checkbox"]:checked,
-  .form__item input[type="checkbox"]:not(:checked),
-  .form__item input[type="radio"]:checked,
-  .form__item input[type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-  }
-
-  .form__item input[type="checkbox"]:checked + label,
-  .form__item input[type="checkbox"]:not(:checked) + label,
-  .form__item input[type="radio"]:checked + label,
-  .form__item input[type="radio"]:not(:checked) + label {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .form__item input[type="checkbox"]:checked + label,
-  .form__item input[type="checkbox"]:not(:checked) + label {
-    padding: 0;
-    padding-left: 60px;
-  }
-
-  .form__item input[type="checkbox"]:checked + label:nth-child(1),
-  .form__item input[type="checkbox"]:not(:checked) + label:nth-child(1),
-  .form__item input[type="checkbox"]:checked + label:nth-child(2),
-  .form__item input[type="checkbox"]:not(:checked) + label:nth-child(2) {
-    padding-top: 4px;
-  }
-
-  .form__item input[type="radio"]:checked + label,
-  .form__item input[type="radio"]:not(:checked) + label {
-    padding: 0;
-    padding-left: 31px;
-    margin-top: 0;
-  }
-
-  .form__item input[type="checkbox"]:checked + label::before,
-  .form__item input[type="checkbox"]:not(:checked) + label::before,
-  .form__item input[type="radio"]:checked + label::before,
-  .form__item input[type="radio"]:not(:checked) + label::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 0;
-    top: 0;
-    border: 1px solid @border-darkgray;
-    background-color: @bg-white;
-  }
-
-  .form__item input[type="checkbox"]:checked + label::before,
-  .form__item input[type="checkbox"]:not(:checked) + label::before {
-    left: 1px;
-    top: -4px;
-    width: 38px;
-    height: 38px;
-    border-radius: 2px;
-  }
-
-  .form__item input[type="radio"]:checked + label::before,
-  .form__item input[type="radio"]:not(:checked) + label::before {
-    left: -27px;
-    top: -8px;
-    width: 36px;
-    height: 36px;
-    border-radius: 100%;
-  }
-
-  .form__item input[type="checkbox"]:checked + label::after,
-  .form__item input[type="checkbox"]:not(:checked) + label::after {
-    position: relative;
-    top: -14px;
-    left: -49px;
-    display: block;
-    content: "";
-    width: 21px;
-    height: 21px;
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-  }
-
-  .form__item input[type="radio"]:checked + label::after,
-  .form__item input[type="radio"]:not(:checked) + label::after {
-    position: relative;
-    display: block;
-    content: "";
-    left: -48px;
-    top: -16px;
-    width: 18px;
-    height: 18px;
-    border-radius: 100%;
-    background-color: @bg-green;
-  }
-
-  .form__item input[type="checkbox"]:not(:checked) + label::after,
-  .form__item input[type="radio"]:not(:checked) + label::after {
-    opacity: 0;
-  }
-
-  .form__item input[type="checkbox"]:checked + label::after,
-  .form__item input[type="radio"]:checked + label::after {
-    opacity: 1;
+    border: none;
   }
 
   .form__send {
@@ -956,7 +131,7 @@
     width: 283px;
     height: 50px;
     padding: 5px 24px;
-    margin-top: 18px;
+    margin-top: 21px;
     margin-left: 39px;
     margin-bottom: 12px;
     font-size: 20px;
@@ -968,7 +143,7 @@
     display: block;
     width: 180px;
     height: 30px;
-    padding: 32px 139px 18px 10px;
+    padding: 36px 139px 18px 10px;
     font-family: @secondfont;
     font-size: 16px;
     text-transform: none;
@@ -993,7 +168,7 @@
     display: block;
     width: 440px;
     margin: 0;
-    padding: 62px 55px 57px 0;
+    padding: 71px 55px 57px 0;
     font-size: 60px;
     line-height: 60px;
     text-transform: none;
@@ -1034,6 +209,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       width: 1220px;
+      padding-bottom: 2px;
     }
 
     &--about-me {
@@ -1046,446 +222,8 @@
       flex-wrap: wrap;
       justify-content: space-between;
       width: 1220px;
-      padding-bottom: 49px;
+      padding-bottom: 55px;
     }
-  }
-
-  .form__fieldset {
-    &--data,
-    &--diet,
-    &--contacts,
-    &--about-me,
-    &--extra {
-      display: flex;
-      padding: 0;
-      margin: 0;
-      border: none;
-    }
-
-    &--data {
-      width: 570px;
-    }
-
-    &--diet {
-      width: 570px;
-      border: 1px solid @border-lightgray;
-    }
-
-    &--contacts {
-      width: 1220px;
-    }
-
-    &--about-me {
-      width: 1220px;
-      padding-bottom: 74px;
-    }
-
-    &--extra {
-      display: block;
-      width: 1220px;
-    }
-  }
-
-  .form__legend {
-    &--contacts,
-    &--about-me,
-    &--extra {
-      display: block;
-      width: 560px;
-      margin: 0;
-      font-size: 36px;
-      line-height: 24px;
-      text-transform: none;
-    }
-
-    &--contacts {
-      padding: 0 7px 77px 0;
-    }
-
-    &--about-me {
-      padding: 2px 0 77px 0;
-    }
-
-    &--extra {
-      padding: 0;
-      padding-bottom: 64px;
-    }
-
-    &--contacts::before {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 776px;
-      height: 3px;
-      top: 17px;
-      left: 554px;
-      background: @bg-green;
-    }
-
-    &--contacts::after {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 70px;
-      height: 3px;
-      top: -9px;
-      left: -110px;
-      background: @bg-green;
-    }
-
-    &--about-me::before {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 1110px;
-      height: 3px;
-      top: 16px;
-      left: 220px;
-      background: @bg-green;
-    }
-
-    &--about-me::after {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 72px;
-      height: 3px;
-      top: -10px;
-      left: -111px;
-      background: @bg-green;
-    }
-
-    &--extra::before {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 1076px;
-      height: 3px;
-      top: 16px;
-      left: 254px;
-      background: @bg-green;
-    }
-
-    &--extra::after {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 70px;
-      height: 3px;
-      top: -11px;
-      left: -110px;
-      background: @bg-green;
-    }
-  }
-
-  .form__item {
-    &--name,
-    &--weight,
-    &--years {
-      display: flex;
-      width: 570px;
-      height: 53px;
-      padding-bottom: 19px;
-    }
-
-    &--slim,
-    &--pro,
-    &--advice {
-      display: flex;
-      width: 500px;
-      height: 40px;
-    }
-
-    &--sweetener,
-    &--water,
-    &--milk,
-    &--vitamins {
-      display: flex;
-      width: 245px;
-      height: 33px;
-      padding: 0;
-      padding-bottom: 12px;
-    }
-
-    &--sweetener {
-      padding-left: 0;
-    }
-
-    &--water {
-      padding-left: 44px;
-    }
-
-    &--milk {
-      padding-right: 45px;
-      padding-left: 44px;
-    }
-
-    &--vitamins {
-      padding-right: 0;
-    }
-
-    &--email-user,
-    &--phone-user {
-      display: flex;
-      width: 570px;
-      height: 50px;
-    }
-  }
-
-  .form__label {
-    &--name,
-    &--weight,
-    &--years {
-      display: block;
-      height: 36px;
-      padding: 17px 0 0 2px;
-      font-size: 20px;
-      line-height: 18px;
-      text-transform: uppercase;
-    }
-
-    &--name {
-      width: 62px;
-    }
-
-    &--weight {
-      width: 94px;
-    }
-
-    &--years {
-      width: 133px;
-    }
-
-    &--slim,
-    &--pro,
-    &--advice {
-      display: block;
-      width: 270px;
-      height: 25px;
-      padding: 19px 0 0 15px;
-      margin: 0;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-
-    &--email-user,
-    &--phone-user {
-      display: block;
-      font-size: 20px;
-      line-height: 18px;
-      text-transform: uppercase;
-    }
-
-    &--email-user {
-      width: 84px;
-      padding: 16px 0 0 2px;
-    }
-
-    &--phone-user {
-      width: 99px;
-      padding: 17px 0 0 0;
-    }
-
-    &--sweetener,
-    &--water,
-    &--milk,
-    &--vitamins {
-      display: block;
-      width: 155px;
-      height: 24px;
-      padding: 3px 0 0 10px;
-      font-size: 20px;
-      line-height: 18px;
-      text-transform: uppercase;
-    }
-  }
-
-  .form__input {
-    &--text1,
-    &--text2,
-    &--text3 {
-      display: block;
-      padding-left: 19px;
-      font-size: 20px;
-      text-transform: uppercase;
-      border: 1px solid @border-lightgray;
-
-      &:hover {
-        border-color: @border-hover;
-      }
-
-      &:active {
-        border-color: @border-active;
-      }
-    }
-
-    &--text1 {
-      width: 486px;
-    }
-
-    &--text2 {
-      width: 454px;
-    }
-
-    &--text3 {
-      width: 414px;
-    }
-
-    &--radio1,
-    &--radio2,
-    &--radio3 {
-      display: block;
-    }
-
-    &--text4,
-    &--text5 {
-      display: block;
-      height: 50px;
-      font-size: 20px;
-      text-transform: uppercase;
-      border: 1px solid @border-lightgray;
-
-      &:hover {
-        border-color: @border-hover;
-      }
-
-      &:active {
-        border-color: @border-active;
-      }
-    }
-
-    &--text4 {
-      width: 465px;
-      padding: 0 0 0 17px;
-    }
-
-    &--text5 {
-      width: 452px;
-      padding: 0 0 0 18px;
-    }
-
-    &--textarea {
-      display: block;
-      width: 1200px;
-      height: 158px;
-      padding: 13px 0 0 19px;
-      margin: 0;
-      font-size: 20px;
-      text-transform: uppercase;
-      border: 1px solid @border-lightgray;
-    }
-
-    &--checkbox1,
-    &--checkbox2,
-    &--checkbox3,
-    &--checkbox4 {
-      display: block;
-    }
-  }
-
-  .form__item input[type="checkbox"]:checked,
-  .form__item input[type="checkbox"]:not(:checked),
-  .form__item input[type="radio"]:checked,
-  .form__item input[type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-  }
-
-  .form__item input[type="checkbox"]:checked + label,
-  .form__item input[type="checkbox"]:not(:checked) + label,
-  .form__item input[type="radio"]:checked + label,
-  .form__item input[type="radio"]:not(:checked) + label {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .form__item input[type="checkbox"]:checked + label,
-  .form__item input[type="checkbox"]:not(:checked) + label {
-    padding: 0;
-    padding-left: 60px;
-  }
-
-  .form__item input[type="checkbox"]:checked + label:nth-child(1),
-  .form__item input[type="checkbox"]:not(:checked) + label:nth-child(1),
-  .form__item input[type="checkbox"]:checked + label:nth-child(2),
-  .form__item input[type="checkbox"]:not(:checked) + label:nth-child(2) {
-    padding-top: 4px;
-  }
-
-  .form__item input[type="radio"]:checked + label,
-  .form__item input[type="radio"]:not(:checked) + label {
-    padding: 0;
-    padding-left: 31px;
-    margin-top: 0;
-  }
-
-  .form__item input[type="checkbox"]:checked + label::before,
-  .form__item input[type="checkbox"]:not(:checked) + label::before,
-  .form__item input[type="radio"]:checked + label::before,
-  .form__item input[type="radio"]:not(:checked) + label::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 0;
-    top: 0;
-    border: 1px solid @border-darkgray;
-    background-color: @bg-white;
-  }
-
-  .form__item input[type="checkbox"]:checked + label::before,
-  .form__item input[type="checkbox"]:not(:checked) + label::before {
-    left: 1px;
-    top: -4px;
-    width: 38px;
-    height: 38px;
-    border-radius: 2px;
-  }
-
-  .form__item input[type="radio"]:checked + label::before,
-  .form__item input[type="radio"]:not(:checked) + label::before {
-    left: -27px;
-    top: -8px;
-    width: 36px;
-    height: 36px;
-    border-radius: 100%;
-  }
-
-  .form__item input[type="checkbox"]:checked + label::after,
-  .form__item input[type="checkbox"]:not(:checked) + label::after {
-    position: relative;
-    top: -14px;
-    left: -49px;
-    display: block;
-    content: "";
-    width: 21px;
-    height: 21px;
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-  }
-
-  .form__item input[type="radio"]:checked + label::after,
-  .form__item input[type="radio"]:not(:checked) + label::after {
-    position: relative;
-    display: block;
-    content: "";
-    left: -48px;
-    top: -16px;
-    width: 18px;
-    height: 18px;
-    border-radius: 100%;
-    background-color: @bg-green;
-  }
-
-  .form__item input[type="checkbox"]:not(:checked) + label::after,
-  .form__item input[type="radio"]:not(:checked) + label::after {
-    opacity: 0;
-  }
-
-  .form__item input[type="checkbox"]:checked + label::after,
-  .form__item input[type="radio"]:checked + label::after {
-    opacity: 1;
   }
 
   .form__send {
@@ -1502,7 +240,6 @@
     height: 50px;
     padding: 3px 24px 0 25px;
     margin: 0;
-    margin-left: 3px;
     font-size: 20px;
     text-transform: uppercase;
     color: @color-white;
@@ -1514,8 +251,8 @@
     width: 180px;
     height: 30px;
     padding: 0;
-    padding-right: 384px;
-    padding-top: 16px;
+    padding-right: 386px;
+    padding-top: 15px;
     margin: 0;
     font-family: @secondfont;
     font-size: 16px;

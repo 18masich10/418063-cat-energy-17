@@ -1,0 +1,399 @@
+// Style.less для блока form-extra
+//--------------------------------
+.form__fieldset {
+  &--extra {
+    display: block;
+    width: 280px;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
+
+.form__legend {
+  &--extra {
+    display: block;
+    width: 280px;
+    padding: 26px 145px 35px 0;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  &--extra::before {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 135px;
+    height: 3px;
+    top: 17px;
+    left: 165px;
+    background-color: @bg-green;
+  }
+}
+
+.form__item {
+  &--sweetener,
+  &--water,
+  &--milk,
+  &--vitamins {
+    display: flex;
+    width: 280px;
+    height: 30px;
+    padding: 0;
+    padding-bottom: 12px;
+  }
+}
+
+.form__input {
+  &--checkbox1,
+  &--checkbox2,
+  &--checkbox3,
+  &--checkbox4 {
+    display: none;
+  }
+}
+
+.form__label {
+  &--sweetener,
+  &--water,
+  &--milk,
+  &--vitamins {
+    display: block;
+    width: 270px;
+    padding: 3px 0 22px 11px;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.form__item input[type="checkbox"]:checked + label,
+.form__item input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-top: 5px;
+  padding-left: 46px;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form__item input[type="checkbox"]:checked + label::before,
+.form__item input[type="checkbox"]:not(:checked) + label::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 0;
+  top: 0;
+  border-radius: 2px;
+  border: 1px solid @border-darkgray;
+  background-color: @bg-white;
+}
+
+.form__item input[type="checkbox"]:checked + label::after,
+.form__item input[type="checkbox"]:not(:checked) + label::after {
+  position: relative;
+  top: -15px;
+  left: -41px;
+  display: block;
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
+.form__item input[type="checkbox"]:not(:checked) + label::after {
+  opacity: 0;
+}
+
+.form__item input[type="checkbox"]:checked + label::after {
+  opacity: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .form__fieldset {
+    &--extra {
+      display: block;
+      width: 708px;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+  }
+
+  .form__legend {
+    &--extra {
+      display: block;
+      width: 560px;
+      padding: 0 0 60px 39px;
+      font-size: 36px;
+      line-height: 24px;
+      text-transform: none;
+    }
+
+    &--extra::before {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 446px;
+      height: 3px;
+      top: 18px;
+      left: 254px;
+      background-color: @bg-green;
+    }
+
+    &--extra::after {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 31px;
+      height: 3px;
+      top: -9px;
+      left: -68px;
+      background-color: @bg-green;
+    }
+  }
+
+  .form__item {
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: flex;
+      width: 294px;
+      height: 39px;
+      padding-bottom: 33px;
+    }
+
+    &--sweetener,
+    &--milk {
+      padding-left: 38px;
+    }
+
+    &--water,
+    &--vitamins {
+      padding-right: 32px;
+    }
+  }
+
+  .form__input {
+    &--checkbox1,
+    &--checkbox2,
+    &--checkbox3,
+    &--checkbox4 {
+      display: none;
+    }
+  }
+
+  .form__label {
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: block;
+      width: 270px;
+      height: 24px;
+      padding: 3px 0 0 16px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  .form__item input[type="checkbox"]:checked + label,
+  .form__item input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    cursor: pointer;
+  }
+
+  .form__item input[type="checkbox"]:checked + label::before,
+  .form__item input[type="checkbox"]:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    left: 2px;
+    top: 0;
+    border-radius: 2px;
+    border: 1px solid @border-darkgray;
+    background-color: @bg-white;
+  }
+
+  .form__item input[type="checkbox"]:checked + label::after,
+  .form__item input[type="checkbox"]:not(:checked) + label::after {
+    position: relative;
+    top: -15px;
+    left: -48px;
+    display: block;
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  .form__item input[type="checkbox"]:not(:checked) + label::after {
+    opacity: 0;
+  }
+
+  .form__item input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__fieldset {
+    &--extra {
+      display: block;
+      width: 1220px;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+  }
+
+  .form__legend {
+    &--extra {
+      display: block;
+      width: 560px;
+      padding: 0;
+      padding-bottom: 64px;
+      margin: 0;
+      font-size: 36px;
+      line-height: 24px;
+      text-transform: none;
+    }
+
+    &--extra::before {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 1008px;
+      height: 3px;
+      top: 18px;
+      left: 252px;
+      background: @bg-green;
+    }
+
+    &--extra::after {
+      position: relative;
+      display: block;
+      content: " ";
+      width: 70px;
+      height: 3px;
+      top: -9px;
+      left: -110px;
+      background: @bg-green;
+    }
+  }
+
+  .form__item {
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: flex;
+      width: 245px;
+      height: 33px;
+      padding: 0;
+      padding-bottom: 12px;
+      margin: 0;
+      margin-top: -4px;
+      margin-left: -3px;
+    }
+
+    &--sweetener {
+      padding-left: 0;
+    }
+
+    &--water {
+      padding-left: 44px;
+    }
+
+    &--milk {
+      padding-right: 45px;
+      padding-left: 44px;
+    }
+
+    &--vitamins {
+      padding-right: 2px;
+    }
+  }
+
+  .form__input {
+    &--checkbox1,
+    &--checkbox2,
+    &--checkbox3,
+    &--checkbox4 {
+      display: none;
+    }
+  }
+
+  .form__label {
+    &--sweetener,
+    &--water,
+    &--milk,
+    &--vitamins {
+      display: block;
+      width: 165px;
+      height: 24px;
+      padding: 3px 0 0 10px;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  .form__item input[type="checkbox"]:checked + label,
+  .form__item input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    cursor: pointer;
+  }
+
+  .form__item input[type="checkbox"]:checked + label::before,
+  .form__item input[type="checkbox"]:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    left: 2px;
+    top: 0;
+    border-radius: 2px;
+    border: 1px solid @border-darkgray;
+    background-color: @bg-white;
+  }
+
+  .form__item input[type="checkbox"]:checked + label::after,
+  .form__item input[type="checkbox"]:not(:checked) + label::after {
+    position: relative;
+    top: -15px;
+    left: -48px;
+    display: block;
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  .form__item input[type="checkbox"]:not(:checked) + label::after {
+    opacity: 0;
+  }
+
+  .form__item input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+  }
+}

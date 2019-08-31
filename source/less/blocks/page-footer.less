@@ -44,7 +44,7 @@
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: flex-start;
   width: 280px;
   margin: 0;
   padding: 0;
@@ -119,37 +119,42 @@
   font-family: @secondfont;
   font-size: 16px;
   line-height: 16px;
+  letter-spacing: -0.25px;
   color: @copyright__link;
   text-transform: none;
-}
 
-.copyright__link:hover {
-  color: @copyright__link-hover;
-}
 
-.copyright__link:active {
-  color: @copyright__link-active;
+  &:hover {
+    color: @copyright__link;
+
+    & ~ .copyright__logo {
+      fill: @logo-academy-hover;
+    }
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+
+    & ~ .copyright__logo {
+      opacity: 0.3;
+    }
+  }
 }
 
 .copyright__logo {
   display: block;
   width: 30px;
   height: 40px;
-  padding: 22px 0 15px 5px;
+  padding: 22px 0 21px 5px;
+  margin: 0;
+  margin-right: -3px;
   font-family: @secondfont;
   font-size: 16px;
   line-height: 16px;
   text-transform: none;
 
   fill: @logo-academy;
-}
-
-.copyright__logo:hover {
-  fill: @logo-academy-hover;
-}
-
-.copyright__logo:active {
-  fill: @logo-academy-active;
 }
 
 @media (min-width: @tablet-width) {
@@ -195,7 +200,7 @@
   .social__list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: flex-start;
     width: 200px;
     padding: 0;
     margin: 0;
@@ -266,14 +271,6 @@
     text-transform: none;
   }
 
-  .copyright__link:hover {
-    color: @copyright__link-hover;
-  }
-
-  .copyright__link:active {
-    color: @copyright__link-active;
-  }
-
   .copyright__logo {
     display: block;
     width: 30px;
@@ -283,14 +280,6 @@
     font-size: 16px;
     line-height: 16px;
     text-transform: none;
-  }
-
-  .copyright__logo:hover {
-    fill: @logo-academy-hover;
-  }
-
-  .copyright__logo:active {
-    fill: @logo-academy-active;
   }
 }
 
@@ -339,7 +328,6 @@
   .social__list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     width: 200px;
     padding: 0;
     margin: 0;
@@ -410,14 +398,6 @@
     text-transform: none;
   }
 
-  .copyright__link:hover {
-    color: @copyright__link-hover;
-  }
-
-  .copyright__link:active {
-    color: @copyright__link-active;
-  }
-
   .copyright__logo {
     display: block;
     width: 30px;
@@ -427,13 +407,5 @@
     font-size: 16px;
     line-height: 16px;
     text-transform: none;
-  }
-
-  .copyright__logo:hover {
-    fill: @logo-academy-hover;
-  }
-
-  .copyright__logo:active {
-    fill: @logo-academy-active;
   }
 }

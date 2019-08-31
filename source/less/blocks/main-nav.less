@@ -6,15 +6,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 320px;
   margin: 0 auto;
 }
 
-.main-nav__toogle {
+.main-nav__toggle {
   position: absolute;
   top: -53px;
-  right: 9px;
-  display: block;
+  right: 6px;
+  display: inline-block;
   width: 45px;
   height: 40px;
   border: none;
@@ -22,21 +21,21 @@
   cursor: pointer;
 }
 
-.main-nav--closed .main-nav__toogle {
-  position: absolute;
+.main-nav--closed .main-nav__toggle {
+  position: relative;
   top: -42px;
-  right: 23px;
+  right: -129px;
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
 }
 
-.main-nav--opened .main-nav__toogle {
+.main-nav--opened .main-nav__toggle {
   position: absolute;
   top: -42px;
-  right: 23px;
+  right: 1px;
   display: block;
   width: 18px;
   height: 18px;
@@ -44,293 +43,37 @@
   background-repeat: no-repeat;
 }
 
-.main-nav__list {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.site-list__item {
-  display: block;
-  width: 320px;
-}
-
-.site-list__link {
-  display: block;
-  width: 200px;
-  padding: 22px 60px 23px 60px;
-  font-family: @basefont;
-  font-size: 20px;
-  line-height: 20px;
-  color: @color-black;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  border-top: 1px solid @border-lightgray;
-
-  &:hover {
-    color: @link-hover;
-  }
-
-  &:active {
-    color: @link-active;
-  }
-}
-
-
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .site-list__item {
     display: none;
-
-    &--active {
-      display: block;
-    }
-  }
-
-  .main-nav--closed .site-list__item--active a {
-    padding-right: 50px;
-    padding-left: 50px;
-    text-align: center;
-  }
-
-  .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav--nojs .main-nav {
-    position: static;
-    min-height: 0;
-  }
-
-  .main-nav--nojs .site-list__item {
-    display: block;
-  }
-
-  .main-nav--nojs .site-list__item--active a {
-    padding-right: 50px;
-    padding-left: 50px;
-    text-align: center;
   }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 470px;
+    display: block;
     margin: 0;
+    padding-top: 20px;
   }
 
-  .main-nav__toogle {
+  .main-nav--closed .main-nav__toggle {
     display: none;
   }
 
-  .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 470px;
-    height: 80px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .site-list__item {
-    display: block;
-    width: 180px;
-    padding-top: 44px;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 9px;
-  }
-
-  .site-list__item:nth-child(1) {
-    width: 110px;
-    margin-left: -33px;
-    padding-right: 17px;
-  }
-
-  .site-list__item:nth-child(3) {
-    padding: 44px 0 20px 0;
-  }
-
-  .site-list__link {
-    display: block;
-    width: 160px;
-    padding: 0;
-    margin: 0;
-    color: @color-black;
-    font-size: 18px;
-    letter-spacing: 0.1px;
-    text-transform: uppercase;
-    border: none;
-
-    &--active-index::before {
-      content: "";
-
-      position: absolute;
-      top: 74px;
-      right: 0;
-      width: 62px;
-      bottom: 20px;
-      left: 30px;
-      height: 2px;
-
-      background: @bg-green;
-    }
-
-    &--active-catalog::before {
-      content: "";
-
-      position: absolute;
-      right: 0;
-      width: 152px;
-      bottom: 10px;
-      left: 127px;
-      height: 2px;
-
-      background: @bg-green;
-    }
-
-    &--active-form::before {
-      content: "";
-
-      position: absolute;
-      right: 0;
-      width: 151px;
-      bottom: 21px;
-      left: 319px;
-      height: 2px;
-
-      background: @bg-green;
-    }
-
-    &:hover {
-      color: @link-hover;
-    }
-
-    &:active {
-      color: @link-active;
-    }
+  .main-nav--opened .main-nav__toggle {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 554px;
-    height: 85px;
-    margin: 0;
-    z-index: 2;
-  }
-
-  .main-nav__toogle {
-    display: none;
-  }
-
-  .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 554px;
-    height: 85px;
+    display: block;
     margin: 0;
     padding: 0;
+    z-index: 1;
   }
 
-  .site-list__item {
-    display: block;
-    width: 180px;
-    padding-top: 54px;
-  }
-
-  .site-list__item:nth-child(1) {
-    width: 130px;
-    padding-left: 55px;
-    padding-right: 10px;
-  }
-
-  .site-list__item:nth-child(2) {
-    padding-right: 24px;
-  }
-
-  .site-list__item:nth-child(3) {
-    padding-top: 54px;
-  }
-
-  .site-list__link {
-    display: block;
-    width: 180px;
-    padding: 22px 0;
-    font-size: 20px;
-    letter-spacing: 0.1px;
-    text-transform: uppercase;
-    border: none;
-
-    &--active-index::before {
-      display: block;
-    }
-
-    &--active-catalog::before {
-      content: "";
-
-      position: absolute;
-      right: 0;
-      width: 169px;
-      bottom: -24px;
-      left: 183px;
-      height: 2px;
-
-      background: @bg-green;
-    }
-
-    &--active-form::before {
-      content: "";
-
-      position: absolute;
-      right: 0;
-      width: 169px;
-      bottom: -23px;
-      left: 386px;
-      height: 2px;
-      background: @bg-green;
-    }
-
-    &:hover {
-      color: @link-hover;
-    }
-
-    &:active {
-      color: @link-active;
-    }
-  }
-
-  .site-list__index {
-    color: @color-white;
-
-    &--active-index::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: 67px;
-      top: 106px;
-      left: 79px;
-      height: 2px;
-      background: @bg-white;
-    }
-
-    &:hover {
-      color: @link-index-hover;
-    }
-
-    &:active {
-      color: @link-index-active;
-    }
+  .main-nav__toggle {
+    display: none;
   }
 }
