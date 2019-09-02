@@ -3095,6 +3095,9 @@ a {
   margin: 0;
   margin-left: -2px;
 }
+.basic-list__group {
+  width: 145px;
+}
 .basic-list__value {
   text-align: left;
 }
@@ -3397,6 +3400,9 @@ a {
     font-size: 16px;
     line-height: 12px;
     color: #444444;
+  }
+  .basic-list__group {
+    width: 255px;
   }
   .basic-list__value,
   .basic-list__field {
