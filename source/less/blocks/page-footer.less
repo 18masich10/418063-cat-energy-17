@@ -14,18 +14,12 @@
   padding: 0 20px;
 }
 
-.page-footer__header {
-  display: block;
-  width: 280px;
-  border-bottom: 1px solid @border-gray;
-}
-
 .page-footer__logo-text {
   display: block;
   width: 128px;
   height: 24px;
-  padding: 41px 77px 31px 76px;
-  text-align: center;
+  padding: 40px 77px 30px 77px;
+  border-bottom: 1px solid @border-gray;
 
   &:hover {
     color: @logo-text-hover;
@@ -34,127 +28,6 @@
   &:active {
     color: @logo-text-active;
   }
-}
-
-.page-footer__social {
-  display: block;
-  border-bottom: 1px solid @border-gray;
-}
-
-.social__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 280px;
-  margin: 0;
-  padding: 0;
-}
-
-.social__item {
-  display: block;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  padding: 22px 29px 10px 0;
-}
-
-.social__item:nth-child(1) {
-  padding-left: 73px;
-}
-
-.social__item:nth-child(2) {
-  padding-right: 23px;
-}
-
-.social__item:nth-child(3) {
-  padding-right: 0;
-}
-
-.social__item-vkontakte-icon {
-  width: 22px;
-  height: 20px;
-}
-
-.social__item-instagram-icon {
-  width: 16px;
-  height: 20px;
-}
-
-.social__item-facebook-icon {
-  width: 16px;
-  height: 19px;
-}
-
-.social__item-vkontakte,
-.social__item-instagram,
-.social__item-facebook {
-  color: @border-icon;
-}
-
-.social__item-vkontakte:hover,
-.social__item-instagram:hover,
-.social__item-facebook:hover {
-  color: @border-icon-hover;
-}
-
-.social__item-vkontakte:active,
-.social__item-instagram:active,
-.social__item-facebook:active {
-  color: @border-icon-active;
-}
-
-.page-footer__copyright {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 280px;
-  margin: 0;
-  padding: 0;
-}
-
-.copyright__link {
-  display: block;
-  width: 120px;
-  padding: 30px 5px 25px 0;
-  font-family: @secondfont;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: -0.25px;
-  color: @copyright__link;
-  text-transform: none;
-
-
-  &:hover {
-    color: @copyright__link;
-
-    & ~ .copyright__logo {
-      fill: @logo-academy-hover;
-    }
-  }
-
-  &:focus,
-  &:active {
-    opacity: 0.3;
-
-    & ~ .copyright__logo {
-      opacity: 0.3;
-    }
-  }
-}
-
-.copyright__logo {
-  display: block;
-  width: 30px;
-  height: 40px;
-  padding: 22px 0 21px 5px;
-  margin: 0;
-  margin-right: -3px;
-  font-family: @secondfont;
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: none;
-
-  fill: @logo-academy;
 }
 
 @media (min-width: @tablet-width) {
@@ -172,15 +45,10 @@
     padding: 0 30px;
   }
 
-  .page-footer__header {
-    display: block;
-    width: 155px;
-    border: none;
-  }
-
   .page-footer__logo-text {
     display: block;
     padding: 64px 10px 5px 0;
+    border: 0;
 
     &:hover {
       color: @logo-text-hover;
@@ -189,97 +57,6 @@
     &:active {
       color: @logo-text-active;
     }
-  }
-
-  .page-footer__social {
-    display: block;
-    width: 200px;
-    border: none;
-  }
-
-  .social__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 200px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .social__item {
-    display: block;
-    justify-content: center;
-    width: 25px;
-    height: 30px;
-    padding: 61px 31px 52px 0;
-  }
-
-  .social__item:nth-child(1) {
-    padding-left: 35px;
-  }
-
-  .social__item-vkontakte-icon {
-    width: 29px;
-    height: 26px;
-  }
-
-  .social__item-instagram-icon {
-    width: 25px;
-    height: 27px;
-  }
-
-  .social__item-facebook-icon {
-    width: 25px;
-    height: 26px;
-  }
-
-  .social__item-vkontakte,
-  .social__item-instagram,
-  .social__item-facebook {
-    color: @border-icon;
-  }
-
-  .social__item-vkontakte:hover,
-  .social__item-instagram:hover,
-  .social__item-facebook:hover {
-    color: @border-icon-hover;
-  }
-
-  .social__item-vkontakte:active,
-  .social__item-instagram:active,
-  .social__item-facebook:active {
-    color: @border-icon-active;
-  }
-
-  .page-footer__copyright {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 165px;
-  }
-
-  .copyright__link {
-    display: block;
-    width: 115px;
-    height: 37px;
-    padding: 66px 5px 44px 0;
-    margin: 0;
-    font-family: @secondfont;
-    font-size: 16px;
-    line-height: 16px;
-    color: @color-darkgray;
-    text-transform: none;
-  }
-
-  .copyright__logo {
-    display: block;
-    width: 30px;
-    height: 40px;
-    padding: 58px 0 49px 5px;
-    font-family: @secondfont;
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: none;
   }
 }
 
@@ -300,12 +77,6 @@
     margin: 0 auto;
   }
 
-  .page-footer__header {
-    display: block;
-    width: 205px;
-    border: none;
-  }
-
   .page-footer__logo-text {
     display: block;
     padding: 66px 0 26px 1px;
@@ -317,95 +88,5 @@
     &:active {
       color: @logo-text-active;
     }
-  }
-
-  .page-footer__social {
-    display: block;
-    width: 200px;
-    border: none;
-  }
-
-  .social__list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 200px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .social__item {
-    display: block;
-    justify-content: center;
-    width: 25px;
-    height: 30px;
-    padding: 63px 31px 52px 0;
-  }
-
-  .social__item:nth-child(1) {
-    padding-left: 12px;
-  }
-
-  .social__item-vkontakte-icon {
-    width: 29px;
-    height: 26px;
-  }
-
-  .social__item-instagram-icon {
-    width: 25px;
-    height: 27px;
-  }
-
-  .social__item-facebook-icon {
-    width: 25px;
-    height: 26px;
-  }
-
-  .social__item-vkontakte,
-  .social__item-instagram,
-  .social__item-facebook {
-    color: @border-icon;
-  }
-
-  .social__item-vkontakte:hover,
-  .social__item-instagram:hover,
-  .social__item-facebook:hover {
-    color: @border-icon-hover;
-  }
-
-  .social__item-vkontakte:active,
-  .social__item-instagram:active,
-  .social__item-facebook:active {
-    color: @border-icon-active;
-  }
-
-  .page-footer__copyright {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 165px;
-  }
-
-  .copyright__link {
-    display: block;
-    width: 115px;
-    height: 37px;
-    padding: 70px 5px 44px 2px;
-    margin: 0;
-    font-family: @secondfont;
-    font-size: 16px;
-    line-height: 16px;
-    color: @color-darkgray;
-    text-transform: none;
-  }
-
-  .copyright__logo {
-    display: block;
-    width: 30px;
-    height: 40px;
-    padding: 61px 0 49px 5px;
-    font-family: @secondfont;
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: none;
   }
 }

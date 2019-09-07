@@ -3,12 +3,13 @@
 
 .page-header {
   display: block;
-  width: 100%;
+  width: 320px;
   background-color: @bg-white;
   border-bottom: 1px solid @border-lightgray;
 }
 
 .page-header__container {
+  width: 280px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -37,10 +38,12 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
+    width: 768px;
     border: none;
   }
 
   .page-header__container {
+    width: 708px;
     padding: 0 30px;
   }
 
@@ -67,6 +70,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    width: 100%;
     position: relative;
   }
 

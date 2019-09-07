@@ -1,17 +1,15 @@
-// Style.less для блока form-data
+// Style.less для блока data-form
 //-------------------------------
 
-.form__fieldset {
-  &--data {
-    display: block;
-    width: 280px;
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
+.data-form {
+  display: block;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
-.form__item {
+.data-form__item {
   &--name,
   &--weight,
   &--years {
@@ -25,7 +23,7 @@
   }
 }
 
-.form__label {
+.data-form__label {
   &--name,
   &--weight,
   &--years {
@@ -49,7 +47,7 @@
   }
 }
 
-.form__input {
+.data-form__input {
   &--text1,
   &--text2,
   &--text3 {
@@ -76,19 +74,17 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__fieldset {
-    &--data {
-      display: flex;
-      flex-wrap: wrap;
-      width: 708px;
-      padding: 0;
-      padding-bottom: 52px;
-      margin: 0;
-      border: none;
-    }
+  .data-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 708px;
+    padding: 0;
+    padding-bottom: 52px;
+    margin: 0;
+    border: none;
   }
 
-  .form__item {
+  .data-form__item {
     &--name,
     &--weight,
     &--years {
@@ -99,7 +95,7 @@
     }
   }
 
-  .form__label {
+  .data-form__label {
     &--name,
     &--weight,
     &--years {
@@ -124,7 +120,7 @@
     }
   }
 
-  .form__input {
+  .data-form__input {
     &--text1,
     &--text2,
     &--text3 {
@@ -152,18 +148,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__fieldset {
-    &--data {
-      display: flex;
-      flex-wrap: wrap;
-      width: 570px;
-      padding: 0;
-      margin: 0;
-      border: none;
-    }
+  .data-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 570px;
+    padding: 0;
+    margin: 0;
+    border: none;
   }
 
-  .form__item {
+  .data-form__item {
     &--name,
     &--weight,
     &--years {
@@ -174,7 +168,7 @@
     }
   }
 
-  .form__label {
+  .data-form__label {
     &--name,
     &--weight,
     &--years {
@@ -199,7 +193,7 @@
     }
   }
 
-  .form__input {
+  .data-form__input {
     &--text1,
     &--text2,
     &--text3 {

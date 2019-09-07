@@ -64,38 +64,6 @@
   text-transform: uppercase;
 }
 
-.title-slim {
-  padding: 29px 0 29px 12px;
-
-  &::after {
-    display: block;
-    position: absolute;
-    content: " ";
-    width: 50px;
-    height: 50px;
-    margin-top: -45px;
-    margin-left: 17px;
-    background-image: url("../img/icon-cat-slim.svg");
-    background-repeat: no-repeat no-repeat;
-  }
-}
-
-.title-pro {
-  padding: 29px 0 29px 39px;
-
-  &::after {
-    display: block;
-    position: absolute;
-    content: " ";
-    width: 68px;
-    height: 56px;
-    margin-top: -32px;
-    margin-left: -27px;
-    background-image: url("../img/icon-cat-pro.svg");
-    background-repeat: no-repeat no-repeat;
-  }
-}
-
 .categories__description-slim,
 .categories__description-pro {
   display: block;
@@ -107,8 +75,8 @@
 .categories__slim,
 .categories__pro {
   display: block;
-  width: 130px;
-  padding: 20px 107px 20px 0;
+  width: 160px;
+  padding: 20px 80px 20px 0;
   margin-right: 20px;
   margin-left: 20px;
   font-family: @basefont;
@@ -123,7 +91,6 @@
     &::before {
       width: 34px;
       margin-left: 120px;
-
       background-image: url("../img/icon-right-arrow-verylong.svg");
     }
   }
@@ -201,41 +168,10 @@
     text-transform: uppercase;
   }
 
-  .title-slim {
-    padding: 73px 125px 26px 26px;
-
-    &::after {
-      display: block;
-      position: absolute;
-      right: 38px;
-      content: " ";
-      width: 195px;
-      height: 195px;
-      margin-top: -34px;
-      background-image: url("../img/icon-cat-slim.svg");
-      background-repeat: no-repeat;
-    }
-  }
-
-  .title-pro {
-    padding: 76px 125px 25px 46px;
-
-    &::after {
-      display: block;
-      position: absolute;
-      right: 29px;
-      content: " ";
-      width: 267px;
-      height: 315px;
-      margin-top: 22px;
-      background-image: url("../img/icon-cat-pro.svg");
-      background-repeat: no-repeat no-repeat;
-    }
-  }
-
   .categories__description-slim,
   .categories__description-pro {
     display: block;
+    padding: 0 5px 50px 52px;
     margin: 0;
     font-size: 16px;
     line-height: 24px;
@@ -244,24 +180,38 @@
 
   .categories__description-slim {
     width: 375px;
-    padding: 0 5px 58px 51px;
   }
 
   .categories__description-pro {
     width: 340px;
-    padding: 0 5px 58px 52px;
   }
 
   .categories__slim,
   .categories__pro {
     display: block;
-    padding: 0 10px 0 32px;
+    width: 160px;
+    padding: 8px;
+    margin: 0 0 0 44px;
     font-family: @basefont;
     font-size: 20px;
     line-height: 16px;
     text-transform: uppercase;
     color: @color-black;
     border: none;
+
+
+    &:focus,
+    &:hover {
+      &::before {
+        width: 34px;
+        margin-left: 120px;
+        background-image: url("../img/icon-right-arrow-verylong.svg");
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .categories__slim::before,
@@ -338,43 +288,11 @@
     border-radius: 50%;
   }
 
-  .title-slim {
-    padding: 75px 10px 74px 187px;
-
-    &::after {
-      display: block;
-      position: absolute;
-      left: 50px;
-      content: " ";
-      width: 95px;
-      height: 95px;
-      margin-top: -70px;
-      background-image: url("../img/icon-cat-slim.svg");
-      background-repeat: no-repeat;
-    }
-  }
-
-  .title-pro {
-    padding: 75px 0 74px 207px;
-
-    &::after {
-      display: block;
-      position: absolute;
-      right: 401px;
-      content: " ";
-      width: 138px;
-      height: 254px;
-      margin-top: -46px;
-      background-image: url("../img/icon-cat-pro.svg");
-      background-repeat: no-repeat no-repeat;
-    }
-  }
-
   .categories__description-slim,
   .categories__description-pro {
     display: block;
     width: 465px;
-    padding: 0 52px 33px 53px;
+    padding: 0 52px 25px 53px;
     margin: 0;
     font-size: 16px;
     line-height: 24px;
@@ -384,12 +302,28 @@
   .categories__slim,
   .categories__pro {
     display: block;
-    padding: 0 10px 61px 33px;
+    width: 170px;
+    padding: 8px;
+    margin: 0 0 0 47px;
     font-family: @basefont;
     font-size: 20px;
     line-height: 16px;
     text-transform: uppercase;
     color: @color-black;
+
+
+    &:focus,
+    &:hover {
+      &::before {
+        width: 34px;
+        margin-left: 120px;
+        background-image: url("../img/icon-right-arrow-verylong.svg");
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .categories__slim::before,
@@ -398,8 +332,8 @@
     content: " ";
     width: 24px;
     height: 12px;
-    margin-top: 1px;
-    margin-left: 132px;
+    top: 289px;
+    left: 54px;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
   }

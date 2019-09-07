@@ -1,39 +1,41 @@
 // Style.less для блока form-contacts
 //-----------------------------------
 
-.form__fieldset {
-  &--contacts {
-    display: block;
-    width: 280px;
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
+.contacts-form {
+  display: block;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
-.form__legend {
-  &--contacts {
-    display: block;
-    width: 280px;
-    padding: 25px 99px 34px 0;
-    font-size: 24px;
-    line-height: 24px;
-    text-transform: none;
-  }
-
-  &--contacts::before {
-    position: relative;
-    display: block;
-    content: " ";
-    width: 98px;
-    height: 3px;
-    top: 17px;
-    left: 202px;
-    background-color: @bg-green;
-  }
+.contacts-form__legend {
+  display: block;
+  width: 280px;
+  padding: 25px 99px 34px 0;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
 }
 
-.form__item {
+.contacts-form__legend::before {
+  position: relative;
+  display: block;
+  content: " ";
+  width: 98px;
+  height: 3px;
+  top: 17px;
+  left: 202px;
+  background-color: @bg-green;
+}
+
+.contacts-form__list {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts-form__item {
   &--email-user,
   &--phone-user {
     display: flex;
@@ -42,7 +44,7 @@
   }
 }
 
-.form__label {
+.contacts-form__label {
   &--email-user,
   &--phone-user {
     display: block;
@@ -62,7 +64,7 @@
   }
 }
 
-.form__input {
+.contacts-form__input {
   &--text4,
   &--text5 {
     display: block;
@@ -104,7 +106,7 @@
   }
 }
 
-.form__input-icon {
+.contacts-form__input-icon {
   &--email,
   &--phone {
     display: block;
@@ -115,50 +117,52 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__fieldset {
-    &--contacts {
-      display: flex;
-      width: 708px;
-      padding: 0;
-      margin: 0;
-      border: none;
-    }
+  .contacts-form {
+    display: flex;
+    width: 708px;
+    padding: 0;
+    margin: 0;
+    border: none;
   }
 
-  .form__legend {
-    &--contacts {
-      display: block;
-      width: 560px;
-      padding: 0 7px 79px 38px;
-      font-size: 36px;
-      line-height: 24px;
-      text-transform: none;
-    }
-
-    &--contacts::before {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 146px;
-      height: 3px;
-      top: 19px;
-      left: 554px;
-      background-color: @bg-green;
-    }
-
-    &--contacts::after {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 31px;
-      height: 3px;
-      top: -8px;
-      left: -68px;
-      background: @bg-green;
-    }
+  .contacts-form__legend {
+    display: block;
+    width: 560px;
+    padding: 0 7px 79px 38px;
+    font-size: 36px;
+    line-height: 24px;
+    text-transform: none;
   }
 
-  .form__item {
+  .contacts-form__legend::before {
+    position: relative;
+    top: 19px;
+    left: 554px;
+    display: block;
+    content: " ";
+    width: 146px;
+    height: 3px;
+    background-color: @bg-green;
+  }
+
+  .contacts-form__legend::after {
+    position: relative;
+    top: -8px;
+    left: -68px;
+    display: block;
+    content: " ";
+    width: 31px;
+    height: 3px;
+    background: @bg-green;
+  }
+
+  .contacts-form__list {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contacts-form__item {
     &--email-user,
     &--phone-user {
       display: flex;
@@ -175,7 +179,7 @@
     }
   }
 
-  .form__label {
+  .contacts-form__label {
     &--email-user,
     &--phone-user {
       display: block;
@@ -195,7 +199,7 @@
     }
   }
 
-  .form__input {
+  .contacts-form__input {
     &--text4,
     &--text5 {
       display: block;
@@ -238,7 +242,7 @@
     }
   }
 
-  .form__input-icon {
+  .contacts-form__input-icon {
     &--email,
     &--phone {
       display: block;
@@ -250,51 +254,56 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__fieldset {
-    &--contacts {
-      display: flex;
-      width: 1220px;
-      padding: 0;
-      margin: 0;
-      border: none;
-    }
+  .contacts-form {
+    display: flex;
+    width: 1220px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    border: none;
   }
 
-  .form__legend {
-    &--contacts {
-      display: block;
-      width: 560px;
-      padding: 0 7px 77px 0;
-      margin: 0;
-      font-size: 36px;
-      line-height: 24px;
-      text-transform: none;
-    }
-
-    &--contacts::before {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 708px;
-      height: 3px;
-      top: 18px;
-      left: 553px;
-      background: @bg-green;
-    }
-
-    &--contacts::after {
-      position: relative;
-      display: block;
-      content: " ";
-      width: 70px;
-      height: 3px;
-      top: -9px;
-      left: -110px;
-      background: @bg-green;
-    }
+  .contacts-form__legend {
+    display: block;
+    width: 560px;
+    padding: 0 7px 77px 0;
+    margin: 0;
+    font-size: 36px;
+    line-height: 24px;
+    text-transform: none;
   }
 
-  .form__item {
+  .contacts-form__legend::before {
+    position: relative;
+    top: 18px;
+    left: 553px;
+    display: block;
+    content: " ";
+    width: 708px;
+    height: 3px;
+    background: @bg-green;
+  }
+
+  .contacts-form__legend::after {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 70px;
+    height: 3px;
+    top: -9px;
+    left: -110px;
+    background: @bg-green;
+  }
+
+  .contacts-form__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contacts-form__item {
     &--email-user,
     &--phone-user {
       display: flex;
@@ -304,7 +313,7 @@
     }
   }
 
-  .form__label {
+  .contacts-form__label {
     &--email-user,
     &--phone-user {
       display: block;
@@ -325,7 +334,7 @@
     }
   }
 
-  .form__input {
+  .contacts-form__input {
     &--text4,
     &--text5 {
       display: block;
@@ -368,7 +377,7 @@
     }
   }
 
-  .form__input-icon {
+  .contacts-form__input-icon {
     &--email,
     &--phone {
       display: block;

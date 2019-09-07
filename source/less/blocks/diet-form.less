@@ -1,17 +1,16 @@
 // Style.less для блока form-diet
 //-------------------------------
 
-.form__fieldset {
-  &--diet {
-    display: block;
-    width: 280px;
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
+.diet-form {
+  display: block;
+  width: 339px;
+  padding: 0;
+  margin: 0;
+  margin-left: -40px;
+  border: 1px solid @border-lightgray;
 }
 
-.form__item {
+.diet-form__item {
   &--slim,
   &--pro,
   &--advice {
@@ -20,28 +19,28 @@
   }
 
   &--slim {
-    padding-top: 12px;
+    padding-top: 11px;
   }
 
   &--advice {
-    padding-bottom: 16px;
+    padding-bottom: 15px;
   }
 }
 
-.form__label {
+.diet-form__label {
   &--slim,
   &--pro,
   &--advice {
     display: block;
     width: 195px;
-    padding: 14px 0 0 46px;
+    padding: 14px 0 0 85px;
     margin: 0;
     font-size: 16px;
     text-transform: uppercase;
   }
 }
 
-.form__input {
+.diet-form__input {
   &--radio1,
   &--radio2,
   &--radio3 {
@@ -49,8 +48,8 @@
   }
 }
 
-.form__item input[type="radio"]:checked + label,
-.form__item input[type="radio"]:not(:checked) + label {
+.diet-form__item input[type="radio"]:checked + label,
+.diet-form__item input[type="radio"]:not(:checked) + label {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -60,25 +59,25 @@
   }
 }
 
-.form__item input[type="radio"]:checked + label::before,
-.form__item input[type="radio"]:not(:checked) + label::before {
+.diet-form__item input[type="radio"]:checked + label::before,
+.diet-form__item input[type="radio"]:not(:checked) + label::before {
   content: "";
   position: absolute;
   width: 28px;
   height: 28px;
-  left: 0;
+  left: 40px;
   top: 8px;
   border-radius: 100%;
   border: 1px solid @border-darkgray;
   background-color: @bg-white;
 }
 
-.form__item input[type="radio"]:checked + label::after,
-.form__item input[type="radio"]:not(:checked) + label::after {
+.diet-form__item input[type="radio"]:checked + label::after,
+.diet-form__item input[type="radio"]:not(:checked) + label::after {
   position: relative;
   display: block;
   content: "";
-  left: -37px;
+  left: -35px;
   top: -14px;
   width: 11px;
   height: 11px;
@@ -86,27 +85,25 @@
   background-color: @bg-green;
 }
 
-.form__item input[type="radio"]:not(:checked) + label::after {
+.diet-form__item input[type="radio"]:not(:checked) + label::after {
   opacity: 0;
 }
 
-.form__item input[type="radio"]:checked + label::after {
+.diet-form__item input[type="radio"]:checked + label::after {
   opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
-  .form__fieldset {
-    &--diet {
-      display: flex;
-      flex-wrap: wrap;
-      width: 628px;
-      margin-left: 42px;
-      margin-bottom: 78px;
-      border: 1px solid @border-lightgray;
-    }
+  .diet-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 628px;
+    margin-left: 42px;
+    margin-bottom: 78px;
+    border: 1px solid @border-lightgray;
   }
 
-  .form__item {
+  .diet-form__item {
     &--slim,
     &--pro,
     &--advice {
@@ -126,7 +123,7 @@
     }
   }
 
-  .form__input {
+  .diet-form__input {
     &--radio1,
     &--radio2,
     &--radio3 {
@@ -134,7 +131,7 @@
     }
   }
 
-  .form__label {
+  .diet-form__label {
     &--slim,
     &--pro,
     &--advice {
@@ -150,15 +147,15 @@
     }
   }
 
-  .form__item input[type="radio"]:checked + label,
-  .form__item input[type="radio"]:not(:checked) + label {
+  .diet-form__item input[type="radio"]:checked + label,
+  .diet-form__item input[type="radio"]:not(:checked) + label {
     display: inline-block;
     position: relative;
     cursor: pointer;
   }
 
-  .form__item input[type="radio"]:checked + label::before,
-  .form__item input[type="radio"]:not(:checked) + label::before {
+  .diet-form__item input[type="radio"]:checked + label::before,
+  .diet-form__item input[type="radio"]:not(:checked) + label::before {
     content: "";
     position: absolute;
     width: 36px;
@@ -170,8 +167,8 @@
     background-color: @bg-white;
   }
 
-  .form__item input[type="radio"]:checked + label::after,
-  .form__item input[type="radio"]:not(:checked) + label::after {
+  .diet-form__item input[type="radio"]:checked + label::after,
+  .diet-form__item input[type="radio"]:not(:checked) + label::after {
     position: relative;
     display: block;
     content: "";
@@ -183,28 +180,28 @@
     background-color: @bg-green;
   }
 
-  .form__item input[type="radio"]:not(:checked) + label::after {
+  .diet-form__item input[type="radio"]:not(:checked) + label::after {
     opacity: 0;
   }
 
-  .form__item input[type="radio"]:checked + label::after {
+  .diet-form__item input[type="radio"]:checked + label::after {
     opacity: 1;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form__fieldset {
-    &--diet {
-      display: flex;
-      flex-wrap: wrap;
-      width: 570px;
-      padding: 0;
-      margin: 0;
-      border: 1px solid @border-lightgray;
-    }
+  .diet-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 570px;
+    height: 195px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 72px;
+    border: 1px solid @border-lightgray;
   }
 
-  .form__item {
+  .diet-form__item {
     &--slim,
     &--pro,
     &--advice {
@@ -212,9 +209,13 @@
       width: 500px;
       height: 40px;
     }
+
+    &--advice {
+      padding-bottom: 0;
+    }
   }
 
-  .form__input {
+  .diet-form__input {
     &--radio1,
     &--radio2,
     &--radio3 {
@@ -222,42 +223,42 @@
     }
   }
 
-  .form__label {
+  .diet-form__label {
     &--slim,
     &--pro,
     &--advice {
       display: block;
       width: 270px;
       height: 25px;
-      padding: 13px 0 7px 85px;
+      padding: 13px 0 7px 88px;
       margin: 0;
       font-size: 20px;
       text-transform: uppercase;
     }
   }
 
-  .form__item input[type="radio"]:checked + label,
-  .form__item input[type="radio"]:not(:checked) + label {
+  .diet-form__item input[type="radio"]:checked + label,
+  .diet-form__item input[type="radio"]:not(:checked) + label {
     display: inline-block;
     position: relative;
     cursor: pointer;
   }
 
-  .form__item input[type="radio"]:checked + label::before,
-  .form__item input[type="radio"]:not(:checked) + label::before {
+  .diet-form__item input[type="radio"]:checked + label::before,
+  .diet-form__item input[type="radio"]:not(:checked) + label::before {
     content: "";
     position: absolute;
     width: 36px;
     height: 36px;
-    left: 27px;
+    left: 30px;
     top: 4px;
     border-radius: 100%;
     border: 1px solid @border-darkgray;
     background-color: @bg-white;
   }
 
-  .form__item input[type="radio"]:checked + label::after,
-  .form__item input[type="radio"]:not(:checked) + label::after {
+  .diet-form__item input[type="radio"]:checked + label::after,
+  .diet-form__item input[type="radio"]:not(:checked) + label::after {
     position: relative;
     display: block;
     content: "";
@@ -269,11 +270,11 @@
     background-color: @bg-green;
   }
 
-  .form__item input[type="radio"]:not(:checked) + label::after {
+  .diet-form__item input[type="radio"]:not(:checked) + label::after {
     opacity: 0;
   }
 
-  .form__item input[type="radio"]:checked + label::after {
+  .diet-form__item input[type="radio"]:checked + label::after {
     opacity: 1;
   }
 }

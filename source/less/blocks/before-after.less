@@ -417,13 +417,17 @@
 
   .before-after__scale {
     position: relative;
-    top: 25px;
+    top: 24px;
     left: 0;
     width: 425px;
     height: 6px;
-    background: #dcdcdc;
+    background-color: @bg-scale;
     border: 0;
     cursor: pointer;
+  }
+
+  .before-after__scale::before {
+    display: none;
   }
 
   .before-after__scale-toggle {
@@ -439,10 +443,10 @@
     border: 1px solid #dcdcdc;
   }
 
-  .before-after__scale::before {
+  .before-after__scale-toggle::before {
     position: absolute;
-    top: 1px;
-    left: 210px;
+    top: 11px;
+    left: 11px;
     content: " ";
     display: block;
     width: 8px;
@@ -694,22 +698,9 @@
     left: 1px;
     width: 425px;
     height: 6px;
-    background: #dcdcdc;
+    background-color: @bg-scale;
     border: 0;
     cursor: pointer;
-  }
-
-  .before-after__scale::before {
-    position: absolute;
-    top: -1px;
-    left: 210px;
-    content: " ";
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: @bg-green;
-    z-index: 1;
   }
 
   .before-after__scale-toggle {
@@ -722,6 +713,19 @@
     height: 32px;
     border-radius: 50%;
     background-color: @bg-white;
-    border: 1px solid #dcdcdc;
+    border: 1px solid @bg-scale;
+  }
+
+  .before-after__scale-toggle::before {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    content: " ";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: @bg-green;
+    z-index: 1;
   }
 }

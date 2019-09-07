@@ -1,0 +1,247 @@
+// Style.less для блока other-list
+//--------------------------------
+
+.other-list {
+  display: block;
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.other-list__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 17px;
+  margin: 0;
+  border-bottom: 1px solid @border-lightergray;
+}
+
+.other-list__item:nth-child(1) {
+  border-top: 1px solid @border-lightergray;
+}
+
+.other-list__title {
+  display: block;
+  width: 155px;
+  padding: 13px 125px 9px 1px;
+  margin: 0;
+}
+
+.other-list__title h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: @basefontweight;
+  line-height: 16px;
+  color: @color-lightblack;
+  text-transform: uppercase;
+}
+
+.other-list__description {
+  display: table;
+  padding: 0;
+  padding-bottom: 12px;
+  margin: 0;
+  margin-left: -3px;
+}
+
+.other-list__number {
+  width: 120px;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-family: @secondfont;
+}
+
+.other-list__price {
+  width: 160px;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  font-family: @secondfont;
+}
+
+.other-list__order {
+  display: block;
+  width: 63px;
+  height: 29px;
+  padding-top: 10px;
+  padding-left: 111px;
+  padding-right: 105px;
+  font-size: 16px;
+  color: @color-white;
+  background-color: @bg-btn-green;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .other-list {
+    display: block;
+    width: 708px;
+    padding: 0;
+    padding-bottom: 32px;
+    list-style: none;
+  }
+
+  .other-list__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 121px;
+    border-top: 1px solid @border-lightgray;
+    border-left: 1px solid @border-lightgray;
+    border-right: 1px solid @border-lightgray;
+    border-bottom: 0;
+  }
+
+  .other-list__item:nth-child(4) {
+    border-bottom: 1px solid @border-lightgray;
+  }
+
+  .other-list__title {
+    display: block;
+    width: 160px;
+    height: 20px;
+    padding: 10px 5px 5px 5px;
+    margin-left: 33px;
+    margin-top: 18px;
+    margin-bottom: 16px;
+  }
+
+  .other-list__title h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: @basefontweight;
+    line-height: 14px;
+    color: @color-lightblack;
+    text-transform: uppercase;
+  }
+
+  .other-list__description {
+    display: table;
+    padding: 0;
+    padding-top: 32px;
+    margin: 0;
+    font-family: @secondfont;
+    font-size: 16px;
+    line-height: 12px;
+    color: @color-lighterblack;
+  }
+
+  .other-list__number {
+    width: 135px;
+    padding: 0;
+    padding-right: 34px;
+    margin: 0;
+    text-align: right;
+    font-family: @secondfont;
+  }
+
+  .other-list__price {
+    width: 59px;
+    padding: 0;
+    padding-right: 34px;
+    margin: 0;
+    text-align: right;
+    font-family: @secondfont;
+  }
+
+  .other-list__order {
+    display: block;
+    width: 135px;
+    height: 30px;
+    padding-top: 14px;
+    padding-left: 284px;
+    padding-right: 215px;
+    margin-top: 1px;
+    margin-left: 38px;
+    margin-bottom: 31px;
+    font-size: 16px;
+    color: @color-white;
+    background-color: @bg-btn-green;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .other-list {
+    display: block;
+    width: 915px;
+    height: 290px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .other-list__item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    height: 71px;
+    border-top: 1px solid @border-lightgray;
+    border-left: none;
+    border-right: none;
+  }
+
+  .other-list__item:nth-child(4) {
+    border-bottom: 1px solid @border-lightgray;
+  }
+
+  .other-list__title {
+    display: block;
+    width: 160px;
+    height: 40px;
+    padding: 27px 0 0 1px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 14px;
+    color: @color-lightblack;
+    text-transform: uppercase;
+  }
+
+  .other-list__description {
+    display: table;
+    padding: 0;
+    padding-top: 31px;
+    margin: 0;
+    margin-left: 107px;
+    font-family: @secondfont;
+    font-size: 16px;
+    line-height: 12px;
+    color: @color-lighterblack;
+  }
+
+  .other-list__number {
+    width: 135px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-family: @secondfont;
+  }
+
+  .other-list__price {
+    position: relative;
+    right: -107px;
+    width: 59px;
+    padding: 0;
+    padding-right: 32px;
+    text-align: left;
+    font-family: @secondfont;
+  }
+
+  .other-list__order {
+    display: block;
+    width: 153px;
+    height: 24px;
+    margin-top: 14px;
+    margin-right: 20px;
+    padding: 12px 0 5px 93px;
+    font-size: 16px;
+    color: @color-white;
+    background-color: @bg-green;
+    text-transform: uppercase;
+  }
+}
