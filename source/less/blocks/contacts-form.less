@@ -1,4 +1,4 @@
-// Style.less для блока form-contacts
+// Style.less для блока contacts-form
 //-----------------------------------
 
 .contacts-form {
@@ -6,7 +6,19 @@
   width: 280px;
   padding: 0;
   margin: 0;
+  margin-bottom: 3px;
   border: none;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: calc((100vw - 280px) / 2 + 44px);
+    top: 627px;
+    right: 0;
+    margin-right: 35px;
+    height: 3px;
+    background-color: @bg-green;
+  }
 }
 
 .contacts-form__legend {
@@ -16,17 +28,6 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: none;
-}
-
-.contacts-form__legend::before {
-  position: relative;
-  display: block;
-  content: " ";
-  width: 98px;
-  height: 3px;
-  top: 17px;
-  left: 202px;
-  background-color: @bg-green;
 }
 
 .contacts-form__list {
@@ -119,41 +120,42 @@
 @media (min-width: @tablet-width) {
   .contacts-form {
     display: flex;
+    flex-wrap: wrap;
     width: 708px;
     padding: 0;
     margin: 0;
     border: none;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: calc((100vw - 280px) / 2 - 99px);
+      top: 940px;
+      right: -35px;
+      margin-right: 35px;
+      height: 3px;
+      background-color: @bg-green;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      width: calc((100vw - 280px) / 2 - 215px);
+      top: 940px;
+      left: -35px;
+      margin-left: 35px;
+      height: 3px;
+      background-color: @bg-green;
+    }
   }
 
   .contacts-form__legend {
     display: block;
     width: 560px;
-    padding: 0 7px 79px 38px;
+    padding: 0 7px 84px 38px;
     font-size: 36px;
     line-height: 24px;
     text-transform: none;
-  }
-
-  .contacts-form__legend::before {
-    position: relative;
-    top: 19px;
-    left: 554px;
-    display: block;
-    content: " ";
-    width: 146px;
-    height: 3px;
-    background-color: @bg-green;
-  }
-
-  .contacts-form__legend::after {
-    position: relative;
-    top: -8px;
-    left: -68px;
-    display: block;
-    content: " ";
-    width: 31px;
-    height: 3px;
-    background: @bg-green;
   }
 
   .contacts-form__list {
@@ -256,43 +258,46 @@
 @media (min-width: @desktop-width) {
   .contacts-form {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 1220px;
     padding: 0;
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     border: none;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: calc((100vw - 280px) / 2 + 170px);
+      top: 715px;
+      right: -8px;
+      margin-right: 35px;
+      height: 3px;
+      background-color: @bg-green;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      width: calc((100vw - 280px) / 2 - 537px);
+      top: 715px;
+      left: -7px;
+      margin-left: 35px;
+      height: 3px;
+      background-color: @bg-green;
+    }
   }
 
   .contacts-form__legend {
     display: block;
     width: 560px;
-    padding: 0 7px 77px 0;
+    padding: 0 7px 79px 0;
     margin: 0;
+    margin-right: 661px;
     font-size: 36px;
     line-height: 24px;
     text-transform: none;
-  }
-
-  .contacts-form__legend::before {
-    position: relative;
-    top: 18px;
-    left: 553px;
-    display: block;
-    content: " ";
-    width: 708px;
-    height: 3px;
-    background: @bg-green;
-  }
-
-  .contacts-form__legend::after {
-    position: relative;
-    display: block;
-    content: " ";
-    width: 70px;
-    height: 3px;
-    top: -9px;
-    left: -110px;
-    background: @bg-green;
   }
 
   .contacts-form__list {

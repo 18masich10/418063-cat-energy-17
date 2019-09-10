@@ -3,6 +3,9 @@
 
 // Базовая типографика для Проекта Cat Energy
 // ------------------------------------------
+html {
+  overflow-x: hidden;
+}
 
 body {
   width: 320px;
@@ -14,12 +17,14 @@ body {
   text-transform: none;
   color: @color-black;
   background-color: @bg-white;
+  overflow-x: hidden;
 }
 
 @media (min-width: @tablet-width) {
   body {
     width: 768px;
     margin: 0 auto;
+    overflow-x: hidden;
   }
 }
 
@@ -27,6 +32,7 @@ body {
   body {
     width: 100%;
     margin: 0 auto;
+    overflow-x: hidden;
   }
 }
 

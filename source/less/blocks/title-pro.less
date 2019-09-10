@@ -1,0 +1,54 @@
+// Style.less для блока title-pro
+//-------------------------------
+
+.title-pro {
+  padding: 29px 0 29px 39px;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: " ";
+    width: 68px;
+    height: 56px;
+    margin-top: -32px;
+    margin-left: -27px;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .title-pro {
+    padding: 76px 125px 23px 46px;
+
+    &::after {
+      display: block;
+      position: absolute;
+      right: 29px;
+      content: " ";
+      width: 267px;
+      height: 315px;
+      margin-top: 22px;
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat no-repeat;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title-pro {
+    padding: 70px 0 74px 207px;
+
+    &::after {
+      display: block;
+      position: absolute;
+      right: 401px;
+      content: " ";
+      width: 138px;
+      height: 254px;
+      margin-top: -46px;
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat no-repeat;
+    }
+  }
+}
